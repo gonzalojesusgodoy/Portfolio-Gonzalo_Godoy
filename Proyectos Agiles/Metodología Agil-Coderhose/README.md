@@ -1,6 +1,6 @@
 # Metodología Ágil — Coderhouse
 
-Este espacio reúne los contenidos, ejercicios y proyectos realizados durante mi formación en Metodologías Ágiles en Coderhouse.
+Este espacio reúne los contenidos, ejercicios y proyectos realizados durante mi formación en el curso "Metodologías Ágiles" de Coderhouse.
 
 El objetivo es documentar lo aprendido y, principalmente, mostrar cómo estos conceptos pueden aplicarse de forma práctica a la organización, seguimiento y mejora de un proyecto.
 
