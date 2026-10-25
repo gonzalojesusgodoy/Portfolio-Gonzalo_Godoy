@@ -2,7 +2,7 @@
 
 ### Captura 1 — Tareas en ejecución
 
-![Tareas en ejecución](img/tablero-tareas-en-ejecucion.png)
+!Captura de pantalla (91).png.png)
 
 ### Captura 2 — Estado final
 
