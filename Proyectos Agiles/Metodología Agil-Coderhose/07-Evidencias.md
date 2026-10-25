@@ -1,5 +1,5 @@
 ### Captura 1 — Tablero inicial
-![Tablero inicial](img/tablero-inicial.png)
+![Tareas en ejecución](img/tablero-tareas-en-ejecucion.png)
 
 [image2]**
 
