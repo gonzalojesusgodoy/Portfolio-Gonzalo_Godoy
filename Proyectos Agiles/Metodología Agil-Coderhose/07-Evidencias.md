@@ -1,5 +1,5 @@
 ### Captura 1 — Tablero inicial
-**![][image1]!
+![Tablero inicial](./imagenes/captura-01-tablero-inicial.png)
 
 [image2]**
 
