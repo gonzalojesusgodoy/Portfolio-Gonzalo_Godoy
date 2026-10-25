@@ -7,4 +7,4 @@
 **![][image3]**
 
 ### Captura 3 — Estado final
-**![][image4]**
+**\*\*![][image4]\*\*** 
