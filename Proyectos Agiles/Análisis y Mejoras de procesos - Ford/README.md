@@ -1,4 +1,4 @@
-# Caso de Estudio 01 — Mejora del proceso de preparación de módulos y herramientas
+#  Mejora del proceso "Ford"
 
 ## Contexto y Rol
 
@@ -56,11 +56,12 @@ En conjunto, las propuestas buscan anticiparse a los problemas antes de que afec
 
 ### Imagen 1 — Herramienta utilizada en el proceso
 
-[Insertar imagen de la herramienta]
+<img width="447" height="447" alt="images" src="https://github.com/user-attachments/assets/f4afc0df-f68e-400d-a5f7-2bc6a3ddf647" />
 
 Imagen ilustrativa del tipo de herramienta involucrada en la situación analizada.
 
 ### Imagen 2 — Área de trabajo y organización de materiales
+<img width="970" height="646" alt="Errores-mas-comunes-al-disenar-un-area-de-empaquetado" src="https://github.com/user-attachments/assets/682b36da-87aa-4eb0-b8bf-88a83367c5ae" />
 
 [Insertar imagen del área de trabajo]
 
