@@ -1,5 +1,9 @@
 # Metodologia Agil "Coderhouse"
 
+## Propuesta
+
+Gestión Visual de Flujo con Kanban y Scrum — Optimización de WIP y Control de Calidad
+
 ## Contexto y Rol
 
 Este proyecto fue realizado durante mi formación en Coderhouse como una práctica para aplicar conocimientos sobre metodologías ágiles.
