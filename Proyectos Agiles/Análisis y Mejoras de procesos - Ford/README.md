@@ -1,6 +1,8 @@
 #  Mejora del proceso "Ford"
 
-### Propuesta: Análisis de Proceso, Detección de Cuellos de Botella y Mejora Continua — Caso Ford
+## Propuesta
+
+Análisis de Proceso, Detección de Cuellos de Botella y Mejora Continua — Caso Ford
 
 ## Contexto y Rol
 
