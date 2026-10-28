@@ -1,24 +1,46 @@
 # 👋 Hola, soy Gonzalo Godoy
 
-### 🎓 Sobre mí
+### Estudiante de Programación | Perfil IT
 
-Actualmente estudio **Tecnicatura en Programación en la UTN** y me encuentro desarrollando mi formación dentro del área de tecnología.
+**Estudiante de la Tecnicatura Universitaria en Programación (UTN FRBA)**, con formación en **Testing QA, herramientas digitales y metodologías ágiles**.
 
-A lo largo de mi formación fui adquiriendo conocimientos de **programación, tecnología, análisis de procesos y metodologías ágiles**, buscando complementar los conocimientos técnicos con una forma de trabajo orientada al análisis, la organización y la mejora continua.
+Busco **mi primera oportunidad profesional en IT**, donde pueda aplicar mis conocimientos, adquirir experiencia y seguir desarrollándome en el sector. Me interesa especialmente aprender mediante la práctica y trabajar de forma organizada y colaborativa.
 
-Me interesa seguir desarrollándome dentro del área de IT, aprender de distintos equipos y tecnologías, y adquirir experiencia práctica que me permita continuar creciendo profesionalmente.
+## Sobre mí
 
-### 🎯 Mi objetivo
+Me interesa la tecnología y el aprendizaje continuo. Actualmente estoy construyendo mi perfil profesional mediante la formación académica, cursos y proyectos prácticos relacionados con programación, testing, metodologías ágiles y mejora de procesos.
 
-Mi objetivo es **ingresar a mi primer puesto profesional dentro del área de IT**, donde pueda aplicar los conocimientos que estoy adquiriendo, aprender de la experiencia y continuar desarrollándome.
+Mi objetivo es incorporarme al sector IT, aportar mis conocimientos y continuar adquiriendo experiencia a través de nuevos desafíos.
 
-Estoy abierto a distintas oportunidades dentro del área de tecnología, especialmente en posiciones **Junior o Trainee**, entendiendo que el primer paso puede abrirme nuevas oportunidades y permitirme descubrir en qué área puedo desarrollarme a largo plazo.
+## Proyectos destacados
 
-### 📚 ¿Qué estoy aprendiendo?
+### Mejora de Procesos — Ford
 
-- **Programación**
-- **Metodologías Ágiles**
-- **Scrum**
-- **Jira**
-- **Quality Assurance (QA) y Testing**
-- **Análisis de procesos**
+Análisis de un proceso de trabajo real, identificación de problemas y propuesta de mejoras mediante herramientas de mejora continua.
+
+### Metodologías Ágiles — Coderhouse
+
+Aplicación práctica de Scrum y Kanban para organizar, visualizar y gestionar el trabajo de un proyecto.
+
+### Análisis y Testing — Alibaba
+
+Análisis de una aplicación ficticia orientado a la identificación de errores y oportunidades de mejora.
+
+## Formación y herramientas
+
+### Formación
+
+- Tecnicatura Universitaria en Programación — UTN FRBA
+- Testing QA
+- Metodologías Ágiles
+- Análisis de Datos
+
+### Herramientas y tecnologías
+
+- Git / GitHub
+- Jira
+- Trello
+- Sistemas operativos
+- Microsoft Office
+
+
