@@ -16,15 +16,15 @@ Mi objetivo es incorporarme al sector IT, aportar mis conocimientos y continuar 
 
 ### Mejora de Procesos — Ford
 
-Análisis de un proceso de trabajo real, identificación de problemas y propuesta de mejoras mediante herramientas de mejora continua.
+Proyecto basado en un proceso real de mi puesto de trabajo, donde analicé situaciones problemáticas, busqué sus posibles causas y propuse acciones de mejora. Este proyecto refleja mi interés por el análisis, la resolución de problemas y la mejora continua.
 
 ### Metodologías Ágiles — Coderhouse
 
-Aplicación práctica de Scrum y Kanban para organizar, visualizar y gestionar el trabajo de un proyecto.
+Proyecto práctico en el que trabajé con **Scrum y Kanban** para organizar y gestionar diferentes partes del trabajo. Utilicé herramientas como **Jira y Trello**, trabajando con backlog, planificación, seguimiento del flujo, WIP y métricas para analizar y mejorar el proceso.
 
 ### Análisis y Testing — Alibaba
 
-Análisis de una aplicación ficticia orientado a la identificación de errores y oportunidades de mejora.
+Proyecto ficticio orientado al análisis de una aplicación, donde busqué identificar posibles errores y oportunidades de mejora mediante diferentes escenarios de prueba. El proyecto refleja mi interés por el **Testing QA**, la observación y el análisis de aplicaciones.
 
 ## Formación y herramientas
 
