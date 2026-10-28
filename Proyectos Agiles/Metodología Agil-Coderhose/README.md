@@ -1,4 +1,4 @@
-# Caso de Estudio 02 — Aplicación de Scrum y Kanban
+# Metodologia Agil "Coderhouse"
 
 ## Contexto y Rol
 
