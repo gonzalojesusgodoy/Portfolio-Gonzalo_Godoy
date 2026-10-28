@@ -1,5 +1,7 @@
 #  Mejora del proceso "Ford"
 
+### Propuesta: Análisis de Proceso, Detección de Cuellos de Botella y Mejora Continua — Caso Ford
+
 ## Contexto y Rol
 
 Este proyecto surgió a partir de un cambio de sector y de puesto de trabajo. El nuevo puesto me resultó interesante, pero también observé que algunas tareas podían generar una carga de trabajo mayor para el operario.
