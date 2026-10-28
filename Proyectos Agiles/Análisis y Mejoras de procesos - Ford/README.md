@@ -63,8 +63,6 @@ Imagen ilustrativa del tipo de herramienta involucrada en la situación analizad
 ### Imagen 2 — Área de trabajo y organización de materiales
 <img width="970" height="646" alt="Errores-mas-comunes-al-disenar-un-area-de-empaquetado" src="https://github.com/user-attachments/assets/682b36da-87aa-4eb0-b8bf-88a83367c5ae" />
 
-[Insertar imagen del área de trabajo]
-
 Imagen ilustrativa utilizada como referencia para representar el entorno industrial relacionado con el proceso analizado.
 
 Las imágenes utilizadas son ilustrativas y no corresponden directamente al puesto de trabajo.
