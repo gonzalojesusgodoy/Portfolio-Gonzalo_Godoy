@@ -26,21 +26,36 @@ Proyecto práctico en el que trabajé con **Scrum y Kanban** para organizar y ge
 
 Proyecto ficticio orientado al análisis de una aplicación, donde busqué identificar posibles errores y oportunidades de mejora mediante diferentes escenarios de prueba. El proyecto refleja mi interés por el **Testing QA**, la observación y el análisis de aplicaciones.
 
-## Formación y herramientas
+## Formación y Stack Tecnológico
 
-### Formación
+Mi perfil combina la base académica de la **Tecnicatura Universitaria en Programación (UTN FRBA)** con formación continua en **Aseguramiento de la Calidad (QA)**, metodologías ágiles y análisis de datos, integrando visión analítica y rigor técnico.
 
-- Tecnicatura Universitaria en Programación — UTN FRBA
-- Testing QA
-- Metodologías Ágiles
-- Análisis de Datos
+###  Formación Académica y Especializaciones
+* **Tecnicatura Universitaria en Programación** — UTN FRBA *(En curso)*
+* **Testing QA & Calidad de Software** — Coderhouse / Instituto Web / Testing Master  
+  *Especialización en diseño de casos de prueba, reporte de defectos, testing funcional y metodologías de prueba.*
+* **Gestión de Proyectos & Metodologías Ágiles** — Coderhouse / IBM  
+  *Scrum, Kanban, gestión de flujos de trabajo y métricas de proceso.*
+* **Análisis de Datos** — Coderhouse  
+  *Modelado, visualización y análisis exploratorio con Power BI y Tableau.*
 
-### Herramientas y tecnologías
+###  Stack de Herramientas y Habilidades Técnicas
 
-- Git / GitHub
-- Jira
-- Trello
-- Sistemas operativos
-- Microsoft Office
+* **Testing & Calidad (QA):**  
+  Diseño y ejecución de Casos de Prueba, Matriz de Pruebas, Reporte y Seguimiento de Bugs, Pruebas Funcionales (Caja Negra), Criterios de Aceptación (DoD/DoR).
+
+* **Bases de Datos & Consultas:**  
+  `SQL` *(consultas estructuradas, filtros, ordenamiento, joins y validación de datos)* - Nivel Inicial
+
+* **Control de Versiones & Código:**  
+  `Git`, `GitHub`.
+
+* **Gestión Ágil & Organización:**  
+  `Jira`, `Trello`, tableros Kanban, control de WIP y estimación de Historias de Usuario.
+
+* **Análisis & Visualización:**  
+  `Power BI`, `Tableau`, Microsoft Excel / Office.
+
+
 
 
