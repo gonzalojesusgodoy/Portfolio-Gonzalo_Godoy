@@ -28,7 +28,7 @@ Proyecto ficticio orientado al análisis de una aplicación, donde busqué ident
 
 ## Formación y Stack Tecnológico
 
-Mi perfil combina la base académica de la **Tecnicatura Universitaria en Programación (UTN FRBA)** con formación continua en **Aseguramiento de la Calidad (QA)**, metodologías ágiles y análisis de datos, integrando visión analítica y rigor técnico.
+Mi perfil combina la base académica de la **Tecnicatura Universitaria en Programación (UTN FRBA)** con formación continua en **Aseguramiento de la Calidad (QA)**, metodologías ágiles y análisis de datos.
 
 ###  Formación Académica y Especializaciones
 * **Tecnicatura Universitaria en Programación** — UTN FRBA *(En curso)*
