@@ -104,5 +104,3 @@ Este proyecto permitió ampliar mi perspectiva sobre el proceso de aseguramiento
 
 La combinación de pruebas funcionales, identificación de defectos, testing de APIs y pruebas de estrés permitió explorar distintos enfoques de evaluación y fortalecer habilidades de análisis, observación y documentación.
 
-
-*Proyecto desarrollado como parte de mi formación en Quality Assurance y Software Testing. La documentación refleja las actividades realizadas durante el ejercicio.*
