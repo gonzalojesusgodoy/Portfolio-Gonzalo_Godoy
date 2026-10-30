@@ -1,42 +1,73 @@
-# 🧪 QA Manual
+# Testing QA Manual 
 
-Proyecto orientado al aprendizaje y aplicación práctica de conceptos fundamentales de **Quality Assurance (QA) y Software Testing**.
+Repositorio dedicado a mi formación y práctica en **Software Testing**, donde documento los conocimientos adquiridos, las herramientas exploradas y los ejercicios realizados durante mi aprendizaje.
 
-## 🎯 Objetivo
+Mi objetivo es desarrollar una base sólida en testing de software, comprender las distintas etapas del proceso de pruebas y aprender a identificar, documentar y analizar posibles defectos en aplicaciones.
 
-Aplicar los conocimientos adquiridos sobre testing de software mediante prácticas y ejercicios que permitan comprender y documentar diferentes etapas del proceso de pruebas.
+## Objetivo del proyecto
 
-## 📚 Contenidos
+Aplicar y consolidar los fundamentos de QA Manual mediante ejercicios y prácticas que permitan comprender cómo se planifican, diseñan, ejecutan y documentan las pruebas de software.
 
-- 🧪 Fundamentos de **QA y QC**
-- 🔍 Verificación y validación
-- 📝 Planificación, diseño y ejecución de **casos de prueba**
-- 🐞 Identificación, documentación y seguimiento de **defectos**
-- 🔄 Pruebas de regresión, progresión, humo, sanidad y exploratorias
-- 📋 Análisis de requisitos funcionales y no funcionales
-- 🌐 Testing de aplicaciones web
-- 📱 Conceptos de testing móvil
-- 🔌 Conceptos básicos de pruebas de API
-- 👤 Conceptos básicos de **UAT**
-- 🔄 Metodologías Ágiles y trabajo con **Scrum**
-- 🛠️ Uso de herramientas relacionadas con testing y gestión de pruebas
+Este espacio busca reflejar mi evolución en el área, conectando los conceptos teóricos con su aplicación práctica.
 
-## 🛠️ Herramientas
+## Áreas de conocimiento
 
-- **Jira**
-- **TestRail**
-- **W3C Validator**
-- **Checklink**
-- **PageSpeed Insights**
-- **WhatFont**
-- **ColorZilla**
+### Fundamentos de calidad y testing
+- Fundamentos de Quality Assurance (QA) y Quality Control (QC).
+- Verificación y validación.
+- Análisis de requisitos funcionales y no funcionales.
+- Ciclo y etapas del proceso de pruebas.
 
-## 📂 Contenido del proyecto
+### Diseño y ejecución de pruebas
+- Planificación y diseño de casos de prueba.
+- Preparación de escenarios y datos de prueba.
+- Ejecución y documentación de pruebas.
+- Identificación, registro y seguimiento de defectos.
+- Pruebas de regresión, progresión, humo, sanidad y exploratorias.
 
-Este espacio reúne diferentes prácticas, ejercicios y evidencias relacionadas con **QA Manual**, documentando el proceso de aprendizaje y la aplicación práctica de los conceptos estudiados.
+### Tipos y ámbitos de testing
+- Testing de aplicaciones web.
+- Conceptos de testing de aplicaciones móviles.
+- Conceptos básicos de pruebas de API.
+- Conceptos básicos de User Acceptance Testing (UAT).
 
-A medida que avance mi formación, iré incorporando nuevos proyectos, casos de prueba, reportes de defectos y evidencias de testing.
+### Metodologías de trabajo
+- Fundamentos de metodologías ágiles.
+- Scrum y organización del trabajo.
+- Gestión y seguimiento de tareas.
 
-## 🚀 Aprendizaje continuo
+## Herramientas utilizadas y exploradas
 
-Este proyecto forma parte de mi formación en tecnología y tiene como objetivo documentar mi evolución en el área de **Quality Assurance y Software Testing**, incorporando progresivamente nuevos conocimientos y herramientas.
+Durante mi formación incorporé diferentes herramientas para realizar verificaciones, analizar aplicaciones y organizar actividades relacionadas con testing.
+
+| Herramienta | Aplicación |
+|---|---|
+| Jira | Gestión y seguimiento de tareas e incidencias. |
+| TestRail | Gestión y organización de pruebas. |
+| W3C Validator | Validación de código HTML. |
+| Checklink | Verificación de enlaces. |
+| PageSpeed Insights | Análisis del rendimiento de páginas web. |
+| WhatFont | Identificación de tipografías en sitios web. |
+| ColorZilla | Identificación y selección de colores. |
+
+## Prácticas y evidencias
+
+Este repositorio reúne ejercicios y actividades desarrollados durante mi formación en QA Manual.
+
+La documentación busca mostrar no solamente los conceptos estudiados, sino también cómo se aplican en diferentes situaciones de prueba.
+
+Entre los contenidos que se incorporarán se encuentran:
+
+- Casos de prueba y escenarios de testing.
+- Análisis de requisitos.
+- Registro y documentación de defectos.
+- Evidencias de ejecución.
+- Prácticas de testing en aplicaciones web.
+- Ejercicios de verificación y validación.
+
+## Aprendizaje y desarrollo profesional
+
+Mi formación en QA me permitió comprender la importancia de la calidad a lo largo del desarrollo de software y el valor que tiene realizar pruebas de manera organizada y sistemática.
+
+Continúo profundizando mis conocimientos en Testing Manual, análisis de requisitos, diseño de casos de prueba y documentación de defectos.
+
