@@ -1,6 +1,6 @@
 #  Medición y Evaluación de Mejoras
 
-> 🎯 Herramientas para interpretar datos, comparar resultados y determinar si una mejora aporta valor al proceso.
+>  Herramientas para interpretar datos, comparar resultados y determinar si una mejora aporta valor al proceso.
 
 ##  1. Propósito
 
