@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford | Análisis y mejora de procesos - Gonzalo Godoy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f5f8;
+            color: #263449;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #17243a;
+            color: white;
+            padding: 22px 8%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            font-size: 20px;
+        }
+
+        nav a {
+            color: #d3dce9;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            background-color: #17243a;
+            color: white;
+            padding: 75px 8% 85px;
+        }
+
+        .etiqueta {
+            color: #9bbce8;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 15px 0;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            color: #c6d4e8;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin-top: 20px;
+            color: #d3dce9;
+        }
+
+        .contenedor {
+            max-width: 1050px;
+            margin: auto;
+            padding: 55px 25px;
+        }
+
+        .seccion {
+            margin-bottom: 45px;
+        }
+
+        .numero {
+            color: #5279ad;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .seccion h2 {
+            color: #17243a;
+            font-size: 26px;
+            margin: 8px 0 18px;
+        }
+
+        .seccion p {
+            margin-bottom: 15px;
+            color: #526174;
+        }
+
+        .tarjeta {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 18px;
+            border: 1px solid #e1e6ed;
+        }
+
+        .tarjeta h3 {
+            color: #17243a;
+            margin-bottom: 10px;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .nota {
+            background-color: #e8eef6;
+            border-left: 4px solid #5279ad;
+            padding: 18px;
+            border-radius: 5px;
+            margin-top: 20px;
+            color: #34465e;
+        }
+
+        .evidencia {
+            background-color: white;
+            border: 1px dashed #aab7c8;
+            padding: 35px 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 15px;
+            color: #64748b;
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #5279ad;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .boton:hover {
+            background-color: #3d608f;
+        }
+
+        footer {
+            background-color: #17243a;
+            color: #c6d4e8;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>GONZALO GODOY</h2>
+
+            <div>
+                <a href="index.html">Inicio</a>
+                <a href="index.html#proyectos">Proyectos</a>
+                <a href="index.html#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <span class="etiqueta">Caso de estudio 01</span>
+
+        <h1>Análisis y mejora de procesos</h1>
+
+        <h2>Ford | Entorno industrial</h2>
+
+        <p>
+            Análisis individual de una parte del proceso de preparación
+            de módulos, materiales y herramientas, con el objetivo de
+            identificar oportunidades de mejora y reducir interrupciones
+            durante el trabajo.
+        </p>
+    </section>
+
+    <main class="contenedor">
+
+        <section class="seccion">
+            <span class="numero">01 — CONTEXTO Y ROL</span>
+            <h2>Origen del análisis</h2>
+
+            <p>
+                Este proyecto surgió a partir de un cambio de sector y de
+                puesto de trabajo. El nuevo puesto me resultó interesante,
+                pero también observé que algunas tareas podían generar
+                una carga de trabajo mayor para el operario.
+            </p>
+
+            <p>
+                A partir de esta situación, decidí analizar por mi cuenta
+                una parte específica del proceso: la preparación de los
+                módulos, materiales y herramientas utilizados durante
+                el trabajo.
+            </p>
+
+            <p>
+                El análisis fue realizado de manera individual. En ese
+                momento también me encontraba realizando una capacitación
+                en metodologías ágiles, por lo que aproveché el proyecto
+                como una oportunidad para aplicar conceptos de Scrum y
+                Kanban a una situación real de mi entorno laboral.
+            </p>
+        </section>
+
+        <section class="seccion">
+            <span class="numero">02 — EL PROBLEMA</span>
+            <h2>Situaciones observadas</h2>
+
+            <p>
+                Durante la preparación de los módulos se presentaban
+                algunas situaciones que podían generar pequeñas demoras
+                e interrupciones durante el trabajo.
+            </p>
+
+            <div class="tarjetas">
+                <div class="tarjeta">
+                    <h3>Preparación de módulos</h3>
+                    <p>
+                        Los módulos llegaban dentro de cajas y debían
+                        prepararse en un espacio reducido, generando
+                        manipulación y tiempo adicional.
+                    </p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Desgaste de herramientas</h3>
+                    <p>
+                        Algunas herramientas presentaban desgaste y,
+                        en determinadas ocasiones, el tornillo podía
+                        tener dificultades para ingresar correctamente
+                        en la máquina.
+                    </p>
+                </div>
+            </div>
+
+            <div class="nota">
+                Aunque cada situación podía representar solamente unos
+                pocos segundos de demora, aproximadamente 4 o 5 segundos,
+                estas pequeñas interrupciones podían repetirse durante
+                la jornada y afectar el trabajo del operario.
+            </div>
+        </section>
+
+        <section class="seccion">
+            <span class="numero">03 — MI PROCESO</span>
+            <h2>Análisis y toma de decisiones</h2>
+
+            <p>
+                Primero observé directamente cómo se realizaba la
+                preparación de los módulos y qué dificultades aparecían
+                durante la tarea.
+            </p>
+
+            <p>
+                Identifiqué principalmente dos situaciones: la preparación
+                de los módulos en el puesto de trabajo y el desgaste
+                de las herramientas.
+            </p>
+
+            <p>
+                A partir de esto, analicé diferentes posibilidades.
+                Una alternativa era reemplazar completamente las
+                herramientas, pero consideré que no era necesario
+                realizar un cambio de esa magnitud si el problema
+                podía abordarse mediante un control y mantenimiento
+                periódico.
+            </p>
+
+            <p>
+                También consideré la posibilidad de modificar el tipo
+                de empaque de los módulos, aunque esto implicaría
+                realizar cambios en la forma en que los materiales
+                eran recibidos y manipulados.
+            </p>
+
+            <p>
+                Finalmente, prioricé propuestas de menor intervención
+                y más relacionadas con las situaciones observadas:
+                recibir los módulos previamente armados y realizar
+                controles periódicos sobre el estado de las herramientas.
+            </p>
+
+            <div class="nota">
+                La decisión buscó encontrar una solución sencilla que
+                pudiera reducir las pequeñas interrupciones sin
+                modificar completamente el proceso existente.
+            </div>
+        </section>
+
+        <section class="seccion">
+            <span class="numero">04 — PROPUESTAS DE MEJORA</span>
+            <h2>Soluciones planteadas</h2>
+
+            <div class="tarjeta">
+                <h3>01. Módulos previamente armados</h3>
+                <p>
+                    Que los módulos lleguen previamente armados y listos
+                    para utilizar, de manera que el operario solamente
+                    tenga que abrir las cajas y pueda comenzar directamente
+                    con el trabajo.
+                </p>
+                <p>
+                    Esto permitiría reducir el tiempo destinado a la
+                    preparación de los módulos y evitar parte de la
+                    manipulación que se realizaba en un espacio reducido.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>02. Revisión y mantenimiento periódico de herramientas</h3>
+                <p>
+                    Establecer una revisión periódica del estado de las
+                    herramientas, permitiendo detectar señales de desgaste
+                    antes de que puedan generar dificultades durante
+                    el trabajo.
+                </p>
+                <p>
+                    El objetivo sería realizar el mantenimiento necesario
+                    de manera preventiva y evitar que el problema aparezca
+                    durante la ejecución de la tarea.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h3>03. Prevención de dificultades</h3>
+                <p>
+                    En conjunto, las propuestas buscan anticiparse a
+                    los problemas antes de que afecten al operario,
+                    reduciendo interrupciones y pequeñas demoras
+                    durante el proceso.
+                </p>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <span class="numero">05 — EVIDENCIA VISUAL</span>
+            <h2>Referencias del entorno de trabajo</h2>
+
+            <p>
+                Las siguientes imágenes se incorporarán como referencias
+                visuales para representar las herramientas y el entorno
+                industrial relacionados con la situación analizada.
+            </p>
+
+            <div class="evidencia">
+                <h3>Herramienta involucrada</h3>
+                <p>
+                    Espacio reservado para la imagen ilustrativa
+                    de la herramienta.
+                </p>
+            </div>
+
+            <div class="evidencia">
+                <h3>Entorno industrial</h3>
+                <p>
+                    Espacio reservado para la imagen ilustrativa
+                    del área de trabajo.
+                </p>
+            </div>
+
+            <div class="nota">
+                Nota: Las imágenes utilizadas son ilustrativas y no
+                corresponden directamente al puesto de trabajo.
+                En una versión futura del caso, sería conveniente
+                incorporar fotografías reales del proceso.
+            </div>
+        </section>
+
+        <section class="seccion">
+            <span class="numero">06 — REFLEXIÓN</span>
+            <h2>Aprendizajes del proyecto</h2>
+
+            <p>
+                Este análisis me permitió practicar la observación
+                de un proceso de trabajo, identificar situaciones
+                que podían generar demoras y evaluar distintas
+                alternativas antes de proponer una mejora.
+            </p>
+
+            <p>
+                También me permitió relacionar conceptos de mejora
+                continua y metodologías ágiles con una situación
+                de mi entorno laboral.
+            </p>
+
+            <p>
+                Las propuestas planteadas representan oportunidades
+                de mejora que deberían evaluarse y validarse mediante
+                una prueba en el proceso real.
+            </p>
+        </section>
+
+        <a href="index.html#proyectos" class="boton">
+            Volver a mis proyectos
+        </a>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Gonzalo Godoy | Portfolio Profesional</p>
+    </footer>
+
+</body>
+</html>
