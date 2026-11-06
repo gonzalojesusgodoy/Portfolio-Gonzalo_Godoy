@@ -4,10 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Portfolio profesional de Gonzalo Godoy. Estudiante de Programación en UTN FRBA.">
+
     <title>Gonzalo Godoy | Portfolio</title>
 
+    <!-- Tipografía Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+
+        /* ESTILOS GENERALES */
+
         * {
             margin: 0;
             padding: 0;
@@ -15,186 +25,225 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
             color: #1e293b;
             line-height: 1.6;
         }
 
+        /* ENCABEZADO */
+
         header {
-            background-color: white;
-            padding: 22px 8%;
+            padding: 22px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e2e8f0;
         }
 
-        header h2 {
-            font-size: 20px;
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #0f172a;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #2563eb;
         }
 
         nav a {
             color: #334155;
             text-decoration: none;
-            margin-left: 22px;
+            margin-left: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* PRESENTACIÓN PRINCIPAL */
+
         .hero {
-            padding: 100px 8%;
-            max-width: 1100px;
-            margin: auto;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 8%;
         }
 
         .hero h1 {
-            font-size: 46px;
+            font-size: 44px;
+            font-weight: 700;
+            color: #0f172a;
             margin-bottom: 12px;
         }
 
         .hero h2 {
-            font-size: 24px;
+            font-size: 21px;
+            font-weight: 500;
             color: #2563eb;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .hero p {
-            max-width: 680px;
+            max-width: 700px;
             color: #475569;
-            margin-bottom: 28px;
+            font-size: 16px;
+            margin-bottom: 12px;
         }
 
-        .button {
-            display: inline-block;
-            background-color: #2563eb;
-            color: white;
-            padding: 12px 22px;
-            border-radius: 7px;
-            text-decoration: none;
+        /* ICONOS DE CONTACTO */
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+            margin-top: 25px;
         }
 
-        section {
-            padding: 65px 8%;
+        .social-links a {
+            color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s, transform 0.2s;
         }
 
-        .projects {
-            background-color: white;
+        .social-links a:hover {
+            color: #2563eb;
+            transform: translateY(-3px);
         }
 
-        .project-card {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 22px;
-            max-width: 850px;
+        .social-links svg {
+            width: 25px;
+            height: 25px;
+            fill: currentColor;
         }
 
-        .project-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            color: #475569;
-            margin-bottom: 15px;
-        }
+        /* PIE DE PÁGINA */
 
         footer {
-            padding: 30px 8%;
-            background-color: #0f172a;
-            color: white;
             text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
         }
 
-        footer a {
-            color: #93c5fd;
+        /* ADAPTACIÓN A CELULARES */
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
         }
+
     </style>
 </head>
 
 <body>
 
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+
     <header>
-        <h2>Gonzalo Godoy</h2>
+
+        <a href="index.html" class="logo">GG<span>.</span></a>
 
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#contacto">Contacto</a>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
+
     </header>
 
+    <!-- PRESENTACIÓN -->
+
     <main>
+
         <section class="hero" id="inicio">
+
             <h1>Hola, soy Gonzalo Godoy 👋</h1>
 
             <h2>Estudiante de Programación | Perfil IT</h2>
-<p>
-        Actualmente estudio la Tecnicatura Universitaria en Programación
-        en la UTN FRBA y me encuentro en constante formación, incorporando
-        conocimientos y herramientas relacionadas con la tecnología.
-    </p>
 
-    <p>
-        Me interesa la resolución de problemas, el análisis y la mejora
-        continua. Busco mi primera oportunidad en el sector IT para poner
-        en práctica mis conocimientos, adquirir experiencia y seguir
-        creciendo profesionalmente.
-    </p>
-            
-            <a href="#proyectos" class="button">Ver mis proyectos</a>
-        </section>
-
-        <section class="projects" id="proyectos">
-            <h2>Proyectos destacados</h2>
-
-            <article class="project-card">
-                <h3>Ford | Análisis y mejora de procesos</h3>
-                <p>
-                    Análisis de situaciones observadas en un proceso
-                    productivo, identificación de oportunidades de
-                    mejora y elaboración de propuestas.
-                </p>
-                <a href="proyecto-ford.html">Ver caso de estudio</a>
-            </article>
-
-            <article class="project-card">
-                <h3>Coderhouse | Metodologías ágiles</h3>
-                <p>
-                    Práctica académica de Scrum y Kanban para organizar
-                    tareas, visualizar el flujo de trabajo y analizar
-                    oportunidades de mejora.
-                </p>
-                <a href="proyecto-coderhouse.html">Ver caso de estudio</a>
-            </article>
-        </section>
-
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
             <p>
-                Me interesa la tecnología, la calidad del software
-                y la mejora continua. Me motiva aprender, analizar
-                problemas y trabajar de manera organizada y colaborativa.
+                Estudiante de la Tecnicatura Universitaria en Programación
+                (UTN FRBA), con formación en Testing QA, herramientas
+                digitales y metodologías ágiles. Busco mi primera oportunidad
+                profesional en IT, donde pueda aplicar mis conocimientos,
+                adquirir experiencia y continuar desarrollándome.
             </p>
-        </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Podés conocer más sobre mi perfil y contactarme:</p>
-            <p>
-                <a href="https://www.linkedin.com/" target="_blank">
-                    LinkedIn
+            <!-- REDES Y CONTACTO -->
+
+            <div class="social-links">
+
+                <!-- LinkedIn -->
+                <a href="https://bit.ly/9Gjgodoy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM8.08 18.5H5.02V9.65h3.06v8.85ZM6.55 8.44a1.78 1.78 0 1 1 0-3.56 1.78 1.78 0 0 1 0 3.56ZM19 18.5h-3.05v-4.3c0-1.03-.02-2.35-1.43-2.35-1.44 0-1.66 1.12-1.66 2.28v4.37H9.81V9.65h2.93v1.21h.04c.41-.7 1.4-1.43 2.88-1.43 3.08 0 3.64 2.02 3.64 4.65v4.42Z"/>
+                    </svg>
+
                 </a>
-            </p>
-            <p>
-                <a href="mailto:gonzalojgodoy2005@gmail.com">Enviar un email</a>
-            </p>
-            <p>CV: próximamente incorporaremos el archivo descargable.</p>
+
+                <!-- Gmail -->
+                <a href="mailto:gonzalojgodoy2005@gmail.com" aria-label="Enviar email">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+                    </svg>
+
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5491153354415" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12.04 2a9.8 9.8 0 0 0-8.48 14.72L2.2 22l5.42-1.42A9.9 9.9 0 1 0 12.04 2Zm0 17.94a8.08 8.08 0 0 1-4.12-1.13l-.3-.18-3.22.84.86-3.14-.2-.32a8.05 8.05 0 1 1 6.98 3.93Zm4.42-6.04c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.5.58.18 1.1.15 1.52.09.46-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/>
+                    </svg>
+
+                </a>
+
+            </div>
+
         </section>
+
     </main>
 
     <footer>
-        <p>© 2026 Gonzalo Godoy | Portfolio Profesional</p>
+        <p>© 2026 Gonzalo Godoy | Portfolio</p>
     </footer>
 
 </body>
