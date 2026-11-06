@@ -1,17 +1,21 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Gonzalo Godoy | Portfolio</title>
 
     <!-- Tipografía Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+
         /* ESTILOS GENERALES */
 
         * {
@@ -54,22 +58,51 @@
         }
 
         nav a {
+            position: relative;
             text-decoration: none;
             color: #172b3a;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
+            padding: 8px 0;
             transition: color 0.2s;
+        }
+
+        /* Línea inferior del menú */
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #08718c;
+            transition: width 0.2s;
         }
 
         nav a:hover {
             color: #08718c;
         }
 
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* PÁGINA ACTIVA */
+
+        nav a.activo {
+            color: #08718c;
+        }
+
+        nav a.activo::after {
+            width: 100%;
+        }
+
         /* PRESENTACIÓN PRINCIPAL */
 
         .presentacion {
             min-height: 650px;
-            padding: 100px 20px 80px;
+            padding: 80px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -78,25 +111,25 @@
         }
 
         .presentacion h1 {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 800;
             color: #102a43;
             margin-bottom: 12px;
         }
 
         .presentacion h2 {
-            font-size: 34px;
+            font-size: 28px;
             font-weight: 700;
             color: #08718c;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
         .presentacion p {
             max-width: 850px;
-            font-size: 21px;
+            font-size: 18px;
             line-height: 1.6;
             color: #3e4c59;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         /* REDES Y CONTACTO */
@@ -157,23 +190,25 @@
             }
 
             .presentacion {
-                padding: 80px 20px;
+                padding: 70px 20px;
                 min-height: auto;
             }
 
             .presentacion h1 {
-                font-size: 34px;
+                font-size: 32px;
             }
 
             .presentacion h2 {
-                font-size: 24px;
+                font-size: 23px;
             }
 
             .presentacion p {
-                font-size: 17px;
+                font-size: 16px;
             }
         }
+
     </style>
+
 </head>
 
 <body>
@@ -185,7 +220,7 @@
         <a href="index.html" class="logo">GG<span>.</span></a>
 
         <nav>
-            <a href="index.html">Inicio</a>
+            <a href="index.html" class="activo">Inicio</a>
             <a href="sobre-mi.html">Sobre mí</a>
             <a href="proyectos.html">Proyectos</a>
             <a href="contacto.html">Contacto</a>
@@ -228,7 +263,7 @@
 
                 </a>
 
-                <!-- CORREO ELECTRÓNICO -->
+                <!-- CORREO -->
 
                 <a href="mailto:gonzalojgodoy2005@gmail.com"
                    aria-label="Enviar correo">
@@ -265,4 +300,5 @@
     </footer>
 
 </body>
+
 </html>
