@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre mí | Gonzalo Godoy</title>
+
+    <!-- Tipografía Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* ESTILOS GENERALES */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #172b3a;
+        }
+
+        /* ENCABEZADO Y NAVEGACIÓN */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #102a43;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #08718c;
+        }
+
+        nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            position: relative;
+            text-decoration: none;
+            color: #172b3a;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 0;
+            transition: color 0.2s;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #08718c;
+            transition: width 0.2s;
+        }
+
+        nav a:hover {
+            color: #08718c;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a.activo {
+            color: #08718c;
+        }
+
+        nav a.activo::after {
+            width: 100%;
+        }
+
+        /* SECCIÓN SOBRE MÍ */
+
+        .sobre-mi {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 65px 30px 80px;
+        }
+
+        .sobre-mi h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #102a43;
+            margin-bottom: 35px;
+        }
+
+        .contenido {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+        /* ESPACIO PARA LA FOTOGRAFÍA */
+
+        .foto {
+            width: 100%;
+            height: 450px;
+            background-color: #f1f5f9;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* TEXTO */
+
+        .texto h2 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #08718c;
+            margin-bottom: 12px;
+        }
+
+        .texto p {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #3e4c59;
+            margin-bottom: 25px;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* ADAPTACIÓN A CELULARES */
+
+        @media (max-width: 768px) {
+
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .sobre-mi {
+                padding: 45px 20px;
+            }
+
+            .sobre-mi h1 {
+                font-size: 32px;
+            }
+
+            .contenido {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .foto {
+                max-width: 350px;
+                height: 400px;
+                margin: 0 auto;
+            }
+
+            .texto h2 {
+                font-size: 19px;
+            }
+
+            .texto p {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <a href="index.html" class="logo">GG<span>.</span></a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html" class="activo">Sobre mí</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO SOBRE MÍ -->
+
+    <main>
+
+        <section class="sobre-mi">
+
+            <h1>Sobre mí</h1>
+
+            <div class="contenido">
+
+                <!-- FOTOGRAFÍA -->
+
+                <div class="foto">
+                    Espacio reservado para mi fotografía
+                </div>
+
+                <!-- DESCRIPCIÓN PERSONAL -->
+
+                <div class="texto">
+
+                    <p>
+                        Soy estudiante de la <strong>Tecnicatura Universitaria en Programación de la UTN FRBA</strong>,
+                        con interés en la tecnología y en seguir desarrollándome profesionalmente dentro del sector IT.
+                        Actualmente me encuentro fortaleciendo mi formación técnica y adquiriendo conocimientos en
+                        distintas áreas, con el objetivo de dar mis primeros pasos en la industria.
+                    </p>
+
+                    <p>
+                        A lo largo de mi formación complementaria, fui explorando diferentes áreas del ecosistema
+                        digital, como el análisis de datos, el testing de software, el diseño UX/UI y las metodologías
+                        ágiles. Lejos de ser caminos separados, considero que conocer estas distintas perspectivas
+                        me permite comprender mejor el proceso de desarrollo de un producto digital y tener una
+                        visión más amplia a la hora de colaborar en equipo.
+                    </p>
+
+                    <h2>Análisis de Datos</h2>
+
+                    <p>
+                        En Análisis de Datos, adquirí conocimientos sobre organización, limpieza y visualización
+                        de información, utilizando herramientas como Excel, Tableau y Power BI para facilitar
+                        su interpretación y análisis.
+                    </p>
+
+                    <h2>Testing de Software (QA)</h2>
+
+                    <p>
+                        También me formé en Testing de Software (QA), incorporando conceptos de pruebas manuales
+                        y exploratorias, pruebas de rendimiento, diseño de casos de prueba y reporte de errores.
+                        Estos conocimientos me permitieron comprender la importancia de validar el funcionamiento
+                        de las aplicaciones y contribuir a mejorar su calidad.
+                    </p>
+
+                    <h2>Diseño UX/UI y metodologías ágiles</h2>
+
+                    <p>
+                        Por otro lado, el acercamiento al Diseño UX/UI me permitió conocer cómo se estructuran
+                        las interfaces digitales y comprender la importancia de la experiencia del usuario.
+                        Asimismo, la formación en metodologías ágiles, como Scrum y Kanban, me ayudó a entender
+                        diferentes marcos de trabajo, la organización de tareas y la colaboración dentro de los equipos.
+                    </p>
+
+                    <h2>Formación y habilidades personales</h2>
+
+                    <p>
+                        Además, completé programas de formación como Forge y Empujar, que me permitieron
+                        fortalecer mis habilidades socioemocionales, reconocer mis fortalezas y desarrollar
+                        herramientas para afrontar los desafíos del ámbito laboral.
+                    </p>
+
+                    <p>
+                        Busco mi <strong>primera oportunidad profesional en IT</strong>, donde pueda integrar
+                        los conocimientos adquiridos, aportar compromiso, capacidad de aprendizaje y una mirada
+                        analítica, mientras continúo desarrollándome y sumando experiencia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+        © 2026 Gonzalo Godoy | Portfolio
+    </footer>
+
+</body>
+
+</html>
