@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,17 +17,17 @@
             box-sizing: border-box;
         }
 
-        html {
-            min-height: 100%;
+        html, body {
+            height: 100%; /* Forzamos a que el documento ocupe exactamente la pantalla */
         }
 
         body {
             font-family: 'Inter', sans-serif;
             color: #172b3a;
             background-color: #ffffff;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow: hidden; /* Elimina barras de scroll en computadoras */
         }
 
         /* ENCABEZADO */
@@ -81,35 +80,36 @@
         /* PRESENTACIÓN CENTRAL */
 
         .presentacion {
-            flex: 8;
+            flex: 1; /* Ocupa todo el espacio dinámico disponible entre el header y el final */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Centrado perfecto vertical */
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto; /* Centrado perfecto horizontal */
         }
 
         .presentacion h1 {
             font-size: 40px;
             font-weight: 800;
             color: #102a43;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .presentacion h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             color: #16839a;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .presentacion p {
-            max-width: 850px;
             font-size: 18px;
-            line-height: 1.7;
+            line-height: 1.6;
             color: #52616f;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         /* ICONOS DE CONTACTO */
@@ -119,6 +119,7 @@
             justify-content: center;
             align-items: center;
             gap: 25px;
+            padding-bottom: 10px; /* Espacio de seguridad inferior */
         }
 
         .redes a {
@@ -135,26 +136,17 @@
         }
 
         .redes svg {
-            width: 23px;
-            height: 23px;
+            width: 26px; /* Ajustamos levemente el tamaño para mejor clicabilidad */
+            height: 26px;
             fill: currentColor;
         }
 
-        /* PIE DE PÁGINA */
-
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 20px;
-            color: #52616f;
-            font-size: 14px;
-            flex-shrink: 0;
-            margin-top: auto;
-        }
-
-        /* DISEÑO PARA CELULARES */
+        /* DISEÑO PARA CELULARES Y PANTALLAS PEQUEÑAS */
 
         @media (max-width: 768px) {
+            body {
+                overflow: auto; /* Permite scroll en móviles para evitar que se corte el contenido */
+            }
 
             header {
                 flex-direction: column;
@@ -173,7 +165,8 @@
             }
 
             .presentacion {
-                padding: 50px 20px;
+                padding: 40px 20px;
+                justify-content: flex-start; /* Alineación superior fluida en móviles */
             }
 
             .presentacion h1 {
@@ -182,20 +175,17 @@
 
             .presentacion h2 {
                 font-size: 21px;
+                margin-bottom: 20px;
             }
 
             .presentacion p {
                 font-size: 16px;
                 line-height: 1.6;
-            }
-
-            footer {
-                font-size: 13px;
+                margin-bottom: 25px;
             }
         }
 
         @media (max-width: 400px) {
-
             nav {
                 gap: 13px;
             }
@@ -283,11 +273,6 @@
         </div>
 
     </main>
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        © 2026 Gonzalo Godoy | Portfolio
-    </footer>
 
 </body>
 </html>
