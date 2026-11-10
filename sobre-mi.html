@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,11 +8,10 @@
 
     <title>Sobre mí | Gonzalo Godoy</title>
 
-    <!-- Tipografía Inter -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
 
@@ -29,20 +29,20 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
             color: #172b3a;
+            background-color: #ffffff;
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* Evita el scroll vertical en computadoras */
+            overflow: hidden;
         }
 
-        /* ENCABEZADO Y NAVEGACIÓN (Restaurado y asegurado a los extremos) */
+        /* ENCABEZADO - IGUAL A INICIO */
 
         header {
             width: 100%;
             padding: 25px 7%;
             display: flex;
-            justify-content: space-between; /* Mantiene GG a la izquierda y menú a la derecha */
+            justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e5e7eb;
             flex-shrink: 0;
@@ -56,52 +56,34 @@
         }
 
         .logo span {
-            color: #08718c;
+            color: #16839a;
         }
 
         nav {
             display: flex;
+            align-items: center;
             gap: 35px;
         }
 
         nav a {
-            position: relative;
             text-decoration: none;
             color: #172b3a;
             font-size: 16px;
             font-weight: 600;
-            padding: 8px 0;
-            transition: color 0.2s;
-        }
-
-        nav a::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: #08718c;
-            transition: width 0.2s;
+            padding-bottom: 7px;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
-            color: #08718c;
-        }
-
-        nav a:hover::after {
-            width: 100%;
+            color: #16839a;
         }
 
         nav a.activo {
-            color: #08718c;
+            color: #16839a;
+            border-bottom: 3px solid #16839a;
         }
 
-        nav a.activo::after {
-            width: 100%;
-        }
-
-        /* CONTENIDO SOBRE MÍ (Ajustado para contener textos grandes) */
+        /* CONTENIDO SOBRE MÍ */
 
         main {
             flex: 1;
@@ -109,6 +91,7 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            min-height: 0;
         }
 
         .sobre-mi {
@@ -119,8 +102,8 @@
 
         .contenido {
             display: grid;
-            grid-template-columns: 300px 1fr; /* Columna de la foto ligeramente más compacta */
-            gap: 60px; /* Buen espacio de separación */
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
             align-items: center;
         }
 
@@ -136,7 +119,7 @@
 
         .foto {
             width: 100%;
-            height: 380px; /* Altura optimizada para compensar el tamaño de las letras */
+            height: 380px;
             object-fit: cover;
             object-position: center;
             display: block;
@@ -144,40 +127,46 @@
             border-radius: 6px;
         }
 
-        /* COLUMNA DEL TEXTO (¡Letras grandes recuperadas!) */
+        /* COLUMNA DEL TEXTO */
 
         .texto {
-            padding-top: 0;
+            padding: 0;
         }
 
         .texto p {
-            font-size: 16px; /* Volvió a tus 16px originales para que se vea imponente */
-            line-height: 1.6;
+            font-size: 16px;
+            line-height: normal;
             color: #3e4c59;
-            margin-bottom: 14px; /* Separación equilibrada */
+            margin-bottom: 14px;
         }
 
         .texto p:last-child {
             margin-bottom: 0;
         }
 
-        .texto strong {
-            font-weight: 700;
-            color: #172b3a;
+        /* PIE DE PÁGINA */
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            color: #52616f;
+            font-size: 14px;
+            flex-shrink: 0;
         }
 
-        /* ADAPTACIÓN A CELULARES */
+        /* DISEÑO PARA CELULARES */
 
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
 
             body {
-                overflow: auto; /* Activa el scroll solo en celulares */
+                overflow: auto;
             }
 
             header {
-                padding: 20px;
                 flex-direction: column;
                 gap: 20px;
+                padding: 20px;
             }
 
             nav {
@@ -190,8 +179,8 @@
                 font-size: 14px;
             }
 
-            .sobre-mi {
-                padding: 15px 0;
+            main {
+                padding: 40px 20px;
             }
 
             .contenido {
@@ -201,6 +190,7 @@
 
             .columna-foto {
                 max-width: 300px;
+                width: 100%;
                 margin: 0 auto;
             }
 
@@ -214,9 +204,24 @@
 
             .texto p {
                 font-size: 15px;
-                margin-bottom: 16px;
+                line-height: normal;
+                margin-bottom: 14px;
             }
 
+            footer {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            nav {
+                gap: 13px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
         }
 
     </style>
@@ -254,7 +259,11 @@
 
                     <h1>SOBRE MÍ</h1>
 
-                    <img src="foto.jpg" alt="Fotografía de Gonzalo Godoy" class="foto">
+                    <img
+                        src="foto.jpg"
+                        alt="Fotografía de Gonzalo Godoy"
+                        class="foto"
+                    >
 
                 </div>
 
@@ -263,14 +272,13 @@
                 <div class="texto">
 
                     <p>
-                        Soy estudiante de la <strong>Tecnicatura Universitaria en Programación de la UTN FRBA</strong>,
+                        Soy estudiante de la Tecnicatura Universitaria en Programación de la UTN FRBA,
                         con interés en la tecnología y en desarrollarme profesionalmente dentro del sector IT.
                     </p>
 
                     <p>
                         A lo largo de mi formación complementaria, fui explorando diferentes áreas del ecosistema digital,
-                        como el <strong>Análisis de Datos</strong>, el <strong>Testing de Software (QA)</strong>,
-                        el <strong>Diseño UX/UI</strong> y las <strong>metodologías ágiles</strong>.
+                        como el Análisis de Datos, el Testing de Software (QA), el Diseño UX/UI y las metodologías ágiles.
                         Considero que conocer estas distintas perspectivas me permite comprender mejor el proceso
                         de desarrollo de un producto digital y tener una visión más amplia a la hora de colaborar en equipo.
                     </p>
@@ -281,12 +289,12 @@
                     </p>
 
                     <p>
-                        Además, completé programas de formación como <strong>Forge y Empujar</strong>,
+                        Además, completé programas de formación como Forge y Empujar,
                         donde fortalecí mis habilidades socioemocionales y el trabajo en equipo.
                     </p>
 
                     <p>
-                        Busco mi <strong>primera oportunidad profesional en IT</strong>, donde pueda aportar compromiso,
+                        Busco mi primera oportunidad profesional en IT, donde pueda aportar compromiso,
                         capacidad de aprendizaje y una mirada analítica, aplicar mis conocimientos y continuar desarrollándome.
                     </p>
 
