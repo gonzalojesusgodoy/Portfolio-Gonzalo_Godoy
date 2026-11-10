@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,10 +23,17 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
             color: #172b3a;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Elimina el scroll vertical en computadoras */
         }
 
         /* ENCABEZADO Y NAVEGACIÓN */
@@ -39,6 +45,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e5e7eb;
+            flex-shrink: 0;
         }
 
         .logo {
@@ -96,17 +103,25 @@
 
         /* CONTENIDO SOBRE MÍ */
 
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .sobre-mi {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
-            padding: 35px 30px 20px;
+            padding: 20px 30px;
         }
 
         .contenido {
             display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 55px;
-            align-items: stretch;
+            grid-template-columns: 320px 1fr; /* Reducido levemente el ancho de columna de foto */
+            gap: 45px; /* Ajustado el espacio entre columnas */
+            align-items: center;
         }
 
         /* COLUMNA DE LA FOTOGRAFÍA */
@@ -116,29 +131,34 @@
             font-weight: 800;
             letter-spacing: 4px;
             color: #102a43;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .foto {
             width: 100%;
-            height: 470px;
+            height: 400px; /* Reducida la altura fija para pantallas medianas/grandes estándar */
             object-fit: cover;
             object-position: center;
             display: block;
             background-color: #e5e7eb;
+            border-radius: 6px;
         }
 
         /* COLUMNA DEL TEXTO */
 
         .texto {
-            padding-top: 5px;
+            padding-top: 0;
         }
 
         .texto p {
-            font-size: 16px;
+            font-size: 15px; /* Un punto menos para que fluya perfecto sin scroll */
             line-height: 1.6;
             color: #3e4c59;
-            margin-bottom: 16px;
+            margin-bottom: 12px; /* Espaciado de párrafos optimizado */
+        }
+
+        .texto p:last-child {
+            margin-bottom: 0;
         }
 
         .texto strong {
@@ -146,18 +166,13 @@
             color: #172b3a;
         }
 
-        /* PIE DE PÁGINA */
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            color: #64748b;
-            font-size: 13px;
-        }
-
         /* ADAPTACIÓN A CELULARES */
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+
+            body {
+                overflow: auto; /* El scroll solo vuelve si entran desde pantallas chicas */
+            }
 
             header {
                 padding: 20px;
@@ -185,11 +200,16 @@
             }
 
             .columna-foto {
-                max-width: 350px;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .columna-foto h1 {
+                text-align: center;
             }
 
             .foto {
-                height: 400px;
+                height: 380px;
             }
 
             .texto p {
@@ -278,12 +298,6 @@
         </section>
 
     </main>
-
-    <!-- PIE DE PÁGINA -->
-
-    <footer>
-        © 2026 Gonzalo Godoy | Portfolio
-    </footer>
 
 </body>
 
