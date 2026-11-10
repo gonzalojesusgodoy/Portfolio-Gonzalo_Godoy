@@ -8,10 +8,10 @@
     <title>Sobre mí | Gonzalo Godoy</title>
 
     <!-- Tipografía Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
 
@@ -33,16 +33,16 @@
             color: #172b3a;
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* Elimina el scroll vertical en computadoras */
+            overflow: hidden; /* Evita el scroll vertical en computadoras */
         }
 
-        /* ENCABEZADO Y NAVEGACIÓN */
+        /* ENCABEZADO Y NAVEGACIÓN (Restaurado y asegurado a los extremos) */
 
         header {
             width: 100%;
             padding: 25px 7%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Mantiene GG a la izquierda y menú a la derecha */
             align-items: center;
             border-bottom: 1px solid #e5e7eb;
             flex-shrink: 0;
@@ -101,26 +101,26 @@
             width: 100%;
         }
 
-        /* CONTENIDO SOBRE MÍ */
+        /* CONTENIDO SOBRE MÍ (Ajustado para contener textos grandes) */
 
         main {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
 
         .sobre-mi {
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
-            padding: 20px 30px;
         }
 
         .contenido {
             display: grid;
-            grid-template-columns: 320px 1fr; /* Reducido levemente el ancho de columna de foto */
-            gap: 45px; /* Ajustado el espacio entre columnas */
+            grid-template-columns: 300px 1fr; /* Columna de la foto ligeramente más compacta */
+            gap: 60px; /* Buen espacio de separación */
             align-items: center;
         }
 
@@ -136,7 +136,7 @@
 
         .foto {
             width: 100%;
-            height: 400px; /* Reducida la altura fija para pantallas medianas/grandes estándar */
+            height: 380px; /* Altura optimizada para compensar el tamaño de las letras */
             object-fit: cover;
             object-position: center;
             display: block;
@@ -144,17 +144,17 @@
             border-radius: 6px;
         }
 
-        /* COLUMNA DEL TEXTO */
+        /* COLUMNA DEL TEXTO (¡Letras grandes recuperadas!) */
 
         .texto {
             padding-top: 0;
         }
 
         .texto p {
-            font-size: 15px; /* Un punto menos para que fluya perfecto sin scroll */
+            font-size: 16px; /* Volvió a tus 16px originales para que se vea imponente */
             line-height: 1.6;
             color: #3e4c59;
-            margin-bottom: 12px; /* Espaciado de párrafos optimizado */
+            margin-bottom: 14px; /* Separación equilibrada */
         }
 
         .texto p:last-child {
@@ -171,7 +171,7 @@
         @media (max-width: 900px) {
 
             body {
-                overflow: auto; /* El scroll solo vuelve si entran desde pantallas chicas */
+                overflow: auto; /* Activa el scroll solo en celulares */
             }
 
             header {
@@ -191,7 +191,7 @@
             }
 
             .sobre-mi {
-                padding: 35px 20px;
+                padding: 15px 0;
             }
 
             .contenido {
@@ -200,7 +200,7 @@
             }
 
             .columna-foto {
-                max-width: 320px;
+                max-width: 300px;
                 margin: 0 auto;
             }
 
@@ -209,12 +209,11 @@
             }
 
             .foto {
-                height: 380px;
+                height: 350px;
             }
 
             .texto p {
                 font-size: 15px;
-                line-height: 1.6;
                 margin-bottom: 16px;
             }
 
