@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-commerce Simulation | Gonzalo Godoy</title>
+
+    <!-- Fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* ESTILOS GENERALES */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #172b3a;
+            background-color: #ffffff;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #102a43;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #16839a;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172b3a;
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 7px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #16839a;
+        }
+
+        nav a.activo {
+            color: #16839a;
+            border-bottom: 3px solid #16839a;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1100px;
+            width: 86%;
+            margin: 0 auto;
+            padding: 65px 0;
+        }
+
+        .volver {
+            display: inline-block;
+            text-decoration: none;
+            color: #16839a;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+
+        .volver:hover {
+            color: #102a43;
+        }
+
+        .categoria {
+            color: #16839a;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            color: #102a43;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .introduccion {
+            max-width: 850px;
+            color: #52616f;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 45px;
+        }
+
+        /* INFORMACIÓN DEL PROYECTO */
+
+        .bloque {
+            margin-bottom: 38px;
+        }
+
+        .bloque h2 {
+            color: #102a43;
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .bloque p {
+            color: #3e4c59;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .bloque ul {
+            padding-left: 22px;
+            color: #3e4c59;
+        }
+
+        .bloque li {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 5px;
+        }
+
+        /* DATOS DEL PROYECTO */
+
+        .datos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+
+        .dato {
+            background-color: #f7f9fb;
+            padding: 22px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+        }
+
+        .dato h3 {
+            color: #16839a;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .dato p {
+            color: #172b3a;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* HERRAMIENTAS */
+
+        .herramientas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .herramientas span {
+            background-color: #eef5f7;
+            color: #176477;
+            padding: 9px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* DOCUMENTACIÓN */
+
+        .documentacion {
+            background-color: #f7f9fb;
+            padding: 25px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .documentacion ul {
+            padding-left: 20px;
+        }
+
+        /* ENLACES FINALES */
+
+        .enlaces {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            margin-top: 45px;
+        }
+
+        .boton {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #102a43;
+            color: #ffffff;
+            padding: 13px 22px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .boton:hover {
+            background-color: #16839a;
+        }
+
+        .volver-final {
+            color: #16839a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* DISEÑO RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                width: 90%;
+                padding: 40px 0;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .introduccion {
+                font-size: 16px;
+            }
+
+            .datos {
+                grid-template-columns: 1fr;
+            }
+
+            .bloque h2 {
+                font-size: 19px;
+            }
+
+            .bloque p,
+            .bloque li {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <a href="index.html" class="logo">GG<span>.</span></a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="proyectos.html" class="activo">Proyectos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main>
+
+        <a href="proyectos.html" class="volver">← Volver a Proyectos</a>
+
+        <p class="categoria">Testing de Software · QA Manual</p>
+
+        <h1>E-commerce Simulation</h1>
+
+        <p class="introduccion">
+            Proyecto práctico de Software Testing enfocado en la evaluación funcional
+            del módulo de registro de usuarios (Sign-Up) de una aplicación web.
+            Se trabajó con diseño y ejecución de casos de prueba, técnicas de caja negra,
+            testing exploratorio y documentación de defectos.
+        </p>
+
+        <!-- DATOS GENERALES -->
+
+        <section class="datos">
+
+            <div class="dato">
+                <h3>MÓDULO EVALUADO</h3>
+                <p>Registro de usuarios (Sign-Up)</p>
+            </div>
+
+            <div class="dato">
+                <h3>ENFOQUE</h3>
+                <p>Testing de caja negra</p>
+            </div>
+
+            <div class="dato">
+                <h3>TIPOS DE PRUEBAS</h3>
+                <p>Funcionales, negativas, de límites y exploratorias</p>
+            </div>
+
+        </section>
+
+        <!-- OBJETIVO -->
+
+        <section class="bloque">
+
+            <h2>Objetivo del proyecto</h2>
+
+            <p>
+                Evaluar el funcionamiento del formulario de registro, prestando
+                especial atención a las validaciones de entrada, el manejo de errores
+                y el comportamiento del sistema ante diferentes escenarios.
+            </p>
+
+            <p>
+                El análisis buscó identificar posibles defectos funcionales y aspectos
+                de usabilidad que puedan afectar la experiencia del usuario.
+            </p>
+
+        </section>
+
+        <!-- ALCANCE -->
+
+        <section class="bloque">
+
+            <h2>Alcance y escenarios evaluados</h2>
+
+            <ul>
+                <li>Validación de campos obligatorios y manejo de espacios en blanco.</li>
+                <li>Verificación del formato de correos electrónicos.</li>
+                <li>Evaluación de políticas de seguridad y longitud de contraseñas.</li>
+                <li>Comprobación de coincidencia entre contraseña y confirmación.</li>
+                <li>Pruebas con caracteres especiales y datos inválidos.</li>
+                <li>Intentos de registro con correos previamente registrados.</li>
+                <li>Evaluación de navegación mediante teclado y mensajes de error.</li>
+            </ul>
+
+        </section>
+
+        <!-- METODOLOGÍA -->
+
+        <section class="bloque">
+
+            <h2>Metodología de trabajo</h2>
+
+            <p>
+                El proceso de testing se organizó en diferentes etapas para mantener
+                una evaluación estructurada y documentada.
+            </p>
+
+            <ul>
+                <li><strong>Análisis de requisitos:</strong> identificación de criterios de aceptación y comportamientos esperados.</li>
+                <li><strong>Diseño de casos de prueba:</strong> definición de precondiciones, pasos, datos y resultados esperados.</li>
+                <li><strong>Ejecución:</strong> realización de pruebas y comparación de resultados.</li>
+                <li><strong>Gestión de defectos:</strong> registro de errores, severidad, prioridad y evidencias.</li>
+                <li><strong>Oportunidades de mejora:</strong> análisis de aspectos de usabilidad y experiencia de usuario.</li>
+            </ul>
+
+        </section>
+
+        <!-- TÉCNICAS -->
+
+        <section class="bloque">
+
+            <h2>Técnicas y herramientas</h2>
+
+            <p>
+                Para diseñar los escenarios y organizar las actividades se contemplaron
+                las siguientes técnicas y metodologías:
+            </p>
+
+            <div class="herramientas">
+                <span>Caja negra</span>
+                <span>Partición de equivalencia</span>
+                <span>Valores límite (BVA)</span>
+                <span>Testing exploratorio</span>
+                <span>SBTM</span>
+                <span>Chrome</span>
+                <span>Firefox</span>
+                <span>Markdown</span>
+            </div>
+
+        </section>
+
+        <!-- DOCUMENTACIÓN -->
+
+        <section class="bloque">
+
+            <h2>Documentación y entregables</h2>
+
+            <div class="documentacion">
+
+                <ul>
+                    <li>Plan de pruebas.</li>
+                    <li>Casos de prueba.</li>
+                    <li>Registro de testing exploratorio.</li>
+                    <li>Reportes de errores.</li>
+                    <li>Evidencias de los defectos identificados.</li>
+                    <li>Reporte de oportunidades de mejora.</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- APRENDIZAJES -->
+
+        <section class="bloque">
+
+            <h2>Aprendizajes</h2>
+
+            <p>
+                Esta práctica permitió profundizar en el diseño de pruebas funcionales,
+                la aplicación de técnicas de caja negra y la documentación de defectos.
+                También permitió trabajar en la diferenciación entre errores funcionales
+                y oportunidades de mejora relacionadas con la experiencia del usuario.
+            </p>
+
+            <p>
+                El proyecto reforzó la importancia de planificar las pruebas,
+                documentar los hallazgos con claridad y analizar el comportamiento
+                de una aplicación desde la perspectiva del usuario.
+            </p>
+
+        </section>
+
+        <!-- ENLACES -->
+
+        <div class="enlaces">
+
+            <a
+                href="https://github.com/gonzalojesusgodoy/Portfolio-Gonzalo_Godoy/tree/2f93cbfe414c63c9bc12dee6eff20d6fd0af9438/Proyectos%20Testing%20QA%20Manual/Proyecto%201%3A%20%22E-commerce%20Simulation%22%20"
+                target="_blank"
+                class="boton">
+                Ver documentación en GitHub
+            </a>
+
+            <a href="proyectos.html" class="volver-final">
+                ← Volver a Proyectos
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
