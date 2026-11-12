@@ -17,18 +17,17 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            height: 100%; /* Forzamos a que el documento ocupe exactamente la pantalla */
-        }
+       html {
+    overflow-y: scroll;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #172b3a;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden; /* Elimina barras de scroll en computadoras */
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    color: #172b3a;
+    background-color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
         /* ENCABEZADO */
 
