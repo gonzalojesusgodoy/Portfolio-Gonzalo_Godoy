@@ -21,7 +21,7 @@
         }
 
         html, body {
-            height: 100%; /* Forzamos a que el documento ocupe exactamente la pantalla */
+            min-height: 100%; 
         }
 
         body {
@@ -30,7 +30,8 @@
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
-            overflow: hidden; /* Elimina barras de scroll en computadoras */
+            overflow-x: hidden; /* Elimina barras de scroll en computadoras */
+            overflow-y: auto; /*seccion mdfica para el scroll*/
         }
 
         /* ENCABEZADO */
