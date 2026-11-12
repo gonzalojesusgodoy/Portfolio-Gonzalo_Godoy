@@ -19,9 +19,9 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        html, body {
-            min-height: 100%; 
+        /* RESERVA EL ESPACIO DEL SCROLL */
+html {
+    scrollbar-gutter: stable;
         }
 
         body {
@@ -31,7 +31,6 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden; /* Elimina barras de scroll en computadoras */
-            overflow-y: auto; /*seccion mdfica para el scroll*/
         }
 
         /* ENCABEZADO */
