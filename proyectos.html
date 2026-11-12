@@ -14,63 +14,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-
-        /* ESTILOS GENERALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         html, body {
-    height: 100%;
-}
+            height: 100%; /* Forzamos a que el documento ocupe exactamente la pantalla */
+        }
 
-body {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-        /* ENCABEZADO - IGUAL A INDEX.HTML */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #172b3a;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Elimina barras de scroll en computadoras */
+        }
 
-header {
-    width: 100%;
-    padding: 25px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e5e7eb;
-    flex-shrink: 0;
-}
+        /* ENCABEZADO */
 
-.logo {
-    font-size: 32px;
-    font-weight: 800;
-    color: #102a43;
-    text-decoration: none;
-}
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            flex-shrink: 0;
+        }
 
-.logo span {
-    color: #16839a;
-}
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #102a43;
+            text-decoration: none;
+        }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-}
+        .logo span {
+            color: #16839a;
+        }
 
-nav a {
-    text-decoration: none;
-    color: #172b3a;
-    font-size: 16px;
-    font-weight: 600;
-    padding-bottom: 7px;
-    transition: color 0.2s ease;
-}
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
 
-nav a:hover {
-    color: #16839a;
-}
+        nav a {
+            text-decoration: none;
+            color: #172b3a;
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 7px;
+            transition: color 0.2s ease;
+        }
 
-nav a.activo {
-    color: #16839a;
-    border-bottom: 3px solid #16839a;
+        nav a:hover {
+            color: #16839a;
+        }
+
+        nav a.activo {
+            color: #16839a;
+            border-bottom: 3px solid #16839a;
 }
 
         /* CONTENIDO PRINCIPAL */
