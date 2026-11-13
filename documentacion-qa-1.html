@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentación QA | E-commerce Simulation</title>
+    <title>Documentación | E-commerce Simulation</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
             background: #ffffff;
         }
 
-        /* NAVEGACIÓN */
+        /* HEADER: mismo diseño que las demás páginas */
 
         header {
             width: 100%;
@@ -32,6 +32,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e5e7eb;
+            flex-shrink: 0;
         }
 
         .logo {
@@ -57,178 +58,238 @@
             font-size: 16px;
             font-weight: 600;
             padding-bottom: 7px;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
             color: #16839a;
         }
 
-        /* CONTENIDO PRINCIPAL */
+        nav a.activo {
+            color: #16839a;
+            border-bottom: 3px solid #16839a;
+        }
+
+        /* CONTENIDO */
 
         main {
-            max-width: 1000px;
+            max-width: 1100px;
             width: 86%;
             margin: 0 auto;
-            padding: 55px 0 80px;
-        }
-
-        .volver {
-            display: inline-block;
-            color: #16839a;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .volver:hover {
-            text-decoration: underline;
+            padding: 60px 0 75px;
         }
 
         .categoria {
             color: #16839a;
             font-size: 13px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         h1 {
             color: #102a43;
-            font-size: 36px;
-            margin-bottom: 12px;
+            font-size: 38px;
+            margin-bottom: 18px;
         }
 
         .introduccion {
-            color: #52616f;
-            font-size: 16px;
+            color: #526474;
+            font-size: 17px;
             line-height: 1.7;
+            max-width: 850px;
             margin-bottom: 40px;
+        }
+
+        .separador {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 35px 0;
         }
 
         /* SECCIONES DESPLEGABLES */
 
-        .seccion {
-            border-top: 1px solid #e5e7eb;
+        .documento {
+            border: 1px solid #e1e7ec;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
         }
 
-        .seccion:last-of-type {
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .seccion summary {
+        .documento > summary {
             list-style: none;
             cursor: pointer;
+            padding: 22px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 15px;
-            padding: 23px 5px;
-        }
-
-        .seccion summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .titulo-seccion {
             color: #102a43;
             font-size: 18px;
             font-weight: 700;
+            background: #ffffff;
         }
 
-        .flecha {
+        .documento > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .documento > summary::after {
+            content: "+";
             color: #16839a;
-            font-size: 20px;
-            transition: transform 0.2s ease;
+            font-size: 25px;
+            font-weight: 400;
         }
 
-        .seccion[open] .flecha {
-            transform: rotate(180deg);
+        .documento[open] > summary::after {
+            content: "−";
         }
 
-        .contenido {
-            padding: 0 5px 28px;
-            color: #3e4c59;
+        .documento > summary:hover {
+            background: #f8fafc;
+        }
+
+        .contenido-documento {
+            padding: 5px 25px 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        h2 {
+            color: #102a43;
+            font-size: 22px;
+            margin: 28px 0 15px;
+        }
+
+        h3 {
+            color: #102a43;
+            font-size: 17px;
+            margin: 24px 0 12px;
+        }
+
+        p {
+            color: #435466;
             font-size: 15px;
             line-height: 1.7;
+            margin-bottom: 13px;
         }
 
-        .contenido p {
-            margin-bottom: 15px;
+        ul, ol {
+            padding-left: 23px;
+            margin: 10px 0 20px;
+            color: #435466;
         }
 
-        .contenido ul {
-            padding-left: 22px;
-            margin-bottom: 15px;
-        }
-
-        .contenido li {
+        li {
+            font-size: 15px;
+            line-height: 1.7;
             margin-bottom: 7px;
         }
 
         /* TABLAS */
 
         .tabla-contenedor {
+            width: 100%;
             overflow-x: auto;
-            margin-top: 18px;
+            margin: 18px 0 28px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px;
-        }
-
-        th, td {
-            padding: 13px;
-            text-align: left;
-            border-bottom: 1px solid #e5e7eb;
+            min-width: 750px;
+            font-size: 13px;
         }
 
         th {
+            background: #edf4f7;
             color: #102a43;
-            background: #f1f5f8;
             font-weight: 700;
+            text-align: left;
         }
 
-        /* EVIDENCIAS DESPLEGABLES */
+        th, td {
+            border: 1px solid #dce4e9;
+            padding: 12px;
+            vertical-align: top;
+            line-height: 1.6;
+        }
+
+        td {
+            color: #435466;
+        }
+
+        /* SUBSECCIONES DE EVIDENCIAS */
 
         .evidencia {
-            margin-top: 18px;
-            border: 1px solid #e5e7eb;
+            border: 1px solid #dce4e9;
             border-radius: 6px;
-            padding: 15px;
+            margin: 14px 0;
+            overflow: hidden;
         }
 
         .evidencia summary {
+            list-style: none;
             cursor: pointer;
+            padding: 14px 18px;
             color: #16839a;
             font-size: 14px;
             font-weight: 600;
+            background: #f8fafc;
         }
 
-        .imagen-evidencia {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin-top: 15px;
-            border-radius: 5px;
+        .evidencia summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .evidencia summary::after {
+            content: " +";
+            float: right;
+            font-size: 18px;
+        }
+
+        .evidencia[open] summary::after {
+            content: " −";
+        }
+
+        .espacio-imagen {
+            min-height: 180px;
+            margin: 18px;
+            padding: 25px;
+            border: 2px dashed #cbd5df;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: #fafcfd;
+            color: #8293a1;
+            font-size: 14px;
         }
 
         .nota {
             color: #718096;
             font-size: 13px;
-            margin-top: 10px;
+            font-style: italic;
         }
 
-        /* BOTONES PARA VOLVER */
+        /* VOLVER */
 
-        .final {
-            margin-top: 45px;
-            padding-top: 25px;
-            border-top: 1px solid #e5e7eb;
+        .volver {
+            display: inline-block;
+            margin-top: 35px;
+            color: #16839a;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            transition: color 0.2s ease;
         }
+
+        .volver:hover {
+            color: #102a43;
+        }
+
+        /* RESPONSIVE */
 
         @media (max-width: 768px) {
             header {
@@ -242,17 +303,26 @@
                 gap: 18px;
             }
 
+            nav a {
+                font-size: 14px;
+            }
+
             main {
                 width: 90%;
-                padding-top: 40px;
+                padding: 40px 0 55px;
             }
 
             h1 {
-                font-size: 29px;
+                font-size: 30px;
             }
 
-            .titulo-seccion {
+            .documento > summary {
                 font-size: 16px;
+                padding: 18px;
+            }
+
+            .contenido-documento {
+                padding: 5px 17px 25px;
             }
         }
     </style>
@@ -266,141 +336,671 @@
         <nav>
             <a href="index.html">Inicio</a>
             <a href="sobre-mi.html">Sobre mí</a>
-            <a href="proyectos.html">Proyectos</a>
+            <a href="proyectos.html" class="activo">Proyectos</a>
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
 
     <main>
 
-        <a href="proyecto-qa-1.html" class="volver">
-            ← Volver a E-commerce Simulation
-        </a>
-
-        <div class="categoria">Testing de Software · QA Manual</div>
+        <div class="categoria">TESTING QA · PROYECTO 01</div>
 
         <h1>Documentación del proyecto</h1>
 
         <p class="introduccion">
-            En esta sección se encuentra la documentación desarrollada
-            durante la evaluación funcional del módulo de registro de usuarios
-            (Sign-Up). Cada apartado permite consultar los detalles del
-            proceso de testing y sus respectivos resultados.
+            E-commerce Simulation. Documentación del trabajo realizado durante
+            las actividades de testing manual, incluyendo plan de pruebas,
+            casos de prueba, testing exploratorio, reportes de errores,
+            evidencias y oportunidades de mejora.
         </p>
 
         <!-- 01. PLAN DE PRUEBAS -->
 
-        <details class="seccion">
-            <summary>
-                <span class="titulo-seccion">01. Plan de pruebas</span>
-                <span class="flecha">⌄</span>
-            </summary>
+        <details class="documento">
+            <summary>01. Plan de pruebas</summary>
 
-            <div class="contenido">
+            <div class="contenido-documento">
+
+                <h2>Plan de pruebas</h2>
+
+                <h3>Objetivo</h3>
                 <p>
-                    Documentación de los objetivos, alcance, estrategia
-                    y criterios considerados para la evaluación.
+                    Evaluar la funcionalidad del proceso y gestión de compra
+                    de un producto, validando que el producto cumpla con las
+                    necesidades del cliente/usuario y reduciendo la probabilidad
+                    de defectos en el desarrollo.
                 </p>
 
-                <!-- Aquí incorporaremos el plan de pruebas real -->
+                <h3>Alcance</h3>
+                <p>
+                    Aseguramiento de calidad de un proyecto en desarrollo,
+                    validando funcionalidades específicas. Se contemplan
+                    aspectos funcionales, de usabilidad y rendimiento.
+                </p>
+
+                <h3>Equipo de trabajo</h3>
+                <p>
+                    Un tester junior, trabajando de manera remota desde Argentina.
+                </p>
+
+                <h3>Estrategia de pruebas</h3>
+                <ul>
+                    <li>Pruebas funcionales manuales.</li>
+                    <li>Pruebas no funcionales.</li>
+                    <li>Pruebas de usabilidad.</li>
+                    <li>Pruebas de rendimiento.</li>
+                    <li>Pruebas exploratorias en Sign-Up.</li>
+                </ul>
+
+                <h3>Criterios de prueba</h3>
+                <p>
+                    Requisitos funcionales y no funcionales relacionados con
+                    usabilidad, rendimiento, seguridad, accesibilidad,
+                    estabilidad y recuperación.
+                </p>
+
+                <h3>Entorno de pruebas</h3>
+                <ul>
+                    <li>Equipo: HP Notebook.</li>
+                    <li>Sistema operativo: Windows 10.</li>
+                    <li>Navegador: Google Chrome.</li>
+                </ul>
+
+                <h3>Entregables</h3>
+                <ul>
+                    <li>Plan de pruebas.</li>
+                    <li>Informe de estado.</li>
+                    <li>Reportes de defectos.</li>
+                    <li>Reportes de mejora.</li>
+                </ul>
+
+                <h3>Gestión de incidentes</h3>
+                <p>
+                    Documentar cada desviación detectada, incluyendo descripción,
+                    pasos para reproducirla, entorno, severidad y evidencia
+                    (capturas de pantalla o registros). La prioridad se determina
+                    según la severidad y el impacto.
+                </p>
+
+                <h3>Gestión de riesgos</h3>
+
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Riesgo</th>
+                                <th>Probabilidad</th>
+                                <th>Impacto</th>
+                                <th>Mitigación</th>
+                                <th>Contingencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Falta de tiempo para completar las pruebas.</td>
+                                <td>Media</td>
+                                <td>Alto</td>
+                                <td>Priorizar los casos según riesgo y criticidad.</td>
+                                <td>Trabajar horas adicionales.</td>
+                            </tr>
+                            <tr>
+                                <td>Impacto en la moral del equipo.</td>
+                                <td>Baja</td>
+                                <td>Medio</td>
+                                <td>Generar un ambiente de trabajo colaborativo y de apoyo.</td>
+                                <td>Celebrar pequeños logros y brindar apoyo continuo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Lista de tareas</h3>
+                <ul>
+                    <li>Crear casos de prueba.</li>
+                    <li>Ejecutar pruebas funcionales.</li>
+                    <li>Ejecutar pruebas no funcionales.</li>
+                    <li>Realizar reporte de defectos.</li>
+                    <li>Realizar reporte de mejora.</li>
+                </ul>
 
             </div>
         </details>
 
         <!-- 02. CASOS DE PRUEBA -->
 
-        <details class="seccion">
-            <summary>
-                <span class="titulo-seccion">02. Casos de prueba</span>
-                <span class="flecha">⌄</span>
-            </summary>
+        <details class="documento">
+            <summary>02. Casos de prueba</summary>
 
-            <div class="contenido">
+            <div class="contenido-documento">
+
+                <h2>Casos de prueba</h2>
+
                 <p>
-                    Casos diseñados para evaluar las distintas validaciones
-                    y comportamientos del formulario de registro.
+                    Casos diseñados para evaluar el funcionamiento de las
+                    distintas funcionalidades de la plataforma.
                 </p>
 
-                <!-- Aquí incorporaremos la tabla real de casos -->
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Precondiciones</th>
+                                <th>Datos de prueba</th>
+                                <th>Pasos</th>
+                                <th>Resultado esperado</th>
+                                <th>Estado</th>
+                                <th>Resultado de ejecución</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Verificar si un usuario nuevo puede registrarse correctamente.</td>
+                                <td>El usuario debe tener una cuenta activa.</td>
+                                <td>Correo electrónico y contraseña.</td>
+                                <td>Ingresar a la página de inicio de sesión, ingresar las credenciales y verificar la redirección y aparición del nombre de usuario.</td>
+                                <td>El usuario se autentica correctamente, sin errores.</td>
+                                <td>Pendiente</td>
+                                <td>Pass</td>
+                            </tr>
+
+                            <tr>
+                                <td>002</td>
+                                <td>Prueba de iniciar sesión correctamente.</td>
+                                <td>Ingresar a la plataforma para realizar la prueba de inicio de sesión.</td>
+                                <td>Datos válidos de inicio de sesión.</td>
+                                <td>Acceder al login, ingresar los datos, hacer clic en iniciar sesión y verificar el resultado.</td>
+                                <td>El inicio de sesión se realiza correctamente.</td>
+                                <td>Pendiente</td>
+                                <td>Pass</td>
+                            </tr>
+
+                            <tr>
+                                <td>003</td>
+                                <td>Prueba de iniciar sesión incorrectamente.</td>
+                                <td>Acceder a la plataforma.</td>
+                                <td>Datos inválidos.</td>
+                                <td>Ingresar al login e introducir datos incorrectos.</td>
+                                <td>El usuario no debe poder iniciar sesión.</td>
+                                <td>Pendiente</td>
+                                <td>Fail</td>
+                            </tr>
+
+                            <tr>
+                                <td>004</td>
+                                <td>Navegar por categorías.</td>
+                                <td>Contar con una cuenta y datos de inicio de sesión válidos.</td>
+                                <td>Datos de inicio de sesión válidos.</td>
+                                <td>Acceder a la cuenta, ingresar a las categorías y verificar la navegación.</td>
+                                <td>La navegación por las categorías se realiza correctamente.</td>
+                                <td>Pendiente</td>
+                                <td>Fail</td>
+                            </tr>
+
+                            <tr>
+                                <td>005</td>
+                                <td>Buscar un producto.</td>
+                                <td>Contar con una cuenta.</td>
+                                <td>Datos válidos de inicio de sesión y un producto específico.</td>
+                                <td>Acceder a la cuenta, dirigirse a la búsqueda, seleccionar el producto y verificar el resultado.</td>
+                                <td>La búsqueda del producto se realiza correctamente.</td>
+                                <td>Pendiente</td>
+                                <td>Fail</td>
+                            </tr>
+
+                            <tr>
+                                <td>006</td>
+                                <td>Agregar al carrito.</td>
+                                <td>Contar con una cuenta.</td>
+                                <td>Datos válidos de inicio de sesión y un producto.</td>
+                                <td>Iniciar sesión, buscar y seleccionar un producto, agregarlo al carrito y verificar.</td>
+                                <td>El producto se agrega correctamente al carrito.</td>
+                                <td>Pendiente</td>
+                                <td>Pass</td>
+                            </tr>
+
+                            <tr>
+                                <td>007</td>
+                                <td>Completar compra correctamente.</td>
+                                <td>Contar con una cuenta y datos de compra válidos.</td>
+                                <td>Datos de compra (tarjeta, DNI, etc.).</td>
+                                <td>Iniciar sesión, acceder al carrito, realizar el pago, verificar los datos y finalizar la compra.</td>
+                                <td>La compra se realiza correctamente.</td>
+                                <td>Pendiente</td>
+                                <td>Fail</td>
+                            </tr>
+
+                            <tr>
+                                <td>008</td>
+                                <td>Completar compra incorrectamente.</td>
+                                <td>Contar con una cuenta.</td>
+                                <td>Datos de compra inválidos.</td>
+                                <td>Iniciar sesión, acceder al carrito, ingresar datos de compra incorrectos e intentar finalizar la compra.</td>
+                                <td>No se debe poder realizar la compra.</td>
+                                <td>Pendiente</td>
+                                <td>Fail</td>
+                            </tr>
+
+                            <tr>
+                                <td>009</td>
+                                <td>Velocidad de la página.</td>
+                                <td>Contar con una cuenta.</td>
+                                <td>Datos válidos de la cuenta.</td>
+                                <td>Medir la carga de búsqueda y el cambio entre categorías, con varias páginas abiertas.</td>
+                                <td>Navegación rápida y sin interrupciones.</td>
+                                <td>Pendiente</td>
+                                <td>Fail</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </details>
 
         <!-- 03. TESTING EXPLORATORIO -->
 
-        <details class="seccion">
-            <summary>
-                <span class="titulo-seccion">03. Testing exploratorio</span>
-                <span class="flecha">⌄</span>
-            </summary>
+        <details class="documento">
+            <summary>03. Testing exploratorio</summary>
 
-            <div class="contenido">
+            <div class="contenido-documento">
+
+                <h2>Testing exploratorio</h2>
+
+                <h3>Objetivo</h3>
                 <p>
-                    Registro de las sesiones de exploración, escenarios
-                    evaluados y hallazgos obtenidos durante las pruebas.
+                    Evaluar la funcionalidad y usabilidad del proceso de
+                    registro de usuarios.
                 </p>
 
-                <!-- Aquí incorporaremos las sesiones reales -->
+                <h3>Alcance</h3>
+                <p>
+                    Verificar que los usuarios puedan registrarse sin
+                    inconvenientes y que el sistema gestione correctamente
+                    distintos escenarios.
+                </p>
+
+                <h3>Preparación</h3>
+                <ul>
+                    <li>Verificar que el servidor y la plataforma estén operativos.</li>
+                    <li>Contar con un navegador actualizado y un sistema operativo compatible.</li>
+                    <li>Preparar diferentes correos electrónicos, nombres de usuario y contraseñas para las pruebas.</li>
+                </ul>
+
+                <h3>Datos de prueba</h3>
+
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Conjunto de datos</th>
+                                <th>Tipo de datos</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Datos 1</td>
+                                <td>Falsos</td>
+                                <td>Datos ficticios para realizar pruebas de registro.</td>
+                            </tr>
+                            <tr>
+                                <td>Datos 2</td>
+                                <td>Verdaderos</td>
+                                <td>Datos correspondientes a un usuario real.</td>
+                            </tr>
+                            <tr>
+                                <td>Datos 3</td>
+                                <td>Falsos</td>
+                                <td>Datos ficticios para realizar pruebas adicionales.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Resultados esperados</h3>
+                <ul>
+                    <li>Los usuarios pueden completar el registro.</li>
+                    <li>El sistema gestiona los errores y proporciona mensajes útiles.</li>
+                    <li>La cuenta se activa y el usuario puede iniciar sesión.</li>
+                </ul>
+
+                <h3>Ejecución de pruebas exploratorias</h3>
+
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Prueba</th>
+                                <th>Resultado esperado</th>
+                                <th>Resultado obtenido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Acceder a la página de registro desde el enlace.</td>
+                                <td>Acceder correctamente al formulario de registro.</td>
+                                <td>Se pudo acceder al formulario.</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Dejar campos incompletos.</td>
+                                <td>No permitir el registro.</td>
+                                <td>El sistema solicitó Username y Password.</td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Completar campos con caracteres y datos como 12121213.</td>
+                                <td>No permitir el registro.</td>
+                                <td>Permitió el registro. No solicitó nombre, apellido ni Gmail.</td>
+                            </tr>
+                            <tr>
+                                <td>004</td>
+                                <td>Registrarse con datos falsos.</td>
+                                <td>No permitir el registro con datos ficticios.</td>
+                                <td>Permitió el registro con datos falsos.</td>
+                            </tr>
+                            <tr>
+                                <td>005</td>
+                                <td>Registrarse con datos de un usuario real.</td>
+                                <td>Permitir el registro.</td>
+                                <td>Se registró sin intervención adicional.</td>
+                            </tr>
+                            <tr>
+                                <td>006</td>
+                                <td>Intentar registrarse con un usuario existente y otra contraseña.</td>
+                                <td>No permitir el registro.</td>
+                                <td>No fue posible porque el usuario ya existía.</td>
+                            </tr>
+                            <tr>
+                                <td>007</td>
+                                <td>Iniciar sesión con los usuarios creados, utilizando datos válidos e inválidos.</td>
+                                <td>Permitir el acceso con datos válidos y rechazar datos inválidos.</td>
+                                <td>Se podía registrar e iniciar sesión con cualquier dato. Con los datos 3 (12121213), apareció una advertencia sobre el cambio de contraseña, pero se permitió continuar navegando.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
         </details>
 
-        <!-- 04. REPORTE DE ERRORES -->
+        <!-- 04. REPORTES DE ERRORES -->
 
-        <details class="seccion">
-            <summary>
-                <span class="titulo-seccion">04. Reporte de errores</span>
-                <span class="flecha">⌄</span>
-            </summary>
+        <details class="documento">
+            <summary>04. Reportes de errores</summary>
 
-            <div class="contenido">
+            <div class="contenido-documento">
+
+                <h2>Reporte de errores generales</h2>
+
+                <h3>Error 1: La pantalla del usuario se bloquea al presionar la opción "Contact"</h3>
+
                 <p>
-                    Registro de los defectos identificados durante
-                    la evaluación del módulo.
+                    <strong>Descripción:</strong>
+                    Al navegar desde Contact hacia Sign-Up, la página se volvía
+                    transparente y no permitía continuar utilizando el sitio.
+                    Luego de actualizar varias veces, el problema desaparecía.
                 </p>
 
-                <!-- Aquí incorporaremos los reportes reales -->
+                <p><strong>Pasos para reproducir:</strong></p>
+                <ol>
+                    <li>Registrarse en la plataforma.</li>
+                    <li>Ir a la página de inicio.</li>
+                    <li>Navegar hacia la opción Contact.</li>
+                </ol>
+
+                <p>
+                    <strong>Resultado esperado:</strong>
+                    Poder navegar normalmente.
+                </p>
+
+                <p>
+                    <strong>Resultado obtenido:</strong>
+                    La página desaparece y no permite navegar hasta actualizarla.
+                </p>
+
+                <p><strong>Severidad:</strong> Alta.</p>
 
                 <details class="evidencia">
-                    <summary>Ver evidencia del defecto</summary>
+                    <summary>Ver evidencia del error 1</summary>
+                    <div class="espacio-imagen">
+                        Espacio reservado para incorporar la captura de pantalla
+                        del problema de navegación entre Contact y Sign-Up.
+                    </div>
+                </details>
 
-                    <p class="nota">
-                        Aquí se incorporará la captura correspondiente
-                        al defecto documentado.
-                    </p>
+                <hr class="separador">
+
+                <h3>Error 2: Se pueden realizar compras con datos incorrectos o falsos</h3>
+
+                <p>
+                    <strong>Descripción:</strong>
+                    El sistema muestra la compra como completada incluso cuando
+                    se utilizan datos incorrectos.
+                </p>
+
+                <p><strong>Pasos para reproducir:</strong></p>
+                <ol>
+                    <li>Acceder a la cuenta.</li>
+                    <li>Seleccionar un producto.</li>
+                    <li>Agregar el producto al carrito.</li>
+                    <li>Ingresar los datos solicitados.</li>
+                    <li>Intentar realizar la compra.</li>
+                </ol>
+
+                <p>
+                    <strong>Resultado esperado:</strong>
+                    No efectuar la compra cuando los datos ingresados son incorrectos.
+                </p>
+
+                <p>
+                    <strong>Resultado obtenido:</strong>
+                    La compra se completa.
+                </p>
+
+                <p><strong>Severidad:</strong> Alta.</p>
+
+                <details class="evidencia">
+                    <summary>Ver evidencia del error 2</summary>
+                    <div class="espacio-imagen">
+                        Espacio reservado para incorporar la captura de pantalla
+                        del proceso de compra con datos incorrectos.
+                    </div>
+                </details>
+
+                <hr class="separador">
+
+                <h2>Reporte de errores - Testing exploratorio</h2>
+
+                <h3>ID 003: Advertencia/alerta de que la contraseña no era segura / Registrarse con caracteres</h3>
+
+                <p>
+                    <strong>Descripción:</strong>
+                    Al iniciar sesión con datos falsos, el sistema permitía
+                    continuar navegando.
+                </p>
+
+                <p><strong>Pasos:</strong></p>
+                <ol>
+                    <li>Acceder a Sign-Up.</li>
+                    <li>Completar los campos.</li>
+                    <li>Iniciar sesión.</li>
+                </ol>
+
+                <p><strong>Datos de prueba:</strong> Usuario y contraseña de prueba: 12121213.</p>
+
+                <p>
+                    <strong>Resultado esperado:</strong>
+                    No permitir el registro con datos falsos.
+                </p>
+
+                <p>
+                    <strong>Resultado obtenido:</strong>
+                    Permite registrarse con datos falsos.
+                </p>
+
+                <details class="evidencia">
+                    <summary>Ver evidencia del error 003</summary>
+                    <div class="espacio-imagen">
+                        Espacio reservado para incorporar la captura de la
+                        advertencia de contraseña no segura.
+                    </div>
+                </details>
+
+                <hr class="separador">
+
+                <h3>ID 004: Se deja registrar a los usuarios con datos inválidos</h3>
+
+                <p>
+                    <strong>Descripción:</strong>
+                    Al intentar ingresar con datos inválidos, la página permite
+                    continuar con el registro.
+                </p>
+
+                <p><strong>Pasos:</strong></p>
+                <ol>
+                    <li>Acceder a Sign-Up.</li>
+                    <li>Completar los campos.</li>
+                    <li>Intentar iniciar sesión.</li>
+                </ol>
+
+                <p>
+                    <strong>Resultado esperado:</strong>
+                    No permitir el registro con datos inválidos.
+                </p>
+
+                <p>
+                    <strong>Resultado obtenido:</strong>
+                    El sistema permite registrarse con datos inválidos.
+                </p>
+
+                <p><strong>Severidad:</strong> Alta.</p>
+
+                <details class="evidencia">
+                    <summary>Ver evidencia del error 004</summary>
+                    <div class="espacio-imagen">
+                        Espacio reservado para incorporar la captura de
+                        registro con datos falsos o inválidos.
+                    </div>
                 </details>
 
             </div>
         </details>
 
-        <!-- 05. OPORTUNIDADES DE MEJORA -->
+        <!-- 05. EVIDENCIAS GENERALES -->
 
-        <details class="seccion">
-            <summary>
-                <span class="titulo-seccion">05. Oportunidades de mejora</span>
-                <span class="flecha">⌄</span>
-            </summary>
+        <details class="documento">
+            <summary>05. Evidencias de errores generales</summary>
 
-            <div class="contenido">
+            <div class="contenido-documento">
+
+                <h2>Evidencias</h2>
+
                 <p>
-                    Aspectos de usabilidad y experiencia de usuario
-                    identificados durante el análisis.
+                    Registro visual de los problemas detectados durante
+                    las pruebas realizadas en la plataforma.
                 </p>
 
-                <!-- Aquí incorporaremos las propuestas reales -->
+                <details class="evidencia">
+                    <summary>Evidencia 1 - Problema de navegación entre Contact y Sign-Up</summary>
+                    <div class="espacio-imagen">
+                        Espacio reservado para incorporar la captura de pantalla
+                        donde se observa la pantalla transparente y la imposibilidad
+                        de continuar navegando.
+                    </div>
+                </details>
+
+                <details class="evidencia">
+                    <summary>Evidencia 2 - Error en la búsqueda de productos</summary>
+                    <div class="espacio-imagen">
+                        Espacio reservado para incorporar la captura de pantalla
+                        que muestra el inconveniente al buscar un producto específico.
+                    </div>
+                </details>
+
+                <details class="evidencia">
+                    <summary>Evidencia 3 - Compra con datos falsos</summary>
+                    <div class="espacio-imagen">
+                        Espacio reservado para incorporar la captura de pantalla
+                        del proceso de compra realizado con datos falsos o incorrectos.
+                    </div>
+                </details>
 
             </div>
         </details>
 
-        <div class="final">
-            <a href="proyecto-qa-1.html" class="volver">
-                ← Volver a E-commerce Simulation
-            </a>
-            <br>
-            <a href="proyectos.html" class="volver">
-                ← Volver a Proyectos
-            </a>
-        </div>
+        <!-- 06. OPORTUNIDAD DE MEJORA -->
+
+        <details class="documento">
+            <summary>06. Oportunidad de mejora</summary>
+
+            <div class="contenido-documento">
+
+                <h2>Falta de un "buscador"</h2>
+
+                <p><strong>Fecha:</strong> 22 de julio de 2024.</p>
+                <p><strong>Autor:</strong> Gonzalo Jesus Godoy.</p>
+
+                <h3>Problema</h3>
+                <p>
+                    No existe una función de búsqueda que permita encontrar
+                    productos específicos dentro del sitio.
+                </p>
+
+                <h3>Objetivo</h3>
+                <p>
+                    Mejorar la utilización del sitio. Un buscador facilita
+                    encontrar el producto requerido.
+                </p>
+
+                <h3>Mejoras propuestas</h3>
+                <ul>
+                    <li>Agregar un campo de búsqueda visible en la página principal y en todas las páginas de categorías.</li>
+                    <li>Incorporar sugerencias automáticas en tiempo real mientras el usuario escribe.</li>
+                    <li>Agregar filtros avanzados, como categoría, precio, marca, entre otros.</li>
+                </ul>
+
+                <h3>Beneficios esperados</h3>
+                <ul>
+                    <li>Los usuarios podrán encontrar productos por descripción o precio.</li>
+                    <li>Se mostrarán resultados relevantes.</li>
+                    <li>Se facilitará la búsqueda de productos.</li>
+                </ul>
+
+                <h3>Impacto en el proyecto</h3>
+                <p>
+                    La implementación y el mantenimiento requieren recursos
+                    de desarrollo y testing, además de capacitación de soporte.
+                    Se espera un efecto positivo en el tráfico y las ventas
+                    debido a la mejora en la usabilidad.
+                </p>
+
+                <h3>Pruebas propuestas</h3>
+                <ul>
+                    <li>Pruebas funcionales del buscador y los filtros.</li>
+                    <li>Pruebas de usabilidad.</li>
+                    <li>Pruebas de rendimiento.</li>
+                </ul>
+
+                <h3>Estado</h3>
+                <p>
+                    Opciones de estado: Pendiente, En Progreso, Completado o Rechazado.
+                </p>
+
+            </div>
+        </details>
+
+        <!-- ÚNICO ENLACE PARA VOLVER -->
+
+        <a href="proyecto-qa-1.html" class="volver">
+            ← Volver a E-commerce Simulation
+        </a>
 
     </main>
 
