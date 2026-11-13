@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación QA | E-commerce Simulation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #172b3a;
+            background: #ffffff;
+        }
+
+        /* NAVEGACIÓN */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #102a43;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #16839a;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172b3a;
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 7px;
+        }
+
+        nav a:hover {
+            color: #16839a;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1000px;
+            width: 86%;
+            margin: 0 auto;
+            padding: 55px 0 80px;
+        }
+
+        .volver {
+            display: inline-block;
+            color: #16839a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+        }
+
+        .categoria {
+            color: #16839a;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            color: #102a43;
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .introduccion {
+            color: #52616f;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        /* SECCIONES DESPLEGABLES */
+
+        .seccion {
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .seccion:last-of-type {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .seccion summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding: 23px 5px;
+        }
+
+        .seccion summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .titulo-seccion {
+            color: #102a43;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .flecha {
+            color: #16839a;
+            font-size: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .seccion[open] .flecha {
+            transform: rotate(180deg);
+        }
+
+        .contenido {
+            padding: 0 5px 28px;
+            color: #3e4c59;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .contenido p {
+            margin-bottom: 15px;
+        }
+
+        .contenido ul {
+            padding-left: 22px;
+            margin-bottom: 15px;
+        }
+
+        .contenido li {
+            margin-bottom: 7px;
+        }
+
+        /* TABLAS */
+
+        .tabla-contenedor {
+            overflow-x: auto;
+            margin-top: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 13px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            color: #102a43;
+            background: #f1f5f8;
+            font-weight: 700;
+        }
+
+        /* EVIDENCIAS DESPLEGABLES */
+
+        .evidencia {
+            margin-top: 18px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 15px;
+        }
+
+        .evidencia summary {
+            cursor: pointer;
+            color: #16839a;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .imagen-evidencia {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .nota {
+            color: #718096;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        /* BOTONES PARA VOLVER */
+
+        .final {
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            main {
+                width: 90%;
+                padding-top: 40px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .titulo-seccion {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">GG<span>.</span></a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <a href="proyecto-qa-1.html" class="volver">
+            ← Volver a E-commerce Simulation
+        </a>
+
+        <div class="categoria">Testing de Software · QA Manual</div>
+
+        <h1>Documentación del proyecto</h1>
+
+        <p class="introduccion">
+            En esta sección se encuentra la documentación desarrollada
+            durante la evaluación funcional del módulo de registro de usuarios
+            (Sign-Up). Cada apartado permite consultar los detalles del
+            proceso de testing y sus respectivos resultados.
+        </p>
+
+        <!-- 01. PLAN DE PRUEBAS -->
+
+        <details class="seccion">
+            <summary>
+                <span class="titulo-seccion">01. Plan de pruebas</span>
+                <span class="flecha">⌄</span>
+            </summary>
+
+            <div class="contenido">
+                <p>
+                    Documentación de los objetivos, alcance, estrategia
+                    y criterios considerados para la evaluación.
+                </p>
+
+                <!-- Aquí incorporaremos el plan de pruebas real -->
+
+            </div>
+        </details>
+
+        <!-- 02. CASOS DE PRUEBA -->
+
+        <details class="seccion">
+            <summary>
+                <span class="titulo-seccion">02. Casos de prueba</span>
+                <span class="flecha">⌄</span>
+            </summary>
+
+            <div class="contenido">
+                <p>
+                    Casos diseñados para evaluar las distintas validaciones
+                    y comportamientos del formulario de registro.
+                </p>
+
+                <!-- Aquí incorporaremos la tabla real de casos -->
+
+            </div>
+        </details>
+
+        <!-- 03. TESTING EXPLORATORIO -->
+
+        <details class="seccion">
+            <summary>
+                <span class="titulo-seccion">03. Testing exploratorio</span>
+                <span class="flecha">⌄</span>
+            </summary>
+
+            <div class="contenido">
+                <p>
+                    Registro de las sesiones de exploración, escenarios
+                    evaluados y hallazgos obtenidos durante las pruebas.
+                </p>
+
+                <!-- Aquí incorporaremos las sesiones reales -->
+
+            </div>
+        </details>
+
+        <!-- 04. REPORTE DE ERRORES -->
+
+        <details class="seccion">
+            <summary>
+                <span class="titulo-seccion">04. Reporte de errores</span>
+                <span class="flecha">⌄</span>
+            </summary>
+
+            <div class="contenido">
+                <p>
+                    Registro de los defectos identificados durante
+                    la evaluación del módulo.
+                </p>
+
+                <!-- Aquí incorporaremos los reportes reales -->
+
+                <details class="evidencia">
+                    <summary>Ver evidencia del defecto</summary>
+
+                    <p class="nota">
+                        Aquí se incorporará la captura correspondiente
+                        al defecto documentado.
+                    </p>
+                </details>
+
+            </div>
+        </details>
+
+        <!-- 05. OPORTUNIDADES DE MEJORA -->
+
+        <details class="seccion">
+            <summary>
+                <span class="titulo-seccion">05. Oportunidades de mejora</span>
+                <span class="flecha">⌄</span>
+            </summary>
+
+            <div class="contenido">
+                <p>
+                    Aspectos de usabilidad y experiencia de usuario
+                    identificados durante el análisis.
+                </p>
+
+                <!-- Aquí incorporaremos las propuestas reales -->
+
+            </div>
+        </details>
+
+        <div class="final">
+            <a href="proyecto-qa-1.html" class="volver">
+                ← Volver a E-commerce Simulation
+            </a>
+            <br>
+            <a href="proyectos.html" class="volver">
+                ← Volver a Proyectos
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
