@@ -202,40 +202,45 @@
             margin-bottom: 12px;
         }
 
-        /* DOCUMENTACIÓN COMPLETA */
+        /* NAVEGACIÓN DEL PROYECTO */
 
-        .documentacion-link {
+        .navegacion-proyecto {
             border-top: 1px solid #e5e7eb;
-            padding-top: 30px;
             margin-top: 45px;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
         }
 
-        .documentacion-link a {
-            display: inline-block;
+        .navegacion-proyecto a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             color: #16839a;
             text-decoration: none;
             font-size: 15px;
             font-weight: 700;
             transition: color 0.2s ease;
+            cursor: pointer;
         }
 
-        .documentacion-link a:hover {
+        .navegacion-proyecto a:hover {
             color: #102a43;
         }
 
-        /* VOLVER */
-
-        .volver {
+        .flecha {
             display: inline-block;
-            margin-top: 35px;
-            color: #16839a;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 700;
+            transition: transform 0.2s ease;
         }
 
-        .volver:hover {
-            color: #102a43;
+        .volver-proyectos:hover .flecha {
+            transform: translateX(-5px);
+        }
+
+        .ver-documentacion:hover .flecha {
+            transform: translateX(5px);
         }
 
         /* DISEÑO RESPONSIVE */
@@ -274,6 +279,14 @@
                 min-width: 600px;
             }
 
+            .navegacion-proyecto {
+                gap: 12px;
+            }
+
+            .navegacion-proyecto a {
+                font-size: 13px;
+            }
+
         }
 
     </style>
@@ -297,7 +310,6 @@
 
     </header>
 
-
     <!-- CONTENIDO PRINCIPAL -->
 
     <main>
@@ -317,7 +329,6 @@
             navegación, rendimiento, validación del código y diseño de interfaz,
             con el objetivo de identificar posibles errores y oportunidades de mejora.
         </p>
-
 
         <!-- OBJETIVO Y ENFOQUE -->
 
@@ -383,13 +394,11 @@
 
         </section>
 
-
         <!-- ÁREAS DE EVALUACIÓN -->
 
         <section class="seccion">
 
             <h2>Áreas de evaluación y actividades realizadas</h2>
-
 
             <div class="area">
 
@@ -408,7 +417,6 @@
 
             </div>
 
-
             <div class="area">
 
                 <h3>2. Rendimiento web</h3>
@@ -425,7 +433,6 @@
                 </ul>
 
             </div>
-
 
             <div class="area">
 
@@ -444,7 +451,6 @@
 
             </div>
 
-
             <div class="area">
 
                 <h3>4. Pruebas de diseño e interfaz</h3>
@@ -461,7 +467,6 @@
                 </ul>
 
             </div>
-
 
             <div class="area">
 
@@ -482,7 +487,6 @@
             </div>
 
         </section>
-
 
         <!-- DOCUMENTACIÓN Y ENTREGABLES -->
 
@@ -540,7 +544,6 @@
 
         </section>
 
-
         <!-- APRENDIZAJES Y CONCLUSIONES -->
 
         <section class="seccion">
@@ -593,33 +596,25 @@
 
         </section>
 
+        <!-- NAVEGACIÓN DEL PROYECTO -->
 
-        <!-- DOCUMENTACIÓN COMPLETA -->
+        <div class="navegacion-proyecto">
 
-        <section class="documentacion-link">
-
-            <h2>Documentación del proyecto</h2>
-
-            <p>
-                Consultá los documentos, pruebas y resultados correspondientes
-                a las actividades realizadas durante el proyecto.
-            </p>
-
-            <a href="documentacion-qa-2.html">
-                Consultar documentación completa →
+            <a href="proyectos.html" class="volver-proyectos">
+                <span class="flecha">←</span>
+                Volver a Proyectos
             </a>
 
-        </section>
+            <a href="documentacion-qa-2.html" class="ver-documentacion">
+                Ver documentación
+                <span class="flecha">→</span>
+            </a>
 
-
-        <!-- VOLVER A PROYECTOS -->
-
-        <a href="proyectos.html" class="volver">
-            ← Volver a Proyectos
-        </a>
+        </div>
 
     </main>
 
 </body>
 
 </html>
+
