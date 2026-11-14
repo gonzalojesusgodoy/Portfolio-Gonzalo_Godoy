@@ -1,9 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>E-commerce Simulation | Gonzalo Godoy</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -72,19 +75,6 @@
             width: 86%;
             margin: 0 auto;
             padding: 65px 0 80px;
-        }
-
-        .volver {
-            display: inline-block;
-            color: #16839a;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 35px;
-        }
-
-        .volver:hover {
-            text-decoration: underline;
         }
 
         .categoria {
@@ -159,50 +149,51 @@
             font-weight: 500;
         }
 
-        /* DOCUMENTACIÓN */
+        /* NAVEGACIÓN DEL PROYECTO */
 
-        .documentos {
+        .navegacion-proyecto {
             border-top: 1px solid #e5e7eb;
-        }
-
-        .documento {
+            margin-top: 45px;
+            padding-top: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
-            padding: 22px 4px;
-            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .navegacion-proyecto a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #16839a;
             text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
             transition: color 0.2s ease;
+            cursor: pointer;
         }
 
-        .documento strong {
+        .navegacion-proyecto a:hover {
             color: #102a43;
-            font-size: 16px;
-            font-weight: 600;
         }
 
-        .documento span {
-            color: #16839a;
-            font-size: 14px;
-            font-weight: 600;
-            white-space: nowrap;
+        .flecha {
+            display: inline-block;
+            transition: transform 0.2s ease;
         }
 
-        .documento:hover strong,
-        .documento:hover span {
-            color: #16839a;
+        .volver-proyectos:hover .flecha {
+            transform: translateX(-5px);
         }
 
-        .final {
-            margin-top: 55px;
-            padding-top: 25px;
-            border-top: 1px solid #e5e7eb;
+        .ver-documentacion:hover .flecha {
+            transform: translateX(5px);
         }
 
         /* RESPONSIVE */
 
         @media (max-width: 768px) {
+
             header {
                 flex-direction: column;
                 gap: 20px;
@@ -231,16 +222,26 @@
                 font-size: 16px;
             }
 
-            .documento {
-                align-items: flex-start;
+            .navegacion-proyecto {
+                gap: 12px;
             }
+
+            .navegacion-proyecto a {
+                font-size: 13px;
+            }
+
         }
+
     </style>
+
 </head>
 
 <body>
 
+    <!-- ENCABEZADO -->
+
     <header>
+
         <a href="index.html" class="logo">GG<span>.</span></a>
 
         <nav>
@@ -249,11 +250,12 @@
             <a href="proyectos.html">Proyectos</a>
             <a href="contacto.html">Contacto</a>
         </nav>
+
     </header>
 
-    <main>
+    <!-- CONTENIDO PRINCIPAL -->
 
-        <a href="proyectos.html" class="volver">← Volver a Proyectos</a>
+    <main>
 
         <div class="categoria">Testing de Software · QA Manual</div>
 
@@ -331,31 +333,24 @@
             </div>
         </section>
 
-        <section>
-            <h2>Documentación del proyecto</h2>
+        <!-- NAVEGACIÓN DEL PROYECTO -->
 
-            <p>
-                Se encuentra disponible la documentación desarrollada durante
-                el proyecto, incluyendo el plan de pruebas, los casos diseñados,
-                las sesiones de testing exploratorio, los reportes de errores
-                y las oportunidades de mejora.
-            </p>
+        <div class="navegacion-proyecto">
 
-            <div class="documentos">
+            <a href="proyectos.html" class="volver-proyectos">
+                <span class="flecha">←</span>
+                Volver a Proyectos
+            </a>
 
-                <a href="documentacion-qa-1.html" class="documento">
-                    <strong>Consultar documentación completa</strong>
-                    <span>Ver documentación →</span>
-                </a>
+            <a href="documentacion-qa-1.html" class="ver-documentacion">
+                Ver documentación
+                <span class="flecha">→</span>
+            </a>
 
-            </div>
-        </section>
-
-        <div class="final">
-            <a href="proyectos.html" class="volver">← Volver a Proyectos</a>
         </div>
 
     </main>
 
 </body>
+
 </html>
