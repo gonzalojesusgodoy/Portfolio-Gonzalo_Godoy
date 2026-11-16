@@ -1,1 +1,617 @@
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mejora del proceso Ford | Gonzalo Godoy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #172b3a;
+            background: #ffffff;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #102a43;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #16839a;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #172b3a;
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 7px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #16839a;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1100px;
+            width: 86%;
+            margin: 0 auto;
+            padding: 60px 0 75px;
+        }
+
+        .categoria {
+            color: #16839a;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            color: #102a43;
+            font-size: 38px;
+            line-height: 1.25;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .subtitulo {
+            color: #16839a;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .introduccion {
+            color: #526474;
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 950px;
+            margin-bottom: 42px;
+        }
+
+        /* SECCIONES */
+
+        .seccion {
+            margin-bottom: 42px;
+        }
+
+        h2 {
+            color: #102a43;
+            font-size: 23px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            color: #16839a;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #435466;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* PROPUESTAS DE MEJORA */
+
+        .propuesta {
+            margin-bottom: 25px;
+        }
+
+        .propuesta h3 {
+            color: #16839a;
+            font-size: 17px;
+        }
+
+        /* IMÁGENES Y EVIDENCIAS */
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 22px;
+        }
+
+        .imagen-evidencia {
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #f8fafb;
+        }
+
+        .imagen-pendiente {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f8;
+            color: #526474;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .descripcion-imagen {
+            padding: 16px;
+        }
+
+        .descripcion-imagen h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .descripcion-imagen p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        /* NAVEGACIÓN DEL PROYECTO */
+
+        .navegacion-proyecto {
+            border-top: 1px solid #e5e7eb;
+            margin-top: 45px;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .navegacion-proyecto a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #16839a;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            transition: color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .navegacion-proyecto a:hover {
+            color: #102a43;
+        }
+
+        .flecha {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .volver-proyectos:hover .flecha {
+            transform: translateX(-5px);
+        }
+
+        .ver-documentacion:hover .flecha {
+            transform: translateX(5px);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                width: 90%;
+                padding: 40px 0 55px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            .introduccion {
+                font-size: 16px;
+            }
+
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+
+            .navegacion-proyecto {
+                gap: 12px;
+            }
+
+            .navegacion-proyecto a {
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <a href="index.html" class="logo">GG<span>.</span></a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sobre-mi.html">Sobre mí</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main>
+
+        <div class="categoria">
+            MEJORA CONTINUA · ANÁLISIS DE PROCESOS
+        </div>
+
+        <h1>Mejora del proceso "Ford"</h1>
+
+        <p class="subtitulo">
+            Análisis de Proceso, Detección de Cuellos de Botella y Mejora Continua — Caso Ford
+        </p>
+
+        <!-- CONTEXTO Y ROL -->
+
+        <section class="seccion">
+
+            <h2>Contexto y Rol</h2>
+
+            <p>
+                Este proyecto surgió a partir de un cambio de sector y de puesto de trabajo.
+                El nuevo puesto me resultó interesante, pero también observé que algunas
+                tareas podían generar una carga de trabajo mayor para el operario.
+            </p>
+
+            <p>
+                A partir de esta situación, decidí analizar por mi cuenta una parte
+                específica del proceso: la preparación de los módulos, materiales y
+                herramientas utilizados durante el trabajo.
+            </p>
+
+            <p>
+                El análisis fue realizado de manera individual. En ese momento también
+                me encontraba realizando una capacitación en metodologías ágiles, por
+                lo que aproveché el proyecto como una oportunidad para aplicar conceptos
+                de Scrum y Kanban a una situación real de mi entorno laboral.
+            </p>
+
+        </section>
+
+        <!-- EL PROBLEMA -->
+
+        <section class="seccion">
+
+            <h2>El Problema</h2>
+
+            <p>
+                Durante la preparación de los módulos se presentaban algunas situaciones
+                que podían generar pequeñas demoras e interrupciones durante el trabajo.
+            </p>
+
+            <p>
+                Los módulos llegaban dentro de cajas y debían ser preparados en un espacio
+                reducido. Además, algunas herramientas presentaban desgaste y, en determinadas
+                ocasiones, el tornillo podía tener dificultades para ingresar correctamente
+                en la máquina.
+            </p>
+
+            <p>
+                Aunque cada situación podía representar solamente unos pocos segundos
+                de demora, aproximadamente 4 o 5 segundos, estas pequeñas interrupciones
+                podían repetirse durante la jornada y afectar el trabajo del operario.
+            </p>
+
+            <p>
+                A partir de estas observaciones, busqué identificar posibles mejoras que
+                permitieran facilitar la tarea y reducir las demoras durante el proceso.
+            </p>
+
+        </section>
+
+        <!-- ANÁLISIS Y DECISIONES -->
+
+        <section class="seccion">
+
+            <h2>Mi Proceso — Análisis y decisiones</h2>
+
+            <p>
+                Primero observé directamente cómo se realizaba la preparación de los
+                módulos y qué dificultades aparecían durante la tarea.
+            </p>
+
+            <p>
+                Identifiqué principalmente dos situaciones: la preparación de los
+                módulos en el puesto de trabajo y el desgaste de las herramientas.
+            </p>
+
+            <p>
+                A partir de esto, analicé diferentes posibilidades. Una alternativa era
+                reemplazar completamente las herramientas, pero consideré que no era
+                necesario realizar un cambio de esa magnitud si el problema podía
+                abordarse mediante un control y mantenimiento periódico.
+            </p>
+
+            <p>
+                También consideré la posibilidad de modificar el tipo de empaque de
+                los módulos, aunque esto implicaría realizar cambios en la forma en
+                que los materiales eran recibidos y manipulados.
+            </p>
+
+            <p>
+                Finalmente, prioricé propuestas de menor intervención y más relacionadas
+                con las situaciones observadas: recibir los módulos previamente armados
+                y realizar controles periódicos sobre el estado de las herramientas.
+            </p>
+
+            <p>
+                Esta decisión buscó encontrar una solución sencilla que pudiera reducir
+                las pequeñas interrupciones sin modificar completamente el proceso existente.
+            </p>
+
+        </section>
+
+        <!-- LA SOLUCIÓN -->
+
+        <section class="seccion">
+
+            <h2>La Solución</h2>
+
+            <p>
+                A partir del análisis realizado, propuse las siguientes mejoras:
+            </p>
+
+            <div class="propuesta">
+
+                <h3>Módulos previamente armados</h3>
+
+                <p>
+                    Que los módulos lleguen previamente armados y listos para utilizar,
+                    de manera que el operario solamente tenga que abrir las cajas y
+                    pueda comenzar directamente con el trabajo.
+                </p>
+
+                <p>
+                    Esto permitiría reducir el tiempo destinado a la preparación de
+                    los módulos y evitar parte de la manipulación que se realizaba
+                    en un espacio reducido.
+                </p>
+
+            </div>
+
+            <div class="propuesta">
+
+                <h3>Revisión y mantenimiento periódico de herramientas</h3>
+
+                <p>
+                    Establecer una revisión periódica del estado de las herramientas,
+                    permitiendo detectar señales de desgaste antes de que puedan
+                    generar dificultades durante el trabajo.
+                </p>
+
+                <p>
+                    El objetivo sería realizar el mantenimiento necesario de manera
+                    preventiva y evitar que el problema aparezca durante la ejecución
+                    de la tarea.
+                </p>
+
+            </div>
+
+            <div class="propuesta">
+
+                <h3>Prevención de dificultades</h3>
+
+                <p>
+                    En conjunto, las propuestas buscan anticiparse a los problemas
+                    antes de que afecten al operario, reduciendo interrupciones y
+                    pequeñas demoras durante el proceso.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- VISUALES Y EVIDENCIA -->
+
+        <section class="seccion">
+
+            <h2>Visuales y evidencia</h2>
+
+            <div class="galeria">
+
+                <article class="imagen-evidencia">
+
+                    <div class="imagen-pendiente">
+                        Imagen ilustrativa pendiente de incorporar
+                    </div>
+
+                    <div class="descripcion-imagen">
+
+                        <h3>Imagen 1 — Herramienta utilizada en el proceso</h3>
+
+                        <p>
+                            Imagen ilustrativa del tipo de herramienta involucrada
+                            en la situación analizada.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="imagen-evidencia">
+
+                    <div class="imagen-pendiente">
+                        Imagen ilustrativa pendiente de incorporar
+                    </div>
+
+                    <div class="descripcion-imagen">
+
+                        <h3>Imagen 2 — Área de trabajo y organización de materiales</h3>
+
+                        <p>
+                            Imagen ilustrativa utilizada como referencia para
+                            representar el entorno industrial relacionado con
+                            el proceso analizado.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p style="margin-top: 18px;">
+                Las imágenes utilizadas son ilustrativas y no corresponden
+                directamente al puesto de trabajo.
+            </p>
+
+        </section>
+
+        <!-- IMPACTO Y RESULTADOS -->
+
+        <section class="seccion">
+
+            <h2>Impacto / Resultados</h2>
+
+            <p>
+                Las propuestas planteadas tienen como objetivo reducir las
+                interrupciones y pequeñas demoras que se producían durante el trabajo.
+            </p>
+
+            <p>
+                Contar con los módulos previamente armados permitiría disminuir el
+                tiempo destinado a su preparación, mientras que la revisión periódica
+                de las herramientas ayudaría a detectar el desgaste antes de que
+                genere dificultades durante la tarea.
+            </p>
+
+            <p>
+                Sin embargo, este proyecto fue una propuesta de análisis y no se
+                realizaron pruebas formales ni mediciones antes y después de
+                implementar las mejoras. Por este motivo, no se presentan estos
+                puntos como resultados comprobados, sino como posibles oportunidades
+                de mejora identificadas a partir de la observación del proceso.
+            </p>
+
+        </section>
+
+        <!-- REFLEXIÓN Y APRENDIZAJE -->
+
+        <section class="seccion">
+
+            <h2>Reflexión y aprendizaje</h2>
+
+            <p>
+                Este proyecto me permitió poner en práctica mis conocimientos de
+                mejora continua y metodologías ágiles a partir de una situación real
+                de mi puesto de trabajo.
+            </p>
+
+            <p>
+                El proyecto fue una primera aproximación para poner a prueba mis
+                conocimientos y aprender a analizar un proceso desde una perspectiva
+                de mejora, pasando de la observación de una situación a la identificación
+                de oportunidades y la propuesta de posibles soluciones.
+            </p>
+
+            <p>
+                Si volviera a realizarlo, avanzaría con pruebas reales y mediciones
+                que permitan validar las propuestas, documentando los resultados obtenidos.
+            </p>
+
+            <p>
+                En el futuro, me gustaría profundizar el análisis del puesto, realizar
+                pruebas sobre las mejoras propuestas y utilizar la evidencia obtenida
+                para comprobar si realmente generan una mejora en el proceso.
+            </p>
+
+        </section>
+
+        <!-- NAVEGACIÓN DEL PROYECTO -->
+
+        <div class="navegacion-proyecto">
+
+            <a href="proyectos.html" class="volver-proyectos">
+                <span class="flecha">←</span>
+                Volver a Proyectos
+            </a>
+
+            <a href="documentacion-agil-1.html" class="ver-documentacion">
+                Ver documentación
+                <span class="flecha">→</span>
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
+
