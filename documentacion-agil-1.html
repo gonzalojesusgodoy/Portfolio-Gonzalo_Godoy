@@ -1,765 +1,1809 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentación | Mejora del proceso Ford</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentación | Mejora del proceso Ford</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        :root {
-            --navy: #183247;
-            --teal: #28788a;
-            --text: #34495a;
-            --muted: #647482;
-            --border: #dfe6eb;
-            --surface: #f7f9fb;
-            --white: #ffffff;
-        }
+:root {
+    --navy: #183247;
+    --teal: #28788a;
+    --text: #34495a;
+    --muted: #647482;
+    --border: #dfe6eb;
+    --surface: #f7f9fb;
+    --white: #ffffff;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--white);
-            color: var(--text);
-            line-height: 1.75;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.75;
+}
 
-        header {
-            width: 100%;
-            padding: 24px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-        }
+header {
+    width: 100%;
+    padding: 24px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: 800;
-            color: var(--navy);
-            text-decoration: none;
-        }
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--navy);
+    text-decoration: none;
+}
 
-        .logo span {
-            color: var(--teal);
-        }
+.logo span {
+    color: var(--teal);
+}
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 14px;
-            font-weight: 600;
-            padding-bottom: 6px;
-            transition: color 0.2s ease;
-        }
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 6px;
+    transition: color .2s ease;
+}
 
-        nav a:hover {
-            color: var(--teal);
-        }
+nav a:hover {
+    color: var(--teal);
+}
 
-        main {
-            width: 86%;
-            max-width: 1050px;
-            margin: auto;
-            padding: 64px 0 72px;
-        }
+main {
+    width: 86%;
+    max-width: 1050px;
+    margin: auto;
+    padding: 64px 0 72px;
+}
 
-        .categoria {
-            color: var(--teal);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
-            margin-bottom: 14px;
-        }
+.categoria {
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
 
-        h1 {
-            color: var(--navy);
-            font-size: 36px;
-            line-height: 1.25;
-            margin-bottom: 18px;
-        }
+h1 {
+    color: var(--navy);
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
 
-        .descripcion {
-            color: var(--muted);
-            font-size: 16px;
-            max-width: 850px;
-            margin-bottom: 42px;
-        }
+.descripcion {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 850px;
+    margin-bottom: 42px;
+}
 
-        .documento {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            margin-bottom: 14px;
-            overflow: hidden;
-            background: var(--white);
-        }
+.documento {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: var(--white);
+}
 
-        .documento summary {
-            list-style: none;
-            cursor: pointer;
-            padding: 20px 23px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-            color: var(--navy);
-            font-size: 15px;
-            font-weight: 700;
-            background: var(--white);
-            transition: background 0.2s ease;
-        }
+.documento summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 700;
+    background: var(--white);
+    transition: background .2s ease;
+}
 
-        .documento summary::-webkit-details-marker {
-            display: none;
-        }
+.documento summary::-webkit-details-marker {
+    display: none;
+}
 
-        .documento summary:hover {
-            background: var(--surface);
-        }
+.documento summary:hover {
+    background: var(--surface);
+}
 
-        .documento summary::after {
-            content: "+";
-            color: var(--teal);
-            font-size: 21px;
-            font-weight: 400;
-            flex-shrink: 0;
-        }
+.documento summary::after {
+    content: "+";
+    color: var(--teal);
+    font-size: 21px;
+    font-weight: 400;
+    flex-shrink: 0;
+}
 
-        .documento[open] > summary::after {
-            content: "−";
-        }
+.documento[open] > summary::after {
+    content: "−";
+}
 
-        .contenido {
-            padding: 12px 25px 28px;
-            border-top: 1px solid var(--border);
-        }
+.contenido {
+    padding: 12px 25px 28px;
+    border-top: 1px solid var(--border);
+}
 
-        .contenido h2 {
-            color: var(--navy);
-            font-size: 20px;
-            margin-top: 25px;
-            margin-bottom: 12px;
-        }
+.contenido h2 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
 
-        .contenido h3 {
-            color: var(--teal);
-            font-size: 16px;
-            margin-top: 22px;
-            margin-bottom: 9px;
-        }
+.contenido h3 {
+    color: var(--teal);
+    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 9px;
+}
 
-        .contenido p {
-            font-size: 14px;
-            margin-bottom: 14px;
-        }
+.contenido p {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
 
-        .contenido ul,
-        .contenido ol {
-            font-size: 14px;
-            margin: 10px 0 18px 24px;
-        }
+.contenido ul,
+.contenido ol {
+    font-size: 14px;
+    margin: 10px 0 18px 24px;
+}
 
-        .contenido li {
-            margin-bottom: 7px;
-        }
+.contenido li {
+    margin-bottom: 7px;
+}
 
-        .contenido strong {
-            color: var(--navy);
-        }
+.contenido strong {
+    color: var(--navy);
+}
 
-        .nota-pendiente {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 7px;
-            padding: 18px 20px;
-            color: var(--muted);
-            margin-top: 15px;
-            font-size: 14px;
-        }
+.contenido table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 25px;
+    font-size: 13px;
+}
 
-        .nota-pendiente strong {
-            display: block;
-            color: var(--navy);
-            margin-bottom: 5px;
-        }
+.contenido th,
+.contenido td {
+    border: 1px solid var(--border);
+    padding: 11px 13px;
+    text-align: left;
+    vertical-align: top;
+}
 
-        .final {
-            border-top: 1px solid var(--border);
-            margin-top: 52px;
-            padding-top: 26px;
-        }
+.contenido th {
+    background: var(--surface);
+    color: var(--navy);
+    font-weight: 700;
+}
 
-        .volver {
-            color: var(--teal);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 700;
-        }
+.destacado {
+    background: var(--surface);
+    border-left: 3px solid var(--teal);
+    padding: 16px 19px;
+    margin: 18px 0 22px;
+    font-size: 14px;
+}
 
-        .volver:hover {
-            color: var(--navy);
-        }
+.formula {
+    background: var(--surface);
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    margin: 15px 0;
+    color: var(--navy);
+    font-weight: 600;
+}
 
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 18px;
-                padding: 20px;
-            }
+.final {
+    border-top: 1px solid var(--border);
+    margin-top: 52px;
+    padding-top: 26px;
+}
 
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 18px;
-            }
+.volver {
+    color: var(--teal);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
 
-            main {
-                width: 90%;
-                padding: 44px 0 56px;
-            }
+.volver:hover {
+    color: var(--navy);
+}
 
-            h1 {
-                font-size: 30px;
-            }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
 
-            .documento summary {
-                padding: 17px;
-                font-size: 14px;
-            }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
 
-            .contenido {
-                padding: 10px 18px 22px;
-            }
-        }
-    </style>
+    main {
+        width: 90%;
+        padding: 44px 0 56px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .documento summary {
+        padding: 17px;
+        font-size: 14px;
+    }
+
+    .contenido {
+        padding: 10px 18px 22px;
+    }
+
+    .contenido table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <a href="index.html" class="logo">GG<span>.</span></a>
-
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="sobre-mi.html">Sobre mí</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
-
-    <main>
-
-        <div class="categoria">Metodologías ágiles · Mejora continua</div>
-
-        <h1>Documentación del proyecto</h1>
-
-        <p class="descripcion">
-            Documentación del análisis y las propuestas de mejora del proceso
-            productivo. Se presentan los fundamentos, la metodología de trabajo,
-            los registros de análisis, los experimentos y los casos de estudio.
-        </p>
-
-        <!-- DOCUMENTO 01 -->
-
-        <details class="documento">
-            <summary>01 — Fundamentos de Mejora Continua</summary>
-
-            <div class="contenido">
-                <div class="nota-pendiente">
-                    <strong>Contenido por incorporar</strong>
-                    Aquí se incluirá el documento original completo de Fundamentos
-                    de Mejora Continua.
-                </div>
-            </div>
-        </details>
-
-        <!-- DOCUMENTO 02 -->
-
-        <details class="documento">
-            <summary>02 — Metodología de Mejora de Procesos — Versión 1.0</summary>
-
-            <div class="contenido">
-                <div class="nota-pendiente">
-                    <strong>Contenido por incorporar</strong>
-                    Aquí se incluirá la metodología original, con sus etapas,
-                    principios y criterios de trabajo.
-                </div>
-            </div>
-        </details>
-
-        <!-- DOCUMENTO 03 -->
-
-        <details class="documento">
-            <summary>03 — Registro de Problemas e Hipótesis</summary>
-
-            <div class="contenido">
-                <div class="nota-pendiente">
-                    <strong>Contenido por incorporar</strong>
-                    Aquí se incluirá el registro original de problemas,
-                    hipótesis y posibles causas.
-                </div>
-            </div>
-        </details>
-
-        <!-- DOCUMENTO 04 -->
-
-        <details class="documento">
-            <summary>04 — Registro de Experimentos y Validación</summary>
-
-            <div class="contenido">
-                <div class="nota-pendiente">
-                    <strong>Contenido por incorporar</strong>
-                    Aquí se incluirá el documento original de experimentos,
-                    pruebas y validaciones.
-                </div>
-            </div>
-        </details>
-
-        <!-- DOCUMENTO 05 -->
-
-        <details class="documento">
-            <summary>05 — Medición y Evaluación de Mejoras</summary>
-
-            <div class="contenido">
-                <div class="nota-pendiente">
-                    <strong>Contenido por incorporar</strong>
-                    Aquí se incluirá el documento original de medición,
-                    indicadores y evaluación de resultados.
-                </div>
-            </div>
-        </details>
-
-        <!-- DOCUMENTO 06 -->
-
-        <details class="documento">
-            <summary>06 — Caso de estudio 01: Preparación de piezas y montaje en una línea de producción</summary>
-
-            <div class="contenido">
-
-                <h2>1. Introducción</h2>
-
-                <p>
-                    Este caso de estudio analiza una situación observada en una estación
-                    de montaje de una línea de producción. El objetivo es identificar
-                    posibles oportunidades de mejora en la organización de las tareas,
-                    la preparación de los componentes y las condiciones en las que el
-                    operario realiza su trabajo.
-                </p>
-
-                <p>
-                    El análisis se basa en la observación directa del proceso y en el
-                    razonamiento sobre posibles alternativas de mejora. No se realizaron
-                    mediciones formales de tiempos ni pruebas de implementación, por lo
-                    que las propuestas presentadas son hipótesis que deberán validarse.
-                </p>
-
-                <h2>2. Descripción del proceso actual</h2>
-
-                <p>
-                    En la estación analizada, el operario realiza distintas tareas de
-                    montaje y ajuste sobre unidades que avanzan continuamente por la
-                    línea de producción.
-                </p>
-
-                <p>Entre las actividades observadas se encuentran:</p>
-
-                <ul>
-                    <li>Retirar y preparar los componentes necesarios.</li>
-                    <li>Manipular la carcasa y el módulo.</li>
-                    <li>Realizar operaciones de montaje y ajuste.</li>
-                    <li>Conectar el tablero.</li>
-                    <li>Ajustar los módulos.</li>
-                    <li>Ajustar los tornillos del limpiaparabrisas.</li>
-                </ul>
-
-                <p>
-                    Los componentes se encuentran disponibles en cajas y otros embalajes.
-                    Algunos deben extraerse, separarse, orientarse y organizarse antes
-                    de poder utilizarlos.
-                </p>
-
-                <p>
-                    La estación tiene un límite de entrada y otro de salida. El operario
-                    debe completar las tareas asignadas antes de que la unidad llegue al
-                    final de su recorrido. Si quedan operaciones pendientes, se activa
-                    una alarma.
-                </p>
-
-                <p>
-                    Por este motivo, la organización previa de los componentes y la
-                    continuidad del trabajo son factores relevantes para el desarrollo
-                    de las tareas.
-                </p>
-
-                <h2>3. Problema observado</h2>
-
-                <p>
-                    La situación identificada es la dificultad para completar todas las
-                    tareas de la estación cuando se acumulan las operaciones de
-                    preparación, montaje y ajuste.
-                </p>
-
-                <p>
-                    Cuando el operario dispone de margen, puede preparar componentes
-                    para varias unidades con anticipación. Esto permite mantener piezas
-                    organizadas y disponibles para las siguientes operaciones.
-                </p>
-
-                <p>
-                    Sin embargo, cuando ese margen disminuye, la preparación de
-                    componentes puede interrumpir el montaje. El operario debe alternar
-                    entre preparar las piezas y continuar con las tareas de la unidad
-                    que avanza por la línea.
-                </p>
-
-                <p>
-                    También se observó una dificultad específica durante el ajuste de
-                    los tornillos del limpiaparabrisas: aunque la herramienta puede
-                    acceder al espacio, la maniobrabilidad es limitada y dificulta
-                    realizar el ajuste.
-                </p>
-
-                <p>
-                    Estas situaciones pueden contribuir a que determinadas operaciones
-                    queden pendientes al finalizar la estación.
-                </p>
-
-                <p>
-                    <strong>Problema central:</strong> la combinación de tareas de
-                    preparación, montaje y ajuste dentro de una estación con avance
-                    continuo puede dificultar la finalización de todas las operaciones
-                    asignadas.
-                </p>
-
-                <h2>4. Análisis de posibles causas</h2>
-
-                <p>
-                    A partir de las observaciones, se identifican las siguientes
-                    hipótesis:
-                </p>
-
-                <h3>4.1. Acumulación de tareas</h3>
-
-                <p>
-                    El operario debe realizar varias operaciones diferentes dentro de
-                    una misma estación. La suma de estas actividades podría reducir el
-                    margen disponible para completar el trabajo.
-                </p>
-
-                <h3>4.2. Preparación de componentes durante el proceso</h3>
-
-                <p>
-                    La necesidad de separar, orientar y organizar las piezas puede
-                    interrumpir la continuidad del montaje cuando no existe una
-                    preparación anticipada suficiente.
-                </p>
-
-                <h3>4.3. Limitaciones de acceso a la herramienta</h3>
-
-                <p>
-                    El espacio disponible para ajustar los tornillos del
-                    limpiaparabrisas dificulta la maniobrabilidad y podría aumentar
-                    la complejidad de esa operación.
-                </p>
-
-                <h3>4.4. Distribución del trabajo entre etapas</h3>
-
-                <p>
-                    Algunas tareas de preparación o ensamblado previo podrían evaluarse
-                    para determinar si conviene realizarlas antes de que los componentes
-                    lleguen a la estación.
-                </p>
-
-                <p>
-                    Estas hipótesis no constituyen causas raíz confirmadas. Para
-                    confirmarlas sería necesario realizar un análisis adicional y,
-                    si fuera posible, validar las alternativas mediante pruebas
-                    controladas.
-                </p>
-
-                <h2>5. Alternativas de mejora propuestas</h2>
-
-                <h3>Alternativa A. Preparación anticipada de componentes</h3>
-
-                <p>
-                    Evaluar la posibilidad de que los componentes lleguen separados,
-                    orientados e identificados en una bandeja o kit preparado para
-                    cada unidad.
-                </p>
-
-                <p>
-                    El objetivo sería reducir la necesidad de detener o interrumpir
-                    el montaje para buscar, separar u organizar piezas.
-                </p>
-
-                <p><strong>Beneficios esperados:</strong></p>
-
-                <ul>
-                    <li>Mayor continuidad del trabajo.</li>
-                    <li>Menos interrupciones durante el montaje.</li>
-                    <li>Mejor organización de los componentes.</li>
-                    <li>Mayor comodidad para el operario.</li>
-                    <li>Posibilidad de concentrarse en las operaciones de montaje y ajuste.</li>
-                </ul>
-
-                <p><strong>Aspectos a evaluar:</strong></p>
-
-                <ul>
-                    <li>Espacio disponible para preparar y almacenar los kits.</li>
-                    <li>Identificación correcta de las piezas.</li>
-                    <li>Riesgo de faltantes, confusiones o daños.</li>
-                    <li>Recursos necesarios para preparar y abastecer los componentes.</li>
-                </ul>
-
-                <h3>Alternativa B. Recepción de subconjuntos preensamblados</h3>
-
-                <p>
-                    Evaluar si determinados componentes, como el módulo y la carcasa,
-                    pueden llegar parcialmente ensamblados desde una etapa anterior.
-                </p>
-
-                <p>
-                    El objetivo sería reducir la cantidad de operaciones que debe
-                    realizar el operario dentro de la estación actual.
-                </p>
-
-                <p><strong>Beneficios esperados:</strong></p>
-
-                <ul>
-                    <li>Menor cantidad de operaciones de montaje en la estación.</li>
-                    <li>Posible reducción de la carga de trabajo.</li>
-                    <li>Mayor disponibilidad para realizar otros ajustes.</li>
-                    <li>Posibilidad de reorganizar las tareas entre diferentes etapas del proceso.</li>
-                </ul>
-
-                <p><strong>Aspectos a evaluar:</strong></p>
-
-                <ul>
-                    <li>Viabilidad técnica del preensamblado.</li>
-                    <li>Calidad y correcta identificación de los subconjuntos.</li>
-                    <li>Costos de implementación y transporte interno.</li>
-                    <li>Espacio, herramientas y capacitación necesarios.</li>
-                    <li>Impacto sobre la carga de trabajo de las etapas anteriores.</li>
-                </ul>
-
-                <p>
-                    Esta alternativa podría requerir la reasignación de tareas o la
-                    creación de un puesto específico de preparación y ensamblado.
-                    Esto representaría una posibilidad de reorganización del trabajo
-                    y una eventual oportunidad laboral, pero también implicaría
-                    costos que deberían evaluarse.
-                </p>
-
-                <p>
-                    Además, trasladar una tarea a otra etapa no significa eliminarla:
-                    es necesario analizar el proceso completo para determinar si la
-                    modificación resulta conveniente.
-                </p>
-
-                <h3>Alternativa complementaria. Analizar el ajuste del limpiaparabrisas</h3>
-
-                <p>
-                    Investigar si la dificultad para maniobrar la herramienta puede
-                    reducirse mediante una revisión del acceso, la posición de trabajo,
-                    el diseño de la herramienta o la secuencia de ajuste.
-                </p>
-
-                <p>
-                    Cualquier modificación deberá respetar los requisitos técnicos,
-                    de seguridad y de calidad.
-                </p>
-
-                <p>
-                    Esta alternativa se analizará por separado, ya que la dificultad
-                    observada podría tener una causa distinta de la preparación de
-                    componentes.
-                </p>
-
-                <h2>6. Beneficios esperados y posibles dificultades</h2>
-
-                <p>
-                    La finalidad de las propuestas no es únicamente mejorar la
-                    productividad, sino también favorecer que el operario pueda
-                    realizar sus tareas de manera más cómoda, organizada y segura.
-                </p>
-
-                <p>Entre los beneficios esperados se encuentran:</p>
-
-                <ul>
-                    <li>Mejor distribución de la carga de trabajo.</li>
-                    <li>Reducción de interrupciones.</li>
-                    <li>Mayor continuidad del montaje.</li>
-                    <li>Posible disminución de tareas pendientes al final de la estación.</li>
-                    <li>Posible mejora de la calidad.</li>
-                    <li>Mejor organización de las actividades entre las diferentes etapas.</li>
-                </ul>
-
-                <p>
-                    No obstante, una mejora en una estación podría generar nuevas
-                    necesidades en otra. Por ejemplo, el preensamblado de componentes
-                    podría requerir personal, espacio y recursos adicionales.
-                </p>
-
-                <p>
-                    Por lo tanto, la decisión deberá considerar tanto los beneficios
-                    para el operario como los efectos sobre el conjunto del proceso
-                    productivo.
-                </p>
-
-                <h2>7. Plan de evaluación de las propuestas</h2>
-
-                <p>
-                    Para comprobar la efectividad de las mejoras, se propone realizar
-                    una prueba autorizada y comparar la situación inicial con los
-                    resultados posteriores.
-                </p>
-
-                <h3>Etapa 1. Registrar la situación inicial</h3>
-
-                <p>
-                    Documentar, mediante observaciones y mediciones autorizadas
-                    cuando sea posible:
-                </p>
-
-                <ul>
-                    <li>Tiempo total del proceso en la estación.</li>
-                    <li>Tiempo dedicado a la preparación y al montaje.</li>
-                    <li>Interrupciones durante el trabajo.</li>
-                    <li>Operaciones que quedan pendientes.</li>
-                    <li>Errores o problemas de calidad.</li>
-                    <li>Percepción del operario respecto de las condiciones de trabajo.</li>
-                </ul>
-
-                <h3>Etapa 2. Implementar una prueba</h3>
-
-                <p>
-                    Seleccionar una de las alternativas y realizar una prueba
-                    controlada, siempre que exista autorización y que se mantengan
-                    las condiciones de seguridad y calidad.
-                </p>
-
-                <h3>Etapa 3. Comparar los resultados</h3>
-
-                <p>
-                    Comparar la situación anterior con la posterior a la prueba,
-                    teniendo en cuenta:
-                </p>
-
-                <ul>
-                    <li>Cambios en los tiempos de trabajo.</li>
-                    <li>Continuidad del montaje.</li>
-                    <li>Cantidad y tipo de tareas pendientes.</li>
-                    <li>Calidad del resultado.</li>
-                    <li>Comodidad y dificultades experimentadas por el operario.</li>
-                    <li>Efectos sobre las demás etapas de producción.</li>
-                </ul>
-
-                <h3>Etapa 4. Tomar una decisión</h3>
-
-                <p>
-                    Si los resultados son favorables y la propuesta resulta viable,
-                    se podrá evaluar su continuidad o implementación.
-                </p>
-
-                <p>
-                    Si no se observan mejoras suficientes o aparecen nuevos problemas,
-                    será necesario revisar la alternativa y considerar otras
-                    posibilidades.
-                </p>
-
-                <p>
-                    Los criterios de aceptación deberán definirse antes de la prueba,
-                    de acuerdo con los objetivos del proceso y los requisitos de la
-                    organización.
-                </p>
-
-                <h2>8. Estado actual del caso</h2>
-
-                <p>
-                    El caso se encuentra en una etapa de análisis preliminar basada
-                    en la observación directa.
-                </p>
-
-                <p>
-                    Se identificaron situaciones que podrían representar oportunidades
-                    de mejora y se formularon alternativas para evaluarlas. Sin embargo,
-                    todavía no se realizaron mediciones formales, pruebas de
-                    implementación ni comparaciones de resultados.
-                </p>
-
-                <p>
-                    Por este motivo, no es posible afirmar que alguna de las propuestas
-                    haya demostrado ser efectiva.
-                </p>
-
-                <h2>9. Conclusión</h2>
-
-                <p>
-                    Este caso permite aplicar el razonamiento de mejora continua a
-                    una situación real de trabajo, considerando tanto la organización
-                    de las operaciones como las condiciones en las que el operario
-                    realiza sus tareas.
-                </p>
-
-                <p>
-                    La preparación anticipada de componentes, el posible preensamblado
-                    de subconjuntos y el análisis de las dificultades de ajuste
-                    constituyen líneas de investigación que podrían contribuir a
-                    mejorar el proceso.
-                </p>
-
-                <p>
-                    El siguiente paso sería validar las hipótesis y evaluar las
-                    alternativas con información objetiva, sin asumir que una mejora
-                    local necesariamente beneficia al sistema completo.
-                </p>
-
-                <p>
-                    La principal conclusión es que mejorar un proceso requiere
-                    observar, analizar, proponer, comprobar los resultados y ajustar
-                    las soluciones según la evidencia obtenida.
-                </p>
-
-            </div>
-        </details>
-
-        <!-- DOCUMENTO 07 -->
-
-        <details class="documento">
-            <summary>07 — Caso de estudio 02: Falla en la sujeción del tornillo</summary>
-
-            <div class="contenido">
-                <div class="nota-pendiente">
-                    <strong>Contenido por incorporar</strong>
-                    Aquí se incluirá el documento original completo sobre la falla
-                    en la sujeción del tornillo.
-                </div>
-            </div>
-        </details>
-
-        <div class="final">
-            <a href="proyecto-agil-1.html" class="volver">
-                ← Volver al proyecto Ford
-            </a>
-        </div>
-
-    </main>
+<header>
+    <a href="index.html" class="logo">GG<span>.</span></a>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<main>
+
+<div class="categoria">Metodologías ágiles · Mejora continua</div>
+
+<h1>Documentación del proyecto</h1>
+
+<p class="descripcion">
+    Documentación del análisis y las propuestas de mejora del proceso productivo.
+    Se presentan los fundamentos, la metodología de trabajo, los registros de
+    análisis, los experimentos y los casos de estudio.
+</p>
+
+<!-- DOCUMENTO 01 -->
+
+<details class="documento">
+<summary>01 — Fundamentos de Mejora Continua</summary>
+
+<div class="contenido">
+
+<h2>Propósito</h2>
+
+<p>
+Este documento establece los principios que orientan mi enfoque de análisis
+y mejora de procesos.
+</p>
+
+<p>
+El objetivo es definir una base de trabajo para observar situaciones reales,
+comprender los problemas, analizar sus posibles causas y desarrollar propuestas
+de mejora fundamentadas.
+</p>
+
+<p>
+La intención no es modificar un proceso sin analizarlo previamente, sino
+comprender cómo funciona, identificar oportunidades y evaluar alternativas
+de manera estructurada.
+</p>
+
+<h2>1. Enfoque de trabajo</h2>
+
+<p>
+La mejora continua consiste en buscar oportunidades para optimizar procesos
+de manera progresiva, a partir de la observación, el análisis y la evaluación
+de los resultados.
+</p>
+
+<p>Mi enfoque se basa en cuatro principios:</p>
+
+<ul>
+<li><strong>Observar antes de proponer:</strong> comprender la situación actual antes de plantear cambios.</li>
+<li><strong>Analizar antes de concluir:</strong> diferenciar los síntomas de las posibles causas.</li>
+<li><strong>Proponer con fundamento:</strong> considerar alternativas que respondan al problema identificado.</li>
+<li><strong>Evaluar antes de validar:</strong> comprobar los resultados cuando existan condiciones para realizar una prueba.</li>
+</ul>
+
+<p>
+Estos principios permiten evitar conclusiones apresuradas y mantener
+un razonamiento ordenado.
+</p>
+
+<h2>2. Visión del proceso</h2>
+
+<p>
+Un proceso está formado por actividades relacionadas que transforman
+entradas en resultados.
+</p>
+
+<p>
+Para analizarlo, es necesario observar no solo las tareas individuales,
+sino también cómo se relacionan entre sí.
+</p>
+
+<p>Algunos aspectos importantes son:</p>
+
+<ul>
+<li><strong>Entradas:</strong> materiales, información, herramientas y recursos necesarios.</li>
+<li><strong>Actividades:</strong> tareas y operaciones que se realizan.</li>
+<li><strong>Salidas:</strong> productos, servicios o resultados obtenidos.</li>
+<li><strong>Relaciones:</strong> dependencias entre tareas, personas y etapas.</li>
+<li><strong>Restricciones:</strong> límites de tiempo, espacio, recursos, calidad o seguridad.</li>
+</ul>
+
+<p>
+Una dificultad en una etapa puede afectar a otras partes del proceso.
+Por eso, una propuesta de mejora debe considerar sus posibles consecuencias
+sobre el conjunto y no únicamente sobre una tarea aislada.
+</p>
+
+<h2>3. Identificación y análisis de problemas</h2>
+
+<p>
+El análisis comienza con la identificación de una situación que podría mejorarse.
+</p>
+
+<p>Para mantener la claridad, se distinguen tres elementos:</p>
+
+<p><strong>Problema observado:</strong> situación concreta que se detecta durante el proceso.</p>
+
+<p><strong>Hipótesis de causa:</strong> explicación posible de por qué ocurre el problema, pendiente de confirmación.</p>
+
+<p><strong>Propuesta de mejora:</strong> alternativa que podría reducir el problema o mejorar el funcionamiento del proceso.</p>
+
+<p>
+Esta separación es fundamental para no confundir una interpretación inicial
+con una causa confirmada o una solución validada.
+</p>
+
+<h2>4. Criterios para proponer mejoras</h2>
+
+<p>
+Una alternativa de mejora debe evaluarse desde diferentes perspectivas.
+</p>
+
+<ul>
+<li><strong>Eficiencia:</strong> posible reducción de tiempos, interrupciones o recursos innecesarios.</li>
+<li><strong>Calidad:</strong> capacidad de mantener o mejorar el resultado del proceso.</li>
+<li><strong>Seguridad y ergonomía:</strong> condiciones en las que las personas realizan sus tareas.</li>
+<li><strong>Organización del trabajo:</strong> distribución de actividades y responsabilidades.</li>
+<li><strong>Viabilidad:</strong> recursos, costos y condiciones necesarios para implementar la propuesta.</li>
+<li><strong>Impacto global:</strong> efectos sobre las demás etapas del proceso.</li>
+</ul>
+
+<p>
+Una mejora local no siempre representa una mejora para todo el sistema.
+Por ejemplo, reducir las tareas de una estación puede trasladar trabajo
+o generar nuevas restricciones en otra.
+</p>
+
+<p>
+Por este motivo, las alternativas deben analizarse de forma integral.
+</p>
+
+<h2>5. Evidencia y validación</h2>
+
+<p>
+Las decisiones deben apoyarse en la información disponible y en el nivel
+de evidencia alcanzado.
+</p>
+
+<p>En este proyecto se distinguen tres niveles:</p>
+
+<ul>
+<li><strong>Observación:</strong> información obtenida al examinar una situación real.</li>
+<li><strong>Hipótesis:</strong> explicación o beneficio esperado que todavía necesita comprobarse.</li>
+<li><strong>Resultado validado:</strong> conclusión respaldada por una evaluación o prueba realizada en condiciones adecuadas.</li>
+</ul>
+
+<p>
+Cuando no se dispone de mediciones, los análisis pueden desarrollarse
+de manera cualitativa, dejando explícitas sus limitaciones.
+</p>
+
+<p>
+No se deben inventar datos ni presentar beneficios esperados como
+resultados comprobados.
+</p>
+
+<h2>6. Aprendizaje y mejora progresiva</h2>
+
+<p>
+La mejora continua requiere revisar las propuestas a partir de la información
+que se obtiene.
+</p>
+
+<p>
+Una alternativa puede resultar útil, necesitar ajustes o no ser viable.
+En cualquiera de esos casos, el análisis permite aprender y definir
+los siguientes pasos.
+</p>
+
+<p>
+El objetivo es desarrollar progresivamente una forma de trabajo más rigurosa,
+documentada y fundamentada.
+</p>
+
+<h2>Aplicación en el portfolio</h2>
+
+<p>
+Estos fundamentos sirven como referencia para los casos de estudio y los
+registros del repositorio.
+</p>
+
+<p>
+Cada caso permite aplicar los principios anteriores a una situación concreta,
+mientras que los documentos de registro ayudan a organizar las hipótesis,
+las pruebas y la evaluación de resultados.
+</p>
+
+<p>
+El contenido de este documento constituye una base de trabajo en evolución.
+Los criterios podrán ampliarse o ajustarse a medida que se incorporen nuevos
+conocimientos y experiencias.
+</p>
+
+<div class="destacado">
+<strong>Principio central:</strong> comprender el proceso, analizar el problema
+y fundamentar las propuestas antes de afirmar que una mejora funciona.
+</div>
+
+</div>
+</details>
+
+<!-- DOCUMENTO 02 -->
+
+<details class="documento">
+<summary>02 — Metodología de Mejora de Procesos — Versión 1.0</summary>
+
+<div class="contenido">
+
+<p>
+<strong>Un enfoque estructurado para observar, analizar y mejorar procesos
+de manera continua.</strong>
+</p>
+
+<h2>1. Propósito</h2>
+
+<p>
+Establecer un procedimiento ordenado para comprender cómo funciona un proceso,
+identificar problemas, analizar sus posibles causas y evaluar oportunidades
+de mejora.
+</p>
+
+<p>
+La metodología busca fundamentar las decisiones, evitar conclusiones apresuradas
+y promover el aprendizaje a partir de los resultados obtenidos.
+</p>
+
+<h2>2. Etapas de la metodología</h2>
+
+<h3>Etapa 1 — Observación</h3>
+
+<p>
+Observar el proceso para comprender su funcionamiento e identificar posibles
+oportunidades de mejora, como demoras, esperas, movimientos innecesarios
+o interrupciones.
+</p>
+
+<h3>Etapa 2 — Identificación del problema</h3>
+
+<p>
+Describir el problema detectado de manera concreta, indicando dónde ocurre,
+cómo se manifiesta y qué efectos puede tener sobre el proceso.
+</p>
+
+<h3>Etapa 3 — Análisis de causas</h3>
+
+<p>
+Investigar por qué ocurre el problema antes de proponer una solución.
+Diferenciar los hechos observados de las posibles causas que todavía
+deben comprobarse.
+</p>
+
+<h3>Etapa 4 — Formulación de hipótesis</h3>
+
+<p>
+Proponer una posible solución y explicar qué cambios o resultados se espera obtener.
+</p>
+
+<h3>Etapa 5 — Prueba</h3>
+
+<p>
+Evaluar la propuesta mediante una prueba controlada, siempre que sea posible,
+segura y autorizada.
+</p>
+
+<h3>Etapa 6 — Medición</h3>
+
+<p>
+Comparar los resultados con la situación inicial mediante datos relevantes,
+como tiempos, interrupciones, errores o indicadores de calidad, según el
+tipo de proceso.
+</p>
+
+<h3>Etapa 7 — Evaluación y ajuste</h3>
+
+<p>
+Analizar los resultados para determinar si la propuesta funcionó, si necesita
+modificaciones o si conviene descartarla y explorar otras alternativas.
+</p>
+
+<h3>Etapa 8 — Mejora continua</h3>
+
+<p>
+Registrar los aprendizajes obtenidos y utilizar la experiencia para perfeccionar
+tanto el proceso analizado como la propia metodología.
+</p>
+
+<h2>3. Principios de trabajo</h2>
+
+<ul>
+<li><strong>Comprender antes de actuar:</strong> analizar la situación antes de intervenir.</li>
+<li><strong>Diferenciar hechos e hipótesis:</strong> no presentar posibles causas como conclusiones confirmadas.</li>
+<li><strong>Fundamentar las decisiones:</strong> evitar propuestas basadas únicamente en suposiciones.</li>
+<li><strong>Medir cuando sea posible:</strong> utilizar información relevante para evaluar los resultados.</li>
+<li><strong>Aprender de cada prueba:</strong> aprovechar tanto los resultados positivos como los negativos.</li>
+<li><strong>Documentar los cambios:</strong> registrar las modificaciones y aprendizajes de cada nueva versión.</li>
+<li><strong>Priorizar la seguridad y la calidad:</strong> ninguna mejora debe comprometer las condiciones de trabajo ni los requisitos del proceso.</li>
+</ul>
+
+<h2>4. Estado de validación</h2>
+
+<p><strong>Estado actual: propuesta inicial en desarrollo.</strong></p>
+
+<p>
+Esta versión establece una estructura de trabajo que se revisará a medida
+que la metodología se aplique a diferentes casos y se obtenga evidencia
+sobre su utilidad.
+</p>
+
+<p>
+Las etapas y los criterios podrán ajustarse según las características
+de cada proceso. Las propuestas no se considerarán mejoras comprobadas
+hasta que sus resultados hayan sido evaluados.
+</p>
+
+<h2>5. Próximo paso</h2>
+
+<p>Aplicar la metodología a un caso concreto y documentar:</p>
+
+<ol>
+<li>Las observaciones iniciales.</li>
+<li>El problema identificado.</li>
+<li>Las posibles causas.</li>
+<li>Las alternativas propuestas.</li>
+<li>Los criterios para evaluar los resultados.</li>
+<li>Los aprendizajes y ajustes necesarios.</li>
+</ol>
+
+<p>
+El objetivo será comprobar si la metodología permite analizar los problemas
+de forma ordenada y si necesita mejoras para futuras aplicaciones.
+</p>
+
+<div class="destacado">
+<strong>Principio fundamental:</strong> observar, comprender, analizar,
+probar y aprender para mejorar continuamente.
+</div>
+
+</div>
+</details>
+
+<!-- DOCUMENTO 03 -->
+
+<details class="documento">
+<summary>03 — Registro de Problemas e Hipótesis</summary>
+
+<div class="contenido">
+
+<p>
+<strong>Documento de seguimiento para identificar problemas, analizar
+posibles causas y registrar oportunidades de mejora.</strong>
+</p>
+
+<h2>1. Propósito</h2>
+
+<p>
+Registrar los problemas detectados durante el análisis de procesos,
+sus posibles causas, las hipótesis de mejora y los resultados de las
+pruebas realizadas.
+</p>
+
+<p>
+El objetivo es mantener un seguimiento ordenado de cada oportunidad
+de mejora y evitar que las propuestas se consideren soluciones comprobadas
+antes de ser evaluadas.
+</p>
+
+<h2>2. Registro de problemas</h2>
+
+<h3>Problema 001 — Esperas entre etapas</h3>
+
+<p><strong>Descripción</strong></p>
+
+<p>
+Se detectaron esperas entre distintas etapas del proceso que podrían afectar
+la continuidad del trabajo.
+</p>
+
+<p><strong>Posibles causas</strong></p>
+
+<ul>
+<li>Desbalance entre las operaciones.</li>
+<li>Diferencias en los tiempos de ciclo.</li>
+<li>Falta de disponibilidad de materiales.</li>
+</ul>
+
+<p>
+Estas causas son hipótesis iniciales y deberán verificarse mediante
+la observación del proceso.
+</p>
+
+<p><strong>Hipótesis de mejora</strong></p>
+
+<p>
+Analizar el origen de las esperas permitirá identificar posibles acciones
+para reducir los tiempos improductivos y mejorar la continuidad del proceso.
+</p>
+
+<p><strong>Prueba propuesta</strong></p>
+
+<p>
+Observar la secuencia de trabajo y registrar cuándo aparece la espera,
+cuánto dura, en qué etapa ocurre y qué situación la provoca.
+</p>
+
+<p><strong>Indicadores de evaluación</strong></p>
+
+<ul>
+<li>Tiempo de espera.</li>
+<li>Tiempo de ciclo.</li>
+<li>Acumulación de unidades o trabajo entre etapas.</li>
+</ul>
+
+<p><strong>Estado:</strong> Pendiente de medición y validación.</p>
+
+<h3>Problema 002 — Preparación de piezas y montaje</h3>
+
+<p><strong>Descripción</strong></p>
+
+<p>
+El armado de módulos requiere realizar tareas de preparación durante
+el proceso, como retirar piezas de sus bolsas, separarlas y organizarlas
+antes de utilizarlas.
+</p>
+
+<p>
+Estas actividades pueden interrumpir la continuidad del montaje cuando
+no existe suficiente preparación anticipada.
+</p>
+
+<p><strong>Posible oportunidad de mejora</strong></p>
+
+<p>
+Evaluar si una parte de la preparación puede realizarse antes de que
+las piezas sean necesarias en la estación de montaje.
+</p>
+
+<p><strong>Hipótesis de mejora</strong></p>
+
+<p>
+Preparar y organizar previamente los componentes podría reducir
+las interrupciones durante el montaje, facilitar el trabajo del operario
+y mejorar la continuidad de las operaciones.
+</p>
+
+<p><strong>Prueba propuesta</strong></p>
+
+<p>
+Comparar el proceso actual con una alternativa de preparación previa,
+mediante una prueba controlada y autorizada.
+</p>
+
+<p><strong>Indicadores de evaluación</strong></p>
+
+<ul>
+<li>Tiempo dedicado a la preparación.</li>
+<li>Tiempo de ciclo de la estación.</li>
+<li>Interrupciones durante el montaje.</li>
+<li>Errores de preparación o montaje.</li>
+<li>Espacio utilizado.</li>
+<li>Disponibilidad e identificación correcta de los materiales.</li>
+</ul>
+
+<p><strong>Estado:</strong> Hipótesis pendiente de prueba.</p>
+
+<h2>3. Criterios de evaluación</h2>
+
+<p>
+Cada propuesta deberá evaluarse considerando los siguientes aspectos:
+</p>
+
+<ul>
+<li><strong>Situación inicial:</strong> cómo funciona el proceso antes de la mejora.</li>
+<li><strong>Análisis de causas:</strong> qué factores originan el problema, cuando puedan verificarse.</li>
+<li><strong>Cambio propuesto:</strong> qué modificación se realiza durante la prueba.</li>
+<li><strong>Comparación de resultados:</strong> qué diferencias se observan entre la situación inicial y la posterior.</li>
+<li><strong>Efectos secundarios:</strong> qué consecuencias podría generar la modificación en otras etapas.</li>
+<li><strong>Seguridad y calidad:</strong> si se mantienen las condiciones de trabajo y los requisitos del proceso.</li>
+<li><strong>Decisión final:</strong> mantener, modificar o descartar la propuesta según la evidencia obtenida.</li>
+</ul>
+
+<p>
+Cuando no existan mediciones, el análisis deberá indicar expresamente
+esa limitación. No se deberán inventar resultados ni considerar una
+hipótesis como confirmada sin evidencia suficiente.
+</p>
+
+<h2>4. Historial de aprendizajes</h2>
+
+<p>
+Este apartado se actualizará a medida que se desarrollen nuevos análisis
+y pruebas.
+</p>
+
+<p>Se registrarán:</p>
+
+<ul>
+<li>Nuevas oportunidades de mejora.</li>
+<li>Hipótesis confirmadas o descartadas.</li>
+<li>Resultados obtenidos durante las evaluaciones.</li>
+<li>Modificaciones realizadas en las propuestas.</li>
+<li>Aprendizajes que puedan incorporarse a futuras versiones de la metodología.</li>
+</ul>
+
+<p>
+El objetivo es construir un registro que permita comprender cómo evoluciona
+cada problema y qué conocimientos se obtienen durante el proceso.
+</p>
+
+<div class="destacado">
+<strong>Principio de trabajo:</strong> identificar el problema, analizar
+sus posibles causas y evaluar las propuestas antes de considerarlas
+soluciones efectivas.
+</div>
+
+</div>
+</details>
+
+<!-- DOCUMENTO 04 -->
+
+<details class="documento">
+<summary>04 — Registro de Experimentos y Validación</summary>
+
+<div class="contenido">
+
+<p>
+<strong>Objetivo:</strong> establecer cómo comprobar las hipótesis de mejora,
+bajo qué condiciones realizar las pruebas y qué evidencia se necesita
+para tomar una decisión.
+</p>
+
+<h2>1. Propósito</h2>
+
+<p>
+Este documento define el procedimiento para diseñar, ejecutar y evaluar
+pruebas destinadas a comprobar hipótesis de mejora.
+</p>
+
+<p>
+A diferencia del registro de problemas, que identifica oportunidades,
+este documento se centra en cómo validar una propuesta y determinar
+si sus resultados justifican mantenerla, modificarla o descartarla.
+</p>
+
+<p>
+Cada experimento deberá tener un objetivo definido, condiciones de prueba
+claras, indicadores relevantes y criterios de evaluación establecidos
+antes de analizar los resultados.
+</p>
+
+<h2>2. Diseño del experimento</h2>
+
+<p>
+Antes de realizar una prueba, se deberán definir los siguientes elementos:
+</p>
+
+<ul>
+<li><strong>Problema de origen:</strong> situación que motiva el experimento.</li>
+<li><strong>Hipótesis:</strong> resultado que se espera obtener y por qué.</li>
+<li><strong>Variable modificada:</strong> factor que se cambiará durante la prueba.</li>
+<li><strong>Condiciones de referencia:</strong> condiciones en las que funciona el proceso actual.</li>
+<li><strong>Indicadores:</strong> variables que permitirán evaluar el resultado.</li>
+<li><strong>Condiciones de control:</strong> aspectos que deben mantenerse constantes para que la comparación sea válida.</li>
+<li><strong>Riesgos y restricciones:</strong> condiciones de seguridad, calidad, autorización y recursos.</li>
+<li><strong>Criterio de aceptación:</strong> qué resultado se considerará suficiente para apoyar la propuesta.</li>
+</ul>
+
+<p>
+Siempre que sea posible, se modificará un factor principal por prueba
+para facilitar la interpretación de los resultados.
+</p>
+
+<h2>3. Protocolo de prueba</h2>
+
+<p>Cada experimento deberá seguir una secuencia ordenada:</p>
+
+<ol>
+<li><strong>Preparar:</strong> definir el objetivo, los recursos y las condiciones de prueba.</li>
+<li><strong>Establecer la referencia:</strong> documentar la situación actual con la información disponible.</li>
+<li><strong>Aplicar el cambio:</strong> realizar la modificación autorizada.</li>
+<li><strong>Observar:</strong> registrar lo que sucede durante la prueba.</li>
+<li><strong>Recopilar datos:</strong> registrar los indicadores definidos.</li>
+<li><strong>Comparar:</strong> analizar las diferencias respecto de la referencia.</li>
+<li><strong>Concluir:</strong> determinar qué se puede afirmar a partir de la evidencia.</li>
+<li><strong>Decidir:</strong> mantener, modificar, descartar o repetir el experimento.</li>
+</ol>
+
+<p>
+Si no se puede realizar una prueba, se documentará como propuesta pendiente,
+sin presentar resultados hipotéticos como si fueran reales.
+</p>
+
+<h2>4. Ficha de experimento</h2>
+
+<p>
+Cada prueba se documentará mediante la siguiente ficha:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Información requerida</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>ID del experimento</td><td>Identificador único.</td></tr>
+<tr><td>Hipótesis asociada</td><td>Referencia al registro de problemas.</td></tr>
+<tr><td>Objetivo</td><td>Qué se busca comprobar.</td></tr>
+<tr><td>Variable modificada</td><td>Qué cambia respecto del proceso actual.</td></tr>
+<tr><td>Condiciones de prueba</td><td>Recursos, entorno y restricciones.</td></tr>
+<tr><td>Indicadores</td><td>Qué se observará o medirá.</td></tr>
+<tr><td>Criterios de aceptación</td><td>Qué resultados apoyarían la propuesta.</td></tr>
+<tr><td>Riesgos y controles</td><td>Qué podría salir mal y cómo prevenirlo.</td></tr>
+<tr><td>Resultados</td><td>Datos y observaciones reales.</td></tr>
+<tr><td>Conclusión</td><td>Qué permite afirmar la evidencia.</td></tr>
+<tr><td>Decisión</td><td>Mantener, modificar, descartar o repetir.</td></tr>
+<tr><td>Estado</td><td>Propuesto, autorizado, ejecutado o evaluado.</td></tr>
+</tbody>
+</table>
+
+<h2>5. Experimento 001 — Preparación previa de piezas</h2>
+
+<p><strong>Problema relacionado:</strong> preparación de piezas durante el montaje de módulos.</p>
+
+<p><strong>Objetivo:</strong> evaluar si organizar y preparar previamente las piezas puede reducir las interrupciones durante el montaje sin generar problemas de calidad, abastecimiento o espacio.</p>
+
+<p><strong>Hipótesis:</strong> si los componentes están preparados y organizados antes de necesitarlos, podrían reducirse las interrupciones del montaje y mejorar la continuidad del trabajo.</p>
+
+<p><strong>Variable modificada:</strong> forma y momento de preparación de las piezas.</p>
+
+<p><strong>Condiciones de referencia:</strong> proceso actual, en el que las piezas se preparan durante el trabajo cuando no están disponibles previamente.</p>
+
+<p><strong>Prueba propuesta:</strong> comparar el proceso actual con una preparación previa controlada, únicamente si la prueba está autorizada y cumple las condiciones de seguridad y calidad.</p>
+
+<h3>Indicadores</h3>
+
+<ul>
+<li>Tiempo dedicado a preparar las piezas.</li>
+<li>Tiempo de montaje.</li>
+<li>Interrupciones durante el proceso.</li>
+<li>Errores de identificación o selección.</li>
+<li>Espacio requerido para los componentes preparados.</li>
+<li>Efectos sobre el abastecimiento y las etapas relacionadas.</li>
+</ul>
+
+<h3>Criterios de aceptación</h3>
+
+<p>
+Antes de ejecutar la prueba, deberán definirse los resultados mínimos esperados.
+La propuesta deberá evaluarse considerando la continuidad del montaje,
+la calidad, la seguridad y los posibles efectos sobre el proceso completo.
+</p>
+
+<p>
+No bastará con reducir el tiempo de una tarea si el cambio genera problemas
+en otra etapa.
+</p>
+
+<h3>Estado actual</h3>
+
+<p><strong>Propuesto — Pendiente de autorización, prueba y validación.</strong></p>
+
+<p>
+No existen resultados medidos disponibles para este experimento. La hipótesis
+y los beneficios esperados todavía deben comprobarse.
+</p>
+
+<h2>6. Interpretación de resultados</h2>
+
+<p>
+Una vez ejecutado el experimento, los resultados deberán interpretarse
+de acuerdo con la evidencia disponible.
+</p>
+
+<ul>
+<li><strong>Mantener:</strong> los resultados cumplen los criterios establecidos y no aparecen efectos negativos relevantes.</li>
+<li><strong>Modificar:</strong> se observan beneficios parciales o dificultades que pueden corregirse.</li>
+<li><strong>Descartar:</strong> la propuesta no alcanza los objetivos o genera consecuencias negativas relevantes.</li>
+<li><strong>Repetir:</strong> la información es insuficiente, las condiciones cambiaron o se necesita comprobar la consistencia de los resultados.</li>
+</ul>
+
+<p>
+Si la prueba no permite llegar a una conclusión clara, se deberá registrar
+esa limitación y evitar afirmar que la hipótesis está confirmada.
+</p>
+
+<h2>7. Seguridad, calidad y autorización</h2>
+
+<p>
+Ningún experimento deberá realizarse sin las autorizaciones correspondientes
+ni comprometer la seguridad de las personas, la calidad del producto
+o el funcionamiento de la línea.
+</p>
+
+<p>
+Cuando una prueba no pueda ejecutarse, el diseño experimental podrá
+documentarse como una propuesta para una futura evaluación.
+</p>
+
+<h2>8. Historial de experimentos</h2>
+
+<p>
+Este registro se actualizará con cada prueba realizada e incluirá:
+</p>
+
+<ul>
+<li>Identificación y fecha del experimento.</li>
+<li>Versión de la propuesta evaluada.</li>
+<li>Condiciones en las que se realizó.</li>
+<li>Datos y observaciones obtenidos.</li>
+<li>Desviaciones o dificultades detectadas.</li>
+<li>Conclusiones y decisión final.</li>
+</ul>
+
+<p>
+El historial permitirá mantener la trazabilidad de las pruebas y evitar
+que una misma hipótesis se evalúe repetidamente sin considerar los
+aprendizajes anteriores.
+</p>
+
+<div class="destacado">
+<strong>Principio fundamental:</strong> una propuesta no se considera
+validada por parecer razonable; debe evaluarse mediante criterios
+definidos y evidencia suficiente.
+</div>
+
+</div>
+</details>
+
+<!-- DOCUMENTO 05 -->
+
+<details class="documento">
+<summary>05 — Medición y Evaluación de Mejoras</summary>
+
+<div class="contenido">
+
+<p>
+<strong>Herramientas para interpretar datos, comparar resultados y determinar
+si una mejora aporta valor al proceso.</strong>
+</p>
+
+<h2>1. Propósito</h2>
+
+<p>
+Establecer criterios y herramientas para analizar los resultados obtenidos
+durante las pruebas de mejora.
+</p>
+
+<p>
+Este documento se centra en cómo interpretar los datos y determinar qué
+significan para el proceso, complementando la metodología general y
+el registro de experimentos.
+</p>
+
+<h2>2. Selección de indicadores</h2>
+
+<p>
+Cada problema requiere indicadores específicos. No es necesario medir todo:
+se deben seleccionar las variables que permitan evaluar el objetivo
+de la mejora.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>¿Qué permite analizar?</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Tiempo de ciclo</td><td>Duración de una operación o unidad de trabajo.</td></tr>
+<tr><td>Tiempo de espera</td><td>Tiempo durante el cual una actividad queda detenida esperando otra.</td></tr>
+<tr><td>Producción</td><td>Cantidad de unidades completadas en un período.</td></tr>
+<tr><td>Calidad</td><td>Errores, defectos y retrabajos detectados.</td></tr>
+<tr><td>Acumulación</td><td>Unidades o tareas pendientes entre etapas.</td></tr>
+<tr><td>Condiciones de trabajo</td><td>Ergonomía, seguridad, disponibilidad de recursos y dificultades operativas.</td></tr>
+</tbody>
+</table>
+
+<p>
+La selección dependerá del problema estudiado y de la información que
+sea posible obtener.
+</p>
+
+<h2>3. Herramientas de análisis</h2>
+
+<h3>Variación del tiempo</h3>
+
+<p>
+Permite calcular cuánto cambió el tiempo de una operación después
+de una modificación.
+</p>
+
+<div class="formula">
+Variación = Tiempo final − Tiempo inicial
+</div>
+
+<p>
+Un resultado negativo indica una reducción del tiempo; uno positivo,
+un aumento.
+</p>
+
+<h3>Porcentaje de reducción</h3>
+
+<p>
+Cuando el tiempo inicial es mayor que cero, se puede calcular la reducción
+porcentual:
+</p>
+
+<div class="formula">
+Reducción (%) = ((Tiempo inicial − Tiempo final) / Tiempo inicial) × 100
+</div>
+
+<p>
+<strong>Ejemplo hipotético:</strong> si una operación pasa de 60 segundos
+a 48 segundos, la reducción es del 20 %.
+</p>
+
+<p>
+Este ejemplo es ilustrativo y no representa una medición de los casos
+del portfolio.
+</p>
+
+<h3>Variación de la producción</h3>
+
+<p>
+Permite comparar la cantidad producida durante períodos equivalentes:
+</p>
+
+<div class="formula">
+Variación de producción = Producción final − Producción inicial
+</div>
+
+<p>
+La comparación solo será útil si se consideran las diferencias relevantes
+entre los períodos, como la duración de la jornada, el volumen de trabajo
+y la disponibilidad de materiales.
+</p>
+
+<h2>4. Interpretación de resultados</h2>
+
+<p>
+Los datos deben interpretarse dentro del contexto del proceso.
+</p>
+
+<p>
+Una reducción del tiempo puede ser favorable, pero no demuestra por sí sola
+que el proceso haya mejorado.
+</p>
+
+<p>También se deberá analizar:</p>
+
+<ul>
+<li>Si la calidad se mantiene o mejora.</li>
+<li>Si las condiciones de seguridad siguen siendo adecuadas.</li>
+<li>Si aparecen demoras o acumulaciones en otras etapas.</li>
+<li>Si la distribución del trabajo resulta viable.</li>
+<li>Si los recursos necesarios justifican la mejora.</li>
+<li>Si los resultados son consistentes o podrían deberse a condiciones particulares.</li>
+</ul>
+
+<p>
+Cuando existan pocas observaciones o condiciones diferentes entre las pruebas,
+las conclusiones deberán presentarse con cautela.
+</p>
+
+<h2>5. Limitaciones de la medición</h2>
+
+<p>
+Toda evaluación tiene limitaciones que pueden afectar la interpretación
+de los resultados.
+</p>
+
+<p>Entre ellas se encuentran:</p>
+
+<ul>
+<li>Datos incompletos o poco precisos.</li>
+<li>Diferencias entre las condiciones iniciales y finales.</li>
+<li>Cantidad insuficiente de observaciones.</li>
+<li>Cambios simultáneos que dificultan identificar la causa del resultado.</li>
+<li>Indicadores que no reflejan todos los efectos de una modificación.</li>
+</ul>
+
+<p>
+Estas limitaciones deberán documentarse para evitar conclusiones más firmes
+de lo que permite la evidencia.
+</p>
+
+<h2>6. De los datos a la decisión</h2>
+
+<p>
+Los resultados de una evaluación pueden dar lugar a distintas conclusiones:
+</p>
+
+<ul>
+<li><strong>Resultado favorable:</strong> los datos respaldan la mejora y no se identifican efectos negativos relevantes.</li>
+<li><strong>Resultado parcial:</strong> existe una mejora en algún aspecto, pero quedan cuestiones por resolver.</li>
+<li><strong>Resultado inconcluso:</strong> la información disponible no permite determinar si la propuesta funciona.</li>
+<li><strong>Resultado desfavorable:</strong> la propuesta no alcanza el objetivo o genera consecuencias negativas relevantes.</li>
+</ul>
+
+<p>
+La decisión final deberá considerar el conjunto del proceso, los criterios
+definidos antes de la prueba y las limitaciones de los datos.
+</p>
+
+<h2>7. Aplicación en los casos de estudio</h2>
+
+<p>
+Estas herramientas podrán utilizarse cuando existan datos suficientes
+para evaluar las propuestas de los casos documentados.
+</p>
+
+<p>
+Por ejemplo, en el caso de preparación y montaje, podrían analizarse
+las interrupciones, los tiempos de preparación y montaje, las tareas
+pendientes y los posibles efectos sobre otras etapas.
+</p>
+
+<p>
+Si no se dispone de mediciones, el caso podrá mantenerse como análisis
+cualitativo y propuesta pendiente de validación. No deberán inventarse
+valores para completar las tablas.
+</p>
+
+<div class="destacado">
+<strong>Principio fundamental:</strong> medir permite conocer qué cambió;
+analizar permite comprender qué significa ese cambio para el proceso.
+</div>
+
+</div>
+</details>
+
+<!-- DOCUMENTO 06: CASO 01 PREPARACIÓN DE PIEZAS -->
+
+<details class="documento">
+<summary>06 — Caso de estudio 01: Preparación de piezas y montaje en una línea de producción</summary>
+
+<div class="contenido">
+
+<h2>1. Introducción</h2>
+
+<p>
+Este caso de estudio analiza una situación observada en una estación de montaje
+de una línea de producción. El objetivo es identificar posibles oportunidades
+de mejora en la organización de las tareas, la preparación de los componentes
+y las condiciones en las que el operario realiza su trabajo.
+</p>
+
+<p>
+El análisis se basa en la observación directa del proceso y en el razonamiento
+sobre posibles alternativas de mejora. No se realizaron mediciones formales
+de tiempos ni pruebas de implementación, por lo que las propuestas presentadas
+son hipótesis que deberán validarse.
+</p>
+
+<h2>2. Descripción del proceso actual</h2>
+
+<p>
+En la estación analizada, el operario realiza distintas tareas de montaje
+y ajuste sobre unidades que avanzan continuamente por la línea de producción.
+</p>
+
+<p>Entre las actividades observadas se encuentran:</p>
+
+<ul>
+<li>Retirar y preparar los componentes necesarios.</li>
+<li>Manipular la carcasa y el módulo.</li>
+<li>Realizar operaciones de montaje y ajuste.</li>
+<li>Conectar el tablero.</li>
+<li>Ajustar los módulos.</li>
+<li>Ajustar los tornillos del limpiaparabrisas.</li>
+</ul>
+
+<p>
+Los componentes se encuentran disponibles en cajas y otros embalajes.
+Algunos deben extraerse, separarse, orientarse y organizarse antes
+de poder utilizarlos.
+</p>
+
+<p>
+La estación tiene un límite de entrada y otro de salida. El operario debe
+completar las tareas asignadas antes de que la unidad llegue al final
+de su recorrido. Si quedan operaciones pendientes, se activa una alarma.
+</p>
+
+<p>
+Por este motivo, la organización previa de los componentes y la continuidad
+del trabajo son factores relevantes para el desarrollo de las tareas.
+</p>
+
+<h2>3. Problema observado</h2>
+
+<p>
+La situación identificada es la dificultad para completar todas las tareas
+de la estación cuando se acumulan las operaciones de preparación, montaje
+y ajuste.
+</p>
+
+<p>
+Cuando el operario dispone de margen, puede preparar componentes para varias
+unidades con anticipación. Esto permite mantener piezas organizadas y
+disponibles para las siguientes operaciones.
+</p>
+
+<p>
+Sin embargo, cuando ese margen disminuye, la preparación de componentes
+puede interrumpir el montaje. El operario debe alternar entre preparar
+las piezas y continuar con las tareas de la unidad que avanza por la línea.
+</p>
+
+<p>
+También se observó una dificultad específica durante el ajuste de los
+tornillos del limpiaparabrisas: aunque la herramienta puede acceder al
+espacio, la maniobrabilidad es limitada y dificulta realizar el ajuste.
+</p>
+
+<p>
+Estas situaciones pueden contribuir a que determinadas operaciones queden
+pendientes al finalizar la estación.
+</p>
+
+<div class="destacado">
+<strong>Problema central:</strong> la combinación de tareas de preparación,
+montaje y ajuste dentro de una estación con avance continuo puede dificultar
+la finalización de todas las operaciones asignadas.
+</div>
+
+<h2>4. Análisis de posibles causas</h2>
+
+<p>
+A partir de las observaciones, se identifican las siguientes hipótesis:
+</p>
+
+<h3>4.1. Acumulación de tareas</h3>
+
+<p>
+El operario debe realizar varias operaciones diferentes dentro de una misma
+estación. La suma de estas actividades podría reducir el margen disponible
+para completar el trabajo.
+</p>
+
+<h3>4.2. Preparación de componentes durante el proceso</h3>
+
+<p>
+La necesidad de separar, orientar y organizar las piezas puede interrumpir
+la continuidad del montaje cuando no existe una preparación anticipada suficiente.
+</p>
+
+<h3>4.3. Limitaciones de acceso a la herramienta</h3>
+
+<p>
+El espacio disponible para ajustar los tornillos del limpiaparabrisas
+dificulta la maniobrabilidad y podría aumentar la complejidad de esa operación.
+</p>
+
+<h3>4.4. Distribución del trabajo entre etapas</h3>
+
+<p>
+Algunas tareas de preparación o ensamblado previo podrían evaluarse para
+determinar si conviene realizarlas antes de que los componentes lleguen
+a la estación.
+</p>
+
+<p>
+Estas hipótesis no constituyen causas raíz confirmadas. Para confirmarlas
+sería necesario realizar un análisis adicional y, si fuera posible,
+validar las alternativas mediante pruebas controladas.
+</p>
+
+<h2>5. Alternativas de mejora propuestas</h2>
+
+<h3>Alternativa A. Preparación anticipada de componentes</h3>
+
+<p>
+Evaluar la posibilidad de que los componentes lleguen separados, orientados
+e identificados en una bandeja o kit preparado para cada unidad.
+</p>
+
+<p>
+El objetivo sería reducir la necesidad de detener o interrumpir el montaje
+para buscar, separar u organizar piezas.
+</p>
+
+<p><strong>Beneficios esperados:</strong></p>
+
+<ul>
+<li>Mayor continuidad del trabajo.</li>
+<li>Menos interrupciones durante el montaje.</li>
+<li>Mejor organización de los componentes.</li>
+<li>Mayor comodidad para el operario.</li>
+<li>Posibilidad de concentrarse en las operaciones de montaje y ajuste.</li>
+</ul>
+
+<p><strong>Aspectos a evaluar:</strong></p>
+
+<ul>
+<li>Espacio disponible para preparar y almacenar los kits.</li>
+<li>Identificación correcta de las piezas.</li>
+<li>Riesgo de faltantes, confusiones o daños.</li>
+<li>Recursos necesarios para preparar y abastecer los componentes.</li>
+</ul>
+
+<h3>Alternativa B. Recepción de subconjuntos preensamblados</h3>
+
+<p>
+Evaluar si determinados componentes, como el módulo y la carcasa,
+pueden llegar parcialmente ensamblados desde una etapa anterior.
+</p>
+
+<p>
+El objetivo sería reducir la cantidad de operaciones que debe realizar
+el operario dentro de la estación actual.
+</p>
+
+<p><strong>Beneficios esperados:</strong></p>
+
+<ul>
+<li>Menor cantidad de operaciones de montaje en la estación.</li>
+<li>Posible reducción de la carga de trabajo.</li>
+<li>Mayor disponibilidad para realizar otros ajustes.</li>
+<li>Posibilidad de reorganizar las tareas entre diferentes etapas del proceso.</li>
+</ul>
+
+<p><strong>Aspectos a evaluar:</strong></p>
+
+<ul>
+<li>Viabilidad técnica del preensamblado.</li>
+<li>Calidad y correcta identificación de los subconjuntos.</li>
+<li>Costos de implementación y transporte interno.</li>
+<li>Espacio, herramientas y capacitación necesarios.</li>
+<li>Impacto sobre la carga de trabajo de las etapas anteriores.</li>
+</ul>
+
+<p>
+Esta alternativa podría requerir la reasignación de tareas o la creación
+de un puesto específico de preparación y ensamblado. Esto representaría
+una posibilidad de reorganización del trabajo y una eventual oportunidad
+laboral, pero también implicaría costos que deberían evaluarse.
+</p>
+
+<p>
+Además, trasladar una tarea a otra etapa no significa eliminarla:
+es necesario analizar el proceso completo para determinar si la modificación
+resulta conveniente.
+</p>
+
+<h3>Alternativa complementaria. Analizar el ajuste del limpiaparabrisas</h3>
+
+<p>
+Investigar si la dificultad para maniobrar la herramienta puede reducirse
+mediante una revisión del acceso, la posición de trabajo, el diseño de
+la herramienta o la secuencia de ajuste.
+</p>
+
+<p>
+Cualquier modificación deberá respetar los requisitos técnicos,
+de seguridad y de calidad.
+</p>
+
+<p>
+Esta alternativa se analizará por separado, ya que la dificultad observada
+podría tener una causa distinta de la preparación de componentes.
+</p>
+
+<h2>6. Beneficios esperados y posibles dificultades</h2>
+
+<p>
+La finalidad de las propuestas no es únicamente mejorar la productividad,
+sino también favorecer que el operario pueda realizar sus tareas de manera
+más cómoda, organizada y segura.
+</p>
+
+<p>Entre los beneficios esperados se encuentran:</p>
+
+<ul>
+<li>Mejor distribución de la carga de trabajo.</li>
+<li>Reducción de interrupciones.</li>
+<li>Mayor continuidad del montaje.</li>
+<li>Posible disminución de tareas pendientes al final de la estación.</li>
+<li>Posible mejora de la calidad.</li>
+<li>Mejor organización de las actividades entre las diferentes etapas.</li>
+</ul>
+
+<p>
+No obstante, una mejora en una estación podría generar nuevas necesidades
+en otra. Por ejemplo, el preensamblado de componentes podría requerir
+personal, espacio y recursos adicionales.
+</p>
+
+<p>
+Por lo tanto, la decisión deberá considerar tanto los beneficios para
+el operario como los efectos sobre el conjunto del proceso productivo.
+</p>
+
+<h2>7. Plan de evaluación de las propuestas</h2>
+
+<p>
+Para comprobar la efectividad de las mejoras, se propone realizar una
+prueba autorizada y comparar la situación inicial con los resultados
+posteriores.
+</p>
+
+<h3>Etapa 1. Registrar la situación inicial</h3>
+
+<p>
+Documentar, mediante observaciones y mediciones autorizadas cuando sea posible:
+</p>
+
+<ul>
+<li>Tiempo total del proceso en la estación.</li>
+<li>Tiempo dedicado a la preparación y al montaje.</li>
+<li>Interrupciones durante el trabajo.</li>
+<li>Operaciones que quedan pendientes.</li>
+<li>Errores o problemas de calidad.</li>
+<li>Percepción del operario respecto de las condiciones de trabajo.</li>
+</ul>
+
+<h3>Etapa 2. Implementar una prueba</h3>
+
+<p>
+Seleccionar una de las alternativas y realizar una prueba controlada,
+siempre que exista autorización y que se mantengan las condiciones
+de seguridad y calidad.
+</p>
+
+<h3>Etapa 3. Comparar los resultados</h3>
+
+<p>
+Comparar la situación anterior con la posterior a la prueba, teniendo en cuenta:
+</p>
+
+<ul>
+<li>Cambios en los tiempos de trabajo.</li>
+<li>Continuidad del montaje.</li>
+<li>Cantidad y tipo de tareas pendientes.</li>
+<li>Calidad del resultado.</li>
+<li>Comodidad y dificultades experimentadas por el operario.</li>
+<li>Efectos sobre las demás etapas de producción.</li>
+</ul>
+
+<h3>Etapa 4. Tomar una decisión</h3>
+
+<p>
+Si los resultados son favorables y la propuesta resulta viable, se podrá
+evaluar su continuidad o implementación.
+</p>
+
+<p>
+Si no se observan mejoras suficientes o aparecen nuevos problemas,
+será necesario revisar la alternativa y considerar otras posibilidades.
+</p>
+
+<p>
+Los criterios de aceptación deberán definirse antes de la prueba,
+de acuerdo con los objetivos del proceso y los requisitos de la organización.
+</p>
+
+<h2>8. Estado actual del caso</h2>
+
+<p>
+El caso se encuentra en una etapa de análisis preliminar basada en
+la observación directa.
+</p>
+
+<p>
+Se identificaron situaciones que podrían representar oportunidades
+de mejora y se formularon alternativas para evaluarlas. Sin embargo,
+todavía no se realizaron mediciones formales, pruebas de implementación
+ni comparaciones de resultados.
+</p>
+
+<p>
+Por este motivo, no es posible afirmar que alguna de las propuestas
+haya demostrado ser efectiva.
+</p>
+
+<h2>9. Conclusión</h2>
+
+<p>
+Este caso permite aplicar el razonamiento de mejora continua a una
+situación real de trabajo, considerando tanto la organización de las
+operaciones como las condiciones en las que el operario realiza sus tareas.
+</p>
+
+<p>
+La preparación anticipada de componentes, el posible preensamblado de
+subconjuntos y el análisis de las dificultades de ajuste constituyen
+líneas de investigación que podrían contribuir a mejorar el proceso.
+</p>
+
+<p>
+El siguiente paso sería validar las hipótesis y evaluar las alternativas
+con información objetiva, sin asumir que una mejora local necesariamente
+beneficia al sistema completo.
+</p>
+
+<p>
+La principal conclusión es que mejorar un proceso requiere observar,
+analizar, proponer, comprobar los resultados y ajustar las soluciones
+según la evidencia obtenida.
+</p>
+
+</div>
+</details>
+
+<!-- DOCUMENTO 07: CASO 02 FALLA EN LA SUJECIÓN DEL TORNILLO -->
+
+<details class="documento">
+<summary>07 — Caso de estudio 02: Falla en la sujeción del tornillo</summary>
+
+<div class="contenido">
+
+<h2>1. Objetivo</h2>
+
+<p>
+Analizar una anomalía observada en una herramienta de sujeción de tornillos,
+identificar posibles causas, definir qué información sería necesaria
+para investigarlas y establecer criterios para evaluar futuras acciones
+de mejora.
+</p>
+
+<p>
+Este caso forma parte de un proyecto personal de aprendizaje sobre mejora
+continua y análisis de procesos productivos.
+</p>
+
+<h2>2. Descripción del problema</h2>
+
+<p>
+Se observó que una herramienta utilizada durante el proceso productivo
+no logra agarrar o retener correctamente el tornillo con facilidad.
+Según la observación inicial, la situación ocurre con bastante frecuencia.
+</p>
+
+<h3>Consecuencias identificadas</h3>
+
+<ul>
+<li>Pérdida de tiempo durante la operación.</li>
+<li>Posibilidad de que el tornillo se caiga.</li>
+<li>Posibles interrupciones y repetición de operaciones.</li>
+</ul>
+
+<p>
+Todavía no se dispone de mediciones que permitan cuantificar estas consecuencias.
+</p>
+
+<h2>3. Observaciones e hipótesis</h2>
+
+<h3>Observaciones iniciales</h3>
+
+<ul>
+<li>La herramienta presenta dificultades para agarrar o retener el tornillo.</li>
+<li>La anomalía ocurre con bastante frecuencia, según la observación realizada.</li>
+<li>La situación puede generar pérdidas de tiempo y existe la posibilidad de que el tornillo se caiga.</li>
+</ul>
+
+<h3>Hipótesis inicial</h3>
+
+<p>
+El uso continuo podría producir desgaste en el componente encargado de
+sujetar el tornillo, reduciendo su capacidad de retención.
+</p>
+
+<p>
+Esta hipótesis no está confirmada. También podrían intervenir otros factores,
+como problemas de ajuste, alineación, alimentación del tornillo o condiciones
+de funcionamiento.
+</p>
+
+<h2>4. Investigación propuesta</h2>
+
+<p>
+Para evaluar las posibles causas, se propone reunir y analizar información
+de distintas fuentes.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Información que se buscaría</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Registro de fallas</td><td>Frecuencia, momento y circunstancias en las que ocurre la anomalía.</td></tr>
+<tr><td>Inspección técnica</td><td>Estado del componente y cumplimiento de las especificaciones correspondientes.</td></tr>
+<tr><td>Historial de mantenimiento</td><td>Reparaciones, inspecciones y reemplazos anteriores.</td></tr>
+<tr><td>Operario</td><td>Dificultades observadas y condiciones en las que aparece la falla.</td></tr>
+<tr><td>Proceso productivo</td><td>Horas de funcionamiento, volumen de producción y tiempo perdido.</td></tr>
+</tbody>
+</table>
+
+<p>
+La información debe recopilarse respetando los procedimientos de la empresa.
+Las inspecciones y las intervenciones técnicas corresponden al personal autorizado.
+</p>
+
+<h2>5. Posibles acciones de mejora</h2>
+
+<p>
+Las acciones definitivas dependerán de los resultados de la investigación.
+</p>
+
+<p>Entre las alternativas que podrían evaluarse se encuentran:</p>
+
+<ul>
+<li>Reparar o reemplazar el componente, si la inspección técnica lo justifica.</li>
+<li>Revisar las condiciones de funcionamiento de la herramienta.</li>
+<li>Mejorar el registro y seguimiento de las anomalías.</li>
+<li>Evaluar un estándar de inspección preventiva basado en criterios técnicos e historial de fallas.</li>
+</ul>
+
+<p>
+No se propone establecer una frecuencia de reemplazo sin contar con evidencia
+que la justifique.
+</p>
+
+<h2>6. Verificación de eficacia</h2>
+
+<p>
+Después de una intervención autorizada, se propone verificar si la anomalía
+disminuye y si el resultado se mantiene durante un período de observación adecuado.
+</p>
+
+<h3>Indicadores posibles</h3>
+
+<ul>
+<li>Cantidad de fallas de sujeción.</li>
+<li>Horas de funcionamiento.</li>
+<li>Tiempo perdido por las fallas.</li>
+<li>Recurrencia de la anomalía después de la intervención.</li>
+<li>Cumplimiento de los requisitos de calidad y seguridad.</li>
+</ul>
+
+<p>
+Cuando sea posible, se compararán períodos con condiciones y volúmenes
+de producción similares.
+</p>
+
+<p>
+La intervención se considerará eficaz cuando los resultados cumplan
+los criterios definidos y exista evidencia suficiente. Si la falla
+reaparece, se deberá revisar la investigación.
+</p>
+
+<h2>7. Relación con la mejora continua</h2>
+
+<p>El caso aplica una secuencia de trabajo basada en:</p>
+
+<ol>
+<li>Observar el problema.</li>
+<li>Identificar sus consecuencias.</li>
+<li>Formular hipótesis.</li>
+<li>Recopilar y analizar evidencia.</li>
+<li>Evaluar posibles contramedidas.</li>
+<li>Verificar los resultados.</li>
+<li>Estandarizar las mejoras cuando estén justificadas.</li>
+<li>Mantener el seguimiento y revisar el análisis si aparecen nuevas evidencias.</li>
+</ol>
+
+<p>
+El enfoque busca evitar que la solución se limite a corregir una falla
+puntual sin investigar por qué ocurrió.
+</p>
+
+<h2>8. Estado del caso</h2>
+
+<p><strong>Estado: análisis preliminar en desarrollo.</strong></p>
+
+<p>
+La anomalía se identificó a partir de una observación laboral. La causa raíz,
+el impacto cuantitativo, las acciones técnicas y sus resultados todavía
+no han sido verificados.
+</p>
+
+<p>
+Los escenarios de reparación y seguimiento desarrollados durante el análisis
+son ejemplos hipotéticos utilizados para construir la metodología.
+No representan resultados medidos en la fábrica.
+</p>
+
+<h2>9. Aprendizajes</h2>
+
+<ul>
+<li>Diferenciar observaciones de hipótesis.</li>
+<li>Evitar atribuir una causa sin evidencia suficiente.</li>
+<li>Analizar el proceso y no solamente el componente que presenta la falla.</li>
+<li>Considerar tanto la corrección como la prevención.</li>
+<li>Definir indicadores antes de evaluar una mejora.</li>
+<li>Verificar los resultados antes de dar por resuelto un problema.</li>
+</ul>
+
+<h2>10. Próximos pasos</h2>
+
+<ul>
+<li>Obtener información adicional sobre la frecuencia y las circunstancias de la falla, si está disponible y autorizado su uso.</li>
+<li>Contrastar las hipótesis con los registros y el diagnóstico técnico.</li>
+<li>Completar la evaluación del impacto cuando existan datos medibles.</li>
+<li>Revisar las conclusiones a medida que se obtenga nueva evidencia.</li>
+</ul>
+
+</div>
+</details>
+
+<div class="final">
+    <a href="proyecto-agil-1.html" class="volver">
+        ← Volver al proyecto Ford
+    </a>
+</div>
+
+</main>
 
 </body>
 </html>
