@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,101 +16,112 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --navy: #183247;
+            --teal: #28788a;
+            --text: #34495a;
+            --muted: #647482;
+            --border: #dfe6eb;
+            --surface: #f7f9fb;
+            --white: #ffffff;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #172b3a;
-            line-height: 1.7;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.75;
         }
 
         header {
             width: 100%;
-            padding: 25px 7%;
+            padding: 24px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--border);
         }
 
         .logo {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 800;
-            color: #102a43;
+            color: var(--navy);
             text-decoration: none;
         }
 
         .logo span {
-            color: #16839a;
+            color: var(--teal);
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 35px;
+            gap: 32px;
         }
 
         nav a {
             text-decoration: none;
-            color: #172b3a;
-            font-size: 16px;
+            color: var(--text);
+            font-size: 14px;
             font-weight: 600;
-            padding-bottom: 7px;
+            padding-bottom: 6px;
             transition: color 0.2s ease;
         }
 
         nav a:hover {
-            color: #16839a;
+            color: var(--teal);
         }
 
         main {
             width: 86%;
             max-width: 1050px;
             margin: auto;
-            padding: 65px 0 70px;
+            padding: 64px 0 72px;
         }
 
         .categoria {
-            color: #16839a;
-            font-size: 13px;
+            color: var(--teal);
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.4px;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         h1 {
-            color: #102a43;
-            font-size: 38px;
+            color: var(--navy);
+            font-size: 36px;
             line-height: 1.25;
             margin-bottom: 18px;
         }
 
         .descripcion {
-            color: #52616f;
-            font-size: 17px;
+            color: var(--muted);
+            font-size: 16px;
             max-width: 850px;
-            margin-bottom: 45px;
+            margin-bottom: 42px;
         }
 
         .documento {
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            margin-bottom: 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 14px;
             overflow: hidden;
+            background: var(--white);
         }
 
         .documento summary {
             list-style: none;
             cursor: pointer;
-            padding: 21px 24px;
+            padding: 20px 23px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 15px;
-            color: #102a43;
-            font-size: 16px;
+            color: var(--navy);
+            font-size: 15px;
             font-weight: 700;
-            background: #ffffff;
+            background: var(--white);
             transition: background 0.2s ease;
         }
 
@@ -121,14 +130,15 @@
         }
 
         .documento summary:hover {
-            background: #f8fafc;
+            background: var(--surface);
         }
 
         .documento summary::after {
             content: "+";
-            color: #16839a;
-            font-size: 23px;
+            color: var(--teal);
+            font-size: 21px;
             font-weight: 400;
+            flex-shrink: 0;
         }
 
         .documento[open] > summary::after {
@@ -136,33 +146,33 @@
         }
 
         .contenido {
-            padding: 10px 25px 28px;
-            border-top: 1px solid #e5e7eb;
+            padding: 12px 25px 28px;
+            border-top: 1px solid var(--border);
         }
 
         .contenido h2 {
-            color: #102a43;
-            font-size: 21px;
+            color: var(--navy);
+            font-size: 20px;
             margin-top: 25px;
             margin-bottom: 12px;
         }
 
         .contenido h3 {
-            color: #16839a;
-            font-size: 17px;
+            color: var(--teal);
+            font-size: 16px;
             margin-top: 22px;
             margin-bottom: 9px;
         }
 
         .contenido p {
-            color: #405466;
+            font-size: 14px;
             margin-bottom: 14px;
         }
 
         .contenido ul,
         .contenido ol {
-            color: #405466;
-            margin: 10px 0 18px 25px;
+            font-size: 14px;
+            margin: 10px 0 18px 24px;
         }
 
         .contenido li {
@@ -170,76 +180,46 @@
         }
 
         .contenido strong {
-            color: #243b53;
+            color: var(--navy);
         }
 
         .nota-pendiente {
-            background: #f8fafc;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 7px;
             padding: 18px 20px;
-            color: #52616f;
+            color: var(--muted);
             margin-top: 15px;
+            font-size: 14px;
         }
 
         .nota-pendiente strong {
             display: block;
-            color: #102a43;
+            color: var(--navy);
             margin-bottom: 5px;
         }
 
-        .subdocumento {
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            margin-top: 18px;
-            overflow: hidden;
-        }
-
-        .subdocumento summary {
-            padding: 15px 18px;
-            font-size: 14px;
-            background: #f8fafc;
-        }
-
-        .subdocumento .contenido {
-            padding: 18px;
+        .final {
+            border-top: 1px solid var(--border);
+            margin-top: 52px;
+            padding-top: 26px;
         }
 
         .volver {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            color: #16839a;
+            color: var(--teal);
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
-            transition: color 0.2s ease;
         }
 
         .volver:hover {
-            color: #102a43;
-        }
-
-        .flecha {
-            display: inline-block;
-            transition: transform 0.2s ease;
-        }
-
-        .volver:hover .flecha {
-            transform: translateX(-5px);
-        }
-
-        .final {
-            border-top: 1px solid #e5e7eb;
-            margin-top: 55px;
-            padding-top: 28px;
+            color: var(--navy);
         }
 
         @media (max-width: 768px) {
-
             header {
                 flex-direction: column;
-                gap: 20px;
+                gap: 18px;
                 padding: 20px;
             }
 
@@ -249,25 +229,17 @@
                 gap: 18px;
             }
 
-            nav a {
-                font-size: 14px;
-            }
-
             main {
                 width: 90%;
-                padding: 45px 0 55px;
+                padding: 44px 0 56px;
             }
 
             h1 {
                 font-size: 30px;
             }
 
-            .descripcion {
-                font-size: 16px;
-            }
-
             .documento summary {
-                padding: 18px;
+                padding: 17px;
                 font-size: 14px;
             }
 
@@ -281,7 +253,6 @@
 <body>
 
     <header>
-
         <a href="index.html" class="logo">GG<span>.</span></a>
 
         <nav>
@@ -290,7 +261,6 @@
             <a href="proyectos.html">Proyectos</a>
             <a href="contacto.html">Contacto</a>
         </nav>
-
     </header>
 
     <main>
@@ -308,99 +278,76 @@
         <!-- DOCUMENTO 01 -->
 
         <details class="documento">
-
             <summary>01 — Fundamentos de Mejora Continua</summary>
 
             <div class="contenido">
-
                 <div class="nota-pendiente">
-                    <strong>Contenido pendiente de recuperar</strong>
-                    Este apartado está reservado para incorporar el documento
-                    original completo, respetando su contenido y estructura.
+                    <strong>Contenido por incorporar</strong>
+                    Aquí se incluirá el documento original completo de Fundamentos
+                    de Mejora Continua.
                 </div>
-
             </div>
-
         </details>
 
         <!-- DOCUMENTO 02 -->
 
         <details class="documento">
-
             <summary>02 — Metodología de Mejora de Procesos — Versión 1.0</summary>
 
             <div class="contenido">
-
                 <div class="nota-pendiente">
-                    <strong>Contenido pendiente de recuperar</strong>
-                    Este apartado está reservado para incorporar el documento
-                    original completo, incluyendo sus etapas, principios y criterios.
+                    <strong>Contenido por incorporar</strong>
+                    Aquí se incluirá la metodología original, con sus etapas,
+                    principios y criterios de trabajo.
                 </div>
-
             </div>
-
         </details>
 
         <!-- DOCUMENTO 03 -->
 
         <details class="documento">
-
             <summary>03 — Registro de Problemas e Hipótesis</summary>
 
             <div class="contenido">
-
                 <div class="nota-pendiente">
-                    <strong>Contenido pendiente de recuperar</strong>
-                    Este apartado está reservado para incorporar el registro
-                    original de problemas, hipótesis, posibles causas e indicadores.
+                    <strong>Contenido por incorporar</strong>
+                    Aquí se incluirá el registro original de problemas,
+                    hipótesis y posibles causas.
                 </div>
-
             </div>
-
         </details>
 
         <!-- DOCUMENTO 04 -->
 
         <details class="documento">
-
             <summary>04 — Registro de Experimentos y Validación</summary>
 
             <div class="contenido">
-
                 <div class="nota-pendiente">
-                    <strong>Contenido pendiente de recuperar</strong>
-                    Este apartado está reservado para incorporar el documento
-                    original completo, incluyendo los protocolos y registros
-                    de experimentación.
+                    <strong>Contenido por incorporar</strong>
+                    Aquí se incluirá el documento original de experimentos,
+                    pruebas y validaciones.
                 </div>
-
             </div>
-
         </details>
 
         <!-- DOCUMENTO 05 -->
 
         <details class="documento">
-
             <summary>05 — Medición y Evaluación de Mejoras</summary>
 
             <div class="contenido">
-
                 <div class="nota-pendiente">
-                    <strong>Contenido pendiente de recuperar</strong>
-                    Este apartado está reservado para incorporar el documento
-                    original completo, con sus indicadores, herramientas de
-                    medición y criterios de evaluación.
+                    <strong>Contenido por incorporar</strong>
+                    Aquí se incluirá el documento original de medición,
+                    indicadores y evaluación de resultados.
                 </div>
-
             </div>
-
         </details>
 
         <!-- DOCUMENTO 06 -->
 
         <details class="documento">
-
             <summary>06 — Caso de estudio 01: Preparación de piezas y montaje en una línea de producción</summary>
 
             <div class="contenido">
@@ -408,17 +355,26 @@
                 <h2>1. Introducción</h2>
 
                 <p>
-                    Este caso de estudio analiza una situación observada en una estación de montaje de una línea de producción. El objetivo es identificar posibles oportunidades de mejora en la organización de las tareas, la preparación de los componentes y las condiciones en las que el operario realiza su trabajo.
+                    Este caso de estudio analiza una situación observada en una estación
+                    de montaje de una línea de producción. El objetivo es identificar
+                    posibles oportunidades de mejora en la organización de las tareas,
+                    la preparación de los componentes y las condiciones en las que el
+                    operario realiza su trabajo.
                 </p>
 
                 <p>
-                    El análisis se basa en la observación directa del proceso y en el razonamiento sobre posibles alternativas de mejora. No se realizaron mediciones formales de tiempos ni pruebas de implementación, por lo que las propuestas presentadas son hipótesis que deberán validarse.
+                    El análisis se basa en la observación directa del proceso y en el
+                    razonamiento sobre posibles alternativas de mejora. No se realizaron
+                    mediciones formales de tiempos ni pruebas de implementación, por lo
+                    que las propuestas presentadas son hipótesis que deberán validarse.
                 </p>
 
                 <h2>2. Descripción del proceso actual</h2>
 
                 <p>
-                    En la estación analizada, el operario realiza distintas tareas de montaje y ajuste sobre unidades que avanzan continuamente por la línea de producción.
+                    En la estación analizada, el operario realiza distintas tareas de
+                    montaje y ajuste sobre unidades que avanzan continuamente por la
+                    línea de producción.
                 </p>
 
                 <p>Entre las actividades observadas se encuentran:</p>
@@ -433,75 +389,108 @@
                 </ul>
 
                 <p>
-                    Los componentes se encuentran disponibles en cajas y otros embalajes. Algunos deben extraerse, separarse, orientarse y organizarse antes de poder utilizarlos.
+                    Los componentes se encuentran disponibles en cajas y otros embalajes.
+                    Algunos deben extraerse, separarse, orientarse y organizarse antes
+                    de poder utilizarlos.
                 </p>
 
                 <p>
-                    La estación tiene un límite de entrada y otro de salida. El operario debe completar las tareas asignadas antes de que la unidad llegue al final de su recorrido. Si quedan operaciones pendientes, se activa una alarma.
+                    La estación tiene un límite de entrada y otro de salida. El operario
+                    debe completar las tareas asignadas antes de que la unidad llegue al
+                    final de su recorrido. Si quedan operaciones pendientes, se activa
+                    una alarma.
                 </p>
 
                 <p>
-                    Por este motivo, la organización previa de los componentes y la continuidad del trabajo son factores relevantes para el desarrollo de las tareas.
+                    Por este motivo, la organización previa de los componentes y la
+                    continuidad del trabajo son factores relevantes para el desarrollo
+                    de las tareas.
                 </p>
 
                 <h2>3. Problema observado</h2>
 
                 <p>
-                    La situación identificada es la dificultad para completar todas las tareas de la estación cuando se acumulan las operaciones de preparación, montaje y ajuste.
+                    La situación identificada es la dificultad para completar todas las
+                    tareas de la estación cuando se acumulan las operaciones de
+                    preparación, montaje y ajuste.
                 </p>
 
                 <p>
-                    Cuando el operario dispone de margen, puede preparar componentes para varias unidades con anticipación. Esto permite mantener piezas organizadas y disponibles para las siguientes operaciones.
+                    Cuando el operario dispone de margen, puede preparar componentes
+                    para varias unidades con anticipación. Esto permite mantener piezas
+                    organizadas y disponibles para las siguientes operaciones.
                 </p>
 
                 <p>
-                    Sin embargo, cuando ese margen disminuye, la preparación de componentes puede interrumpir el montaje. El operario debe alternar entre preparar las piezas y continuar con las tareas de la unidad que avanza por la línea.
+                    Sin embargo, cuando ese margen disminuye, la preparación de
+                    componentes puede interrumpir el montaje. El operario debe alternar
+                    entre preparar las piezas y continuar con las tareas de la unidad
+                    que avanza por la línea.
                 </p>
 
                 <p>
-                    También se observó una dificultad específica durante el ajuste de los tornillos del limpiaparabrisas: aunque la herramienta puede acceder al espacio, la maniobrabilidad es limitada y dificulta realizar el ajuste.
+                    También se observó una dificultad específica durante el ajuste de
+                    los tornillos del limpiaparabrisas: aunque la herramienta puede
+                    acceder al espacio, la maniobrabilidad es limitada y dificulta
+                    realizar el ajuste.
                 </p>
 
                 <p>
-                    Estas situaciones pueden contribuir a que determinadas operaciones queden pendientes al finalizar la estación.
+                    Estas situaciones pueden contribuir a que determinadas operaciones
+                    queden pendientes al finalizar la estación.
                 </p>
 
                 <p>
-                    <strong>Problema central:</strong> la combinación de tareas de preparación, montaje y ajuste dentro de una estación con avance continuo puede dificultar la finalización de todas las operaciones asignadas.
+                    <strong>Problema central:</strong> la combinación de tareas de
+                    preparación, montaje y ajuste dentro de una estación con avance
+                    continuo puede dificultar la finalización de todas las operaciones
+                    asignadas.
                 </p>
 
                 <h2>4. Análisis de posibles causas</h2>
 
                 <p>
-                    A partir de las observaciones, se identifican las siguientes hipótesis:
+                    A partir de las observaciones, se identifican las siguientes
+                    hipótesis:
                 </p>
 
                 <h3>4.1. Acumulación de tareas</h3>
 
                 <p>
-                    El operario debe realizar varias operaciones diferentes dentro de una misma estación. La suma de estas actividades podría reducir el margen disponible para completar el trabajo.
+                    El operario debe realizar varias operaciones diferentes dentro de
+                    una misma estación. La suma de estas actividades podría reducir el
+                    margen disponible para completar el trabajo.
                 </p>
 
                 <h3>4.2. Preparación de componentes durante el proceso</h3>
 
                 <p>
-                    La necesidad de separar, orientar y organizar las piezas puede interrumpir la continuidad del montaje cuando no existe una preparación anticipada suficiente.
+                    La necesidad de separar, orientar y organizar las piezas puede
+                    interrumpir la continuidad del montaje cuando no existe una
+                    preparación anticipada suficiente.
                 </p>
 
                 <h3>4.3. Limitaciones de acceso a la herramienta</h3>
 
                 <p>
-                    El espacio disponible para ajustar los tornillos del limpiaparabrisas dificulta la maniobrabilidad y podría aumentar la complejidad de esa operación.
+                    El espacio disponible para ajustar los tornillos del
+                    limpiaparabrisas dificulta la maniobrabilidad y podría aumentar
+                    la complejidad de esa operación.
                 </p>
 
                 <h3>4.4. Distribución del trabajo entre etapas</h3>
 
                 <p>
-                    Algunas tareas de preparación o ensamblado previo podrían evaluarse para determinar si conviene realizarlas antes de que los componentes lleguen a la estación.
+                    Algunas tareas de preparación o ensamblado previo podrían evaluarse
+                    para determinar si conviene realizarlas antes de que los componentes
+                    lleguen a la estación.
                 </p>
 
                 <p>
-                    Estas hipótesis no constituyen causas raíz confirmadas. Para confirmarlas sería necesario realizar un análisis adicional y, si fuera posible, validar las alternativas mediante pruebas controladas.
+                    Estas hipótesis no constituyen causas raíz confirmadas. Para
+                    confirmarlas sería necesario realizar un análisis adicional y,
+                    si fuera posible, validar las alternativas mediante pruebas
+                    controladas.
                 </p>
 
                 <h2>5. Alternativas de mejora propuestas</h2>
@@ -509,11 +498,14 @@
                 <h3>Alternativa A. Preparación anticipada de componentes</h3>
 
                 <p>
-                    Evaluar la posibilidad de que los componentes lleguen separados, orientados e identificados en una bandeja o kit preparado para cada unidad.
+                    Evaluar la posibilidad de que los componentes lleguen separados,
+                    orientados e identificados en una bandeja o kit preparado para
+                    cada unidad.
                 </p>
 
                 <p>
-                    El objetivo sería reducir la necesidad de detener o interrumpir el montaje para buscar, separar u organizar piezas.
+                    El objetivo sería reducir la necesidad de detener o interrumpir
+                    el montaje para buscar, separar u organizar piezas.
                 </p>
 
                 <p><strong>Beneficios esperados:</strong></p>
@@ -538,11 +530,13 @@
                 <h3>Alternativa B. Recepción de subconjuntos preensamblados</h3>
 
                 <p>
-                    Evaluar si determinados componentes, como el módulo y la carcasa, pueden llegar parcialmente ensamblados desde una etapa anterior.
+                    Evaluar si determinados componentes, como el módulo y la carcasa,
+                    pueden llegar parcialmente ensamblados desde una etapa anterior.
                 </p>
 
                 <p>
-                    El objetivo sería reducir la cantidad de operaciones que debe realizar el operario dentro de la estación actual.
+                    El objetivo sería reducir la cantidad de operaciones que debe
+                    realizar el operario dentro de la estación actual.
                 </p>
 
                 <p><strong>Beneficios esperados:</strong></p>
@@ -565,31 +559,44 @@
                 </ul>
 
                 <p>
-                    Esta alternativa podría requerir la reasignación de tareas o la creación de un puesto específico de preparación y ensamblado. Esto representaría una posibilidad de reorganización del trabajo y una eventual oportunidad laboral, pero también implicaría costos que deberían evaluarse.
+                    Esta alternativa podría requerir la reasignación de tareas o la
+                    creación de un puesto específico de preparación y ensamblado.
+                    Esto representaría una posibilidad de reorganización del trabajo
+                    y una eventual oportunidad laboral, pero también implicaría
+                    costos que deberían evaluarse.
                 </p>
 
                 <p>
-                    Además, trasladar una tarea a otra etapa no significa eliminarla: es necesario analizar el proceso completo para determinar si la modificación resulta conveniente.
+                    Además, trasladar una tarea a otra etapa no significa eliminarla:
+                    es necesario analizar el proceso completo para determinar si la
+                    modificación resulta conveniente.
                 </p>
 
                 <h3>Alternativa complementaria. Analizar el ajuste del limpiaparabrisas</h3>
 
                 <p>
-                    Investigar si la dificultad para maniobrar la herramienta puede reducirse mediante una revisión del acceso, la posición de trabajo, el diseño de la herramienta o la secuencia de ajuste.
+                    Investigar si la dificultad para maniobrar la herramienta puede
+                    reducirse mediante una revisión del acceso, la posición de trabajo,
+                    el diseño de la herramienta o la secuencia de ajuste.
                 </p>
 
                 <p>
-                    Cualquier modificación deberá respetar los requisitos técnicos, de seguridad y de calidad.
+                    Cualquier modificación deberá respetar los requisitos técnicos,
+                    de seguridad y de calidad.
                 </p>
 
                 <p>
-                    Esta alternativa se analizará por separado, ya que la dificultad observada podría tener una causa distinta de la preparación de componentes.
+                    Esta alternativa se analizará por separado, ya que la dificultad
+                    observada podría tener una causa distinta de la preparación de
+                    componentes.
                 </p>
 
                 <h2>6. Beneficios esperados y posibles dificultades</h2>
 
                 <p>
-                    La finalidad de las propuestas no es únicamente mejorar la productividad, sino también favorecer que el operario pueda realizar sus tareas de manera más cómoda, organizada y segura.
+                    La finalidad de las propuestas no es únicamente mejorar la
+                    productividad, sino también favorecer que el operario pueda
+                    realizar sus tareas de manera más cómoda, organizada y segura.
                 </p>
 
                 <p>Entre los beneficios esperados se encuentran:</p>
@@ -604,23 +611,30 @@
                 </ul>
 
                 <p>
-                    No obstante, una mejora en una estación podría generar nuevas necesidades en otra. Por ejemplo, el preensamblado de componentes podría requerir personal, espacio y recursos adicionales.
+                    No obstante, una mejora en una estación podría generar nuevas
+                    necesidades en otra. Por ejemplo, el preensamblado de componentes
+                    podría requerir personal, espacio y recursos adicionales.
                 </p>
 
                 <p>
-                    Por lo tanto, la decisión deberá considerar tanto los beneficios para el operario como los efectos sobre el conjunto del proceso productivo.
+                    Por lo tanto, la decisión deberá considerar tanto los beneficios
+                    para el operario como los efectos sobre el conjunto del proceso
+                    productivo.
                 </p>
 
                 <h2>7. Plan de evaluación de las propuestas</h2>
 
                 <p>
-                    Para comprobar la efectividad de las mejoras, se propone realizar una prueba autorizada y comparar la situación inicial con los resultados posteriores.
+                    Para comprobar la efectividad de las mejoras, se propone realizar
+                    una prueba autorizada y comparar la situación inicial con los
+                    resultados posteriores.
                 </p>
 
                 <h3>Etapa 1. Registrar la situación inicial</h3>
 
                 <p>
-                    Documentar, mediante observaciones y mediciones autorizadas cuando sea posible:
+                    Documentar, mediante observaciones y mediciones autorizadas
+                    cuando sea posible:
                 </p>
 
                 <ul>
@@ -635,13 +649,16 @@
                 <h3>Etapa 2. Implementar una prueba</h3>
 
                 <p>
-                    Seleccionar una de las alternativas y realizar una prueba controlada, siempre que exista autorización y que se mantengan las condiciones de seguridad y calidad.
+                    Seleccionar una de las alternativas y realizar una prueba
+                    controlada, siempre que exista autorización y que se mantengan
+                    las condiciones de seguridad y calidad.
                 </p>
 
                 <h3>Etapa 3. Comparar los resultados</h3>
 
                 <p>
-                    Comparar la situación anterior con la posterior a la prueba, teniendo en cuenta:
+                    Comparar la situación anterior con la posterior a la prueba,
+                    teniendo en cuenta:
                 </p>
 
                 <ul>
@@ -656,85 +673,93 @@
                 <h3>Etapa 4. Tomar una decisión</h3>
 
                 <p>
-                    Si los resultados son favorables y la propuesta resulta viable, se podrá evaluar su continuidad o implementación.
+                    Si los resultados son favorables y la propuesta resulta viable,
+                    se podrá evaluar su continuidad o implementación.
                 </p>
 
                 <p>
-                    Si no se observan mejoras suficientes o aparecen nuevos problemas, será necesario revisar la alternativa y considerar otras posibilidades.
+                    Si no se observan mejoras suficientes o aparecen nuevos problemas,
+                    será necesario revisar la alternativa y considerar otras
+                    posibilidades.
                 </p>
 
                 <p>
-                    Los criterios de aceptación deberán definirse antes de la prueba, de acuerdo con los objetivos del proceso y los requisitos de la organización.
+                    Los criterios de aceptación deberán definirse antes de la prueba,
+                    de acuerdo con los objetivos del proceso y los requisitos de la
+                    organización.
                 </p>
 
                 <h2>8. Estado actual del caso</h2>
 
                 <p>
-                    El caso se encuentra en una etapa de análisis preliminar basada en la observación directa.
+                    El caso se encuentra en una etapa de análisis preliminar basada
+                    en la observación directa.
                 </p>
 
                 <p>
-                    Se identificaron situaciones que podrían representar oportunidades de mejora y se formularon alternativas para evaluarlas. Sin embargo, todavía no se realizaron mediciones formales, pruebas de implementación ni comparaciones de resultados.
+                    Se identificaron situaciones que podrían representar oportunidades
+                    de mejora y se formularon alternativas para evaluarlas. Sin embargo,
+                    todavía no se realizaron mediciones formales, pruebas de
+                    implementación ni comparaciones de resultados.
                 </p>
 
                 <p>
-                    Por este motivo, no es posible afirmar que alguna de las propuestas haya demostrado ser efectiva.
+                    Por este motivo, no es posible afirmar que alguna de las propuestas
+                    haya demostrado ser efectiva.
                 </p>
 
                 <h2>9. Conclusión</h2>
 
                 <p>
-                    Este caso permite aplicar el razonamiento de mejora continua a una situación real de trabajo, considerando tanto la organización de las operaciones como las condiciones en las que el operario realiza sus tareas.
+                    Este caso permite aplicar el razonamiento de mejora continua a
+                    una situación real de trabajo, considerando tanto la organización
+                    de las operaciones como las condiciones en las que el operario
+                    realiza sus tareas.
                 </p>
 
                 <p>
-                    La preparación anticipada de componentes, el posible preensamblado de subconjuntos y el análisis de las dificultades de ajuste constituyen líneas de investigación que podrían contribuir a mejorar el proceso.
+                    La preparación anticipada de componentes, el posible preensamblado
+                    de subconjuntos y el análisis de las dificultades de ajuste
+                    constituyen líneas de investigación que podrían contribuir a
+                    mejorar el proceso.
                 </p>
 
                 <p>
-                    El siguiente paso sería validar las hipótesis y evaluar las alternativas con información objetiva, sin asumir que una mejora local necesariamente beneficia al sistema completo.
+                    El siguiente paso sería validar las hipótesis y evaluar las
+                    alternativas con información objetiva, sin asumir que una mejora
+                    local necesariamente beneficia al sistema completo.
                 </p>
 
                 <p>
-                    La principal conclusión es que mejorar un proceso requiere observar, analizar, proponer, comprobar los resultados y ajustar las soluciones según la evidencia obtenida.
+                    La principal conclusión es que mejorar un proceso requiere
+                    observar, analizar, proponer, comprobar los resultados y ajustar
+                    las soluciones según la evidencia obtenida.
                 </p>
 
             </div>
-
         </details>
 
         <!-- DOCUMENTO 07 -->
 
         <details class="documento">
-
             <summary>07 — Caso de estudio 02: Falla en la sujeción del tornillo</summary>
 
             <div class="contenido">
-
                 <div class="nota-pendiente">
-                    <strong>Contenido pendiente de recuperar</strong>
-                    Este apartado está reservado para incorporar el documento
-                    original completo sobre la falla en la sujeción del tornillo,
-                    respetando sus observaciones, hipótesis y propuestas.
+                    <strong>Contenido por incorporar</strong>
+                    Aquí se incluirá el documento original completo sobre la falla
+                    en la sujeción del tornillo.
                 </div>
-
             </div>
-
         </details>
 
-        <!-- VOLVER AL PROYECTO -->
-
         <div class="final">
-
             <a href="proyecto-agil-1.html" class="volver">
-                <span class="flecha">←</span>
-                Volver al proyecto Ford
+                ← Volver al proyecto Ford
             </a>
-
         </div>
 
     </main>
 
 </body>
 </html>
-
