@@ -1,1 +1,1144 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentación Ágil 02 | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #263746;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ENCABEZADO */
+
+    header {
+      width: 100%;
+      border-bottom: 1px solid #e5e9ed;
+      background: #ffffff;
+    }
+
+    .navbar {
+      max-width: 1100px;
+      margin: auto;
+      padding: 22px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      color: #173b57;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #526575;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #173b57;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 55px 25px 75px;
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: #7b8995;
+      margin-bottom: 25px;
+    }
+
+    .breadcrumb a {
+      color: #416d88;
+      font-weight: 600;
+    }
+
+    .category {
+      color: #537e98;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      color: #173b57;
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: -1px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 780px;
+      color: #687987;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    /* INFORMACIÓN DEL PROYECTO */
+
+    .project-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 38px;
+    }
+
+    .info-box {
+      background: #f6f8fa;
+      border: 1px solid #e3e9ed;
+      border-radius: 9px;
+      padding: 16px 18px;
+    }
+
+    .info-box span {
+      display: block;
+      color: #7a8995;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .info-box strong {
+      color: #173b57;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* CAJITAS DESPLEGABLES */
+
+    .documentation {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    details {
+      border: 1px solid #dfe6eb;
+      border-radius: 10px;
+      background: #ffffff;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease;
+    }
+
+    details[open] {
+      box-shadow: 0 4px 15px rgba(23, 59, 87, 0.06);
+    }
+
+    summary {
+      position: relative;
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 55px 20px 22px;
+      color: #173b57;
+      font-size: 16px;
+      font-weight: 700;
+      background: #f7f9fa;
+      transition: background 0.2s ease;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary:hover {
+      background: #edf2f5;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 23px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #416d88;
+      font-size: 23px;
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .details-content {
+      padding: 25px;
+      border-top: 1px solid #e5eaee;
+    }
+
+    .details-content h3 {
+      color: #173b57;
+      font-size: 17px;
+      margin: 25px 0 12px;
+    }
+
+    .details-content h3:first-child {
+      margin-top: 0;
+    }
+
+    .details-content h4 {
+      color: #294f6b;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .details-content p {
+      color: #526575;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .details-content ul,
+    .details-content ol {
+      padding-left: 23px;
+      margin: 10px 0 18px;
+      color: #526575;
+      font-size: 14px;
+    }
+
+    .details-content li {
+      margin-bottom: 8px;
+    }
+
+    /* BLOQUES DESTACADOS */
+
+    .highlight {
+      background: #f3f7f9;
+      border-left: 4px solid #416d88;
+      padding: 18px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+    }
+
+    .highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    .objective {
+      background: #f6f8fa;
+      border: 1px solid #e1e8ed;
+      padding: 18px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    .objective strong {
+      color: #173b57;
+      display: block;
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    .objective p {
+      margin-bottom: 0;
+    }
+
+    .note {
+      background: #faf8f3;
+      border: 1px solid #e9e0ce;
+      color: #79633f;
+      padding: 14px 17px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin: 18px 0;
+    }
+
+    /* TABLAS */
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      margin: 18px 0 25px;
+      border: 1px solid #e1e7eb;
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 550px;
+      font-size: 13px;
+    }
+
+    th {
+      background: #edf2f5;
+      color: #173b57;
+      padding: 13px 14px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-top: 1px solid #e8edf0;
+      color: #526575;
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: #f9fbfc;
+    }
+
+    tfoot td {
+      background: #f5f7f9;
+      color: #173b57;
+      font-weight: 700;
+    }
+
+    /* TAREAS */
+
+    .task {
+      padding: 16px 18px;
+      border: 1px solid #e3e9ed;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .task h4 {
+      margin-bottom: 6px;
+    }
+
+    .task p {
+      margin: 0;
+    }
+
+    /* TABLERO KANBAN */
+
+    .kanban-flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin: 20px 0;
+    }
+
+    .kanban-column {
+      padding: 17px 9px;
+      background: #f3f6f8;
+      border: 1px solid #e0e7eb;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .kanban-column strong {
+      display: block;
+      color: #173b57;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .kanban-column span {
+      display: block;
+      color: #788793;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .wip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      background: #f3f7f9;
+      border: 1px solid #dfe8ed;
+      border-radius: 8px;
+      padding: 17px 20px;
+      margin: 20px 0;
+    }
+
+    .wip strong {
+      color: #173b57;
+      font-size: 15px;
+    }
+
+    .wip span {
+      color: #416d88;
+      font-size: 21px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* MÉTRICAS */
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .metric-box {
+      border: 1px solid #e0e7eb;
+      background: #f7f9fa;
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .metric-box span {
+      display: block;
+      color: #788793;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .metric-box strong {
+      color: #173b57;
+      font-size: 25px;
+    }
+
+    /* HALLAZGOS */
+
+    .finding {
+      border: 1px solid #e1e7eb;
+      border-radius: 8px;
+      padding: 19px;
+      margin-bottom: 15px;
+    }
+
+    .finding h3 {
+      margin-top: 0;
+    }
+
+    .finding .proposal {
+      border-top: 1px solid #e6ebee;
+      padding-top: 14px;
+      margin-top: 15px;
+    }
+
+    .finding .proposal p:last-child {
+      margin-bottom: 0;
+    }
+
+    .indicator {
+      background: #f3f7f9;
+      padding: 12px 15px;
+      border-radius: 7px;
+      margin-top: 12px;
+    }
+
+    .indicator strong {
+      color: #173b57;
+    }
+
+    /* PLAN DE MEJORA */
+
+    .improvement-item {
+      border: 1px solid #e1e7eb;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+
+    .improvement-item strong {
+      color: #173b57;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .improvement-item p {
+      margin: 0;
+    }
+
+    /* CONCLUSIÓN */
+
+    .conclusion {
+      background: #f3f6f8;
+      border: 1px solid #e1e7eb;
+      border-radius: 9px;
+      padding: 22px;
+    }
+
+    .conclusion p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* VOLVER */
+
+    .back-link {
+      display: inline-block;
+      margin-top: 35px;
+      color: #416d88;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .back-link:hover {
+      color: #173b57;
+    }
+
+    footer {
+      border-top: 1px solid #e5e9ed;
+      padding: 24px;
+      text-align: center;
+      color: #87939c;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 750px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .project-info {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .kanban-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .kanban-column:last-child {
+        grid-column: span 2;
+      }
+
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .container {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+      .project-info {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      summary {
+        font-size: 14px;
+        padding: 17px 45px 17px 16px;
+      }
+
+      .details-content {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">GG.</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> /
+      <a href="proyecto-agil-2.html">Proyecto Ágil 02</a> /
+      Documentación
+    </div>
+
+    <p class="category">Metodología Ágil · Coderhouse</p>
+
+    <h1>Documentación Ágil 02</h1>
+
+    <p class="intro">
+      Documentación del trabajo realizado sobre gestión visual del flujo
+      mediante Trello y metodología Kanban. Se presenta la historia de usuario,
+      la planificación de la iteración, el tablero de trabajo, las métricas
+      utilizadas, los hallazgos y las propuestas de mejora.
+    </p>
+
+    <div class="project-info">
+      <div class="info-box">
+        <span>Proyecto</span>
+        <strong>Visual Management</strong>
+      </div>
+
+      <div class="info-box">
+        <span>Herramienta</span>
+        <strong>Trello</strong>
+      </div>
+
+      <div class="info-box">
+        <span>Metodología</span>
+        <strong>Kanban</strong>
+      </div>
+    </div>
+
+    <div class="documentation">
+
+      <!-- 01. HISTORIA DE USUARIO -->
+      <details>
+        <summary>01. Historia de Usuario — HU-01: Explorar proyectos y competencias</summary>
+
+        <div class="details-content">
+
+          <div class="highlight">
+            <p>
+              Como visitante del portfolio, quiero poder explorar los proyectos
+              realizados y las competencias adquiridas, para conocer la experiencia,
+              los conocimientos y las capacidades del desarrollador.
+            </p>
+          </div>
+
+          <p>
+            A partir de la historia de usuario se definieron las siguientes tareas:
+          </p>
+
+          <h3>Desglose de tareas</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Tarea</th>
+                  <th>Estimación</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>T1</td><td>Definir estructura de la sección</td><td>2 h</td><td>02/11/2026</td></tr>
+                <tr><td>T2</td><td>Preparar información de los proyectos</td><td>4 h</td><td>03/11/2026</td></tr>
+                <tr><td>T3</td><td>Documentar pruebas y resultados</td><td>6 h</td><td>05/11/2026</td></tr>
+                <tr><td>T4</td><td>Incorporar evidencia</td><td>4 h</td><td>05/11/2026</td></tr>
+                <tr><td>T5</td><td>Construir / maquetar la sección</td><td>8 h</td><td>06/11/2026</td></tr>
+                <tr><td>T6</td><td>Revisar navegación</td><td>6 h</td><td>10/11/2026</td></tr>
+                <tr><td>T7</td><td>Ejecutar pruebas</td><td>4 h</td><td>11/11/2026</td></tr>
+                <tr><td>T8</td><td>Corregir problemas</td><td>6 h</td><td>12/11/2026</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td colspan="2">Total</td><td>40 h</td><td>—</td></tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <h3>Descripción de las tareas</h3>
+
+          <div class="task">
+            <h4>T1 — Definir estructura de la sección</h4>
+            <p>Definir la organización general de la sección de proyectos y competencias, determinando qué información se mostrará y cómo se distribuirá dentro del portfolio.</p>
+          </div>
+
+          <div class="task">
+            <h4>T2 — Preparar información de los proyectos</h4>
+            <p>Preparar, organizar y seleccionar la información necesaria para presentar los proyectos incluidos en el portfolio.</p>
+          </div>
+
+          <div class="task">
+            <h4>T3 — Documentar pruebas y resultados</h4>
+            <p>Documentar las pruebas realizadas y los resultados obtenidos durante el desarrollo del trabajo.</p>
+          </div>
+
+          <div class="task">
+            <h4>T4 — Incorporar evidencia</h4>
+            <p>Incorporar las evidencias que permitan respaldar el trabajo realizado y los resultados obtenidos.</p>
+          </div>
+
+          <div class="task">
+            <h4>T5 — Construir / maquetar la sección</h4>
+            <p>Construir y maquetar la sección del portfolio de acuerdo con la estructura previamente definida.</p>
+          </div>
+
+          <div class="task">
+            <h4>T6 — Revisar navegación</h4>
+            <p>Verificar que la navegación de la sección funcione correctamente y que los diferentes elementos permitan acceder a la información correspondiente.</p>
+          </div>
+
+          <div class="task">
+            <h4>T7 — Ejecutar pruebas</h4>
+            <p>Ejecutar las pruebas necesarias sobre la sección desarrollada para verificar su funcionamiento y detectar posibles problemas.</p>
+          </div>
+
+          <div class="task">
+            <h4>T8 — Corregir problemas</h4>
+            <p>Resolver los problemas encontrados durante la revisión y las pruebas realizadas.</p>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- 02. PLAN DE ITERACIÓN -->
+      <details>
+        <summary>02. Plan de Iteración</summary>
+
+        <div class="details-content">
+
+          <h3>Selección de tareas</h3>
+
+          <p>
+            Para esta iteración se seleccionaron las primeras cinco tareas del backlog:
+          </p>
+
+          <ul>
+            <li>T1 — Definir estructura de la sección.</li>
+            <li>T2 — Preparar información de los proyectos.</li>
+            <li>T3 — Documentar pruebas y resultados.</li>
+            <li>T4 — Incorporar evidencia.</li>
+            <li>T5 — Construir / maquetar la sección.</li>
+          </ul>
+
+          <h3>Objetivo de la iteración</h3>
+
+          <div class="highlight">
+            <p>
+              Organizar y avanzar las tareas necesarias para analizar el proceso,
+              definir la estructura de la sección, preparar la información,
+              documentar las pruebas e incorporar las evidencias necesarias,
+              buscando completar el flujo hasta su revisión y finalización.
+            </p>
+          </div>
+
+          <div class="objective">
+            <strong>Objetivo de construcción</strong>
+            <p>
+              Construir una primera versión de la sección de proyectos y competencias,
+              incorporando la información y evidencias necesarias para que pueda
+              ser revisada y posteriormente validada.
+            </p>
+          </div>
+
+          <h3>Estimación de la iteración</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tarea</th>
+                  <th>Estimación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>T1 — Definir estructura</td><td>2 h</td></tr>
+                <tr><td>T2 — Preparar información</td><td>4 h</td></tr>
+                <tr><td>T3 — Documentar pruebas</td><td>6 h</td></tr>
+                <tr><td>T4 — Incorporar evidencia</td><td>4 h</td></tr>
+                <tr><td>T5 — Construir / maquetar</td><td>8 h</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td>Total</td><td>24 h</td></tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <p>
+            La selección de estas tareas permite avanzar desde la definición inicial
+            de la sección hasta su construcción, dejando preparadas las condiciones
+            para las posteriores tareas de navegación y pruebas.
+          </p>
+
+        </div>
+      </details>
+
+      <!-- 03. TABLERO -->
+      <details>
+        <summary>03. Tablero — Gestión visual mediante Trello</summary>
+
+        <div class="details-content">
+
+          <p>
+            Para visualizar y gestionar el trabajo se utilizó <strong>Trello</strong>.
+            El tablero se organizó mediante cinco columnas:
+          </p>
+
+          <div class="kanban-flow">
+            <div class="kanban-column">
+              <strong>Backlog</strong>
+              <span>Tareas identificadas</span>
+            </div>
+
+            <div class="kanban-column">
+              <strong>To Do</strong>
+              <span>Preparadas para comenzar</span>
+            </div>
+
+            <div class="kanban-column">
+              <strong>In Progress (Doing)</strong>
+              <span>En desarrollo</span>
+            </div>
+
+            <div class="kanban-column">
+              <strong>Testing / Review</strong>
+              <span>En verificación</span>
+            </div>
+
+            <div class="kanban-column">
+              <strong>Done</strong>
+              <span>Finalizadas</span>
+            </div>
+          </div>
+
+          <h3>Backlog</h3>
+          <p>Contiene las tareas identificadas que todavía no fueron seleccionadas para su ejecución.</p>
+
+          <h3>To Do</h3>
+          <p>Contiene las tareas preparadas para comenzar, pero que todavía no se encuentran en ejecución.</p>
+
+          <h3>In Progress (Doing)</h3>
+          <p>Contiene las tareas que se encuentran actualmente en desarrollo.</p>
+
+          <h3>Testing / Review</h3>
+          <p>Contiene las tareas que finalizaron su ejecución y están siendo verificadas antes de considerarse terminadas.</p>
+
+          <h3>Done</h3>
+          <p>Contiene las tareas que finalizaron correctamente el proceso y fueron consideradas terminadas.</p>
+
+          <div class="wip">
+            <strong>Límite de trabajo en proceso</strong>
+            <span>WIP = 2</span>
+          </div>
+
+          <p>
+            El objetivo es evitar comenzar demasiadas tareas simultáneamente
+            y favorecer la finalización de las actividades que ya están en proceso.
+          </p>
+
+        </div>
+      </details>
+
+      <!-- 04. MÉTRICAS -->
+      <details>
+        <summary>04. Métricas — Cycle Time</summary>
+
+        <div class="details-content">
+
+          <h3>Definición de la métrica</h3>
+
+          <p>
+            La métrica seleccionada fue <strong>Cycle Time</strong>, utilizada
+            para analizar cuánto tiempo tarda una tarea desde que comienza su
+            ejecución hasta que se considera terminada.
+          </p>
+
+          <div class="highlight">
+            <p>
+              El Cycle Time permite conocer cuánto tiempo tarda una tarea desde
+              que comienza a trabajarse hasta que finaliza. Esta métrica nos
+              permite analizar si existen demoras durante la ejecución de las tareas.
+              Un Cycle Time elevado puede indicar que existen dificultades,
+              esperas, bloqueos o que las tareas son demasiado grandes.
+            </p>
+
+            <p>
+              En nuestro tablero, observar el recorrido de las tareas nos permite
+              identificar posibles puntos de espera y analizar dónde se podría
+              mejorar el flujo de trabajo.
+            </p>
+          </div>
+
+          <div class="note">
+            Debido a que el proyecto corresponde a una simulación, los valores
+            utilizados representan un escenario simulado de ejecución.
+          </div>
+
+          <h3>Estimación y Cycle Time simulado</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Tarea</th>
+                  <th>Estimación</th>
+                  <th>Cycle Time simulado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>T1 — Definir estructura</td><td>2 h</td><td>2 h</td></tr>
+                <tr><td>T2 — Preparar información</td><td>4 h</td><td>5 h</td></tr>
+                <tr><td>T3 — Documentar pruebas</td><td>6 h</td><td>8 h</td></tr>
+                <tr><td>T4 — Incorporar evidencia</td><td>4 h</td><td>4 h</td></tr>
+                <tr><td>T5 — Construir / maquetar</td><td>8 h</td><td>10 h</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td>Total</td><td>24 h</td><td>29 h</td></tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-box">
+              <span>Estimación total</span>
+              <strong>24 h</strong>
+            </div>
+
+            <div class="metric-box">
+              <span>Cycle Time total simulado</span>
+              <strong>29 h</strong>
+            </div>
+
+            <div class="metric-box">
+              <span>Promedio por tarea</span>
+              <strong>5,8 h</strong>
+            </div>
+          </div>
+
+          <p><strong>Cálculo del promedio:</strong> 29 ÷ 5 = 5,8 horas por tarea.</p>
+
+          <h3>Análisis</h3>
+
+          <p>
+            Al comparar las estimaciones iniciales con el Cycle Time simulado,
+            se observa que algunas tareas requirieron más tiempo del inicialmente previsto.
+          </p>
+
+          <ul>
+            <li><strong>T2:</strong> requirió una revisión adicional.</li>
+            <li><strong>T3:</strong> presentó una demora relacionada con información faltante.</li>
+            <li><strong>T5:</strong> necesitó ajustes durante la revisión.</li>
+          </ul>
+
+          <p>
+            La métrica permitió identificar que las etapas de preparación de
+            información y revisión pueden generar demoras cuando existen
+            dependencias, información incompleta o modificaciones posteriores.
+          </p>
+
+        </div>
+      </details>
+
+      <!-- 05. HALLAZGOS -->
+      <details>
+        <summary>05. Hallazgos</summary>
+
+        <div class="details-content">
+
+          <p>
+            A partir de la visualización del tablero y del análisis de la métrica
+            se identificaron los siguientes hallazgos.
+          </p>
+
+          <div class="finding">
+            <h3>Hallazgo 1 — Falta de información</h3>
+
+            <p>
+              La falta de información necesaria para realizar una tarea puede
+              provocar interrupciones y aumentar el tiempo necesario para completarla.
+              Esto se observó especialmente en la tarea T3.
+            </p>
+
+            <div class="proposal">
+              <h4>Mejora propuesta</h4>
+              <p><strong>Verificar la información necesaria antes de iniciar cada tarea.</strong></p>
+
+              <p>
+                <strong>Objetivo:</strong> reducir las interrupciones provocadas
+                por información faltante.
+              </p>
+
+              <div class="indicator">
+                <strong>Indicador de éxito:</strong> disminuir la cantidad de tareas
+                que requieren información adicional durante su ejecución.
+              </div>
+            </div>
+          </div>
+
+          <div class="finding">
+            <h3>Hallazgo 2 — Demoras durante la revisión</h3>
+
+            <p>
+              Durante la etapa de Testing / Review pueden detectarse ajustes
+              o modificaciones que aumentan el tiempo necesario para completar
+              una tarea.
+            </p>
+
+            <div class="proposal">
+              <h4>Mejora propuesta</h4>
+              <p><strong>Realizar revisiones tempranas durante la ejecución.</strong></p>
+
+              <p>
+                <strong>Objetivo:</strong> detectar problemas antes de que la tarea
+                llegue a la etapa final de revisión.
+              </p>
+
+              <div class="indicator">
+                <strong>Indicador de éxito:</strong> reducir la cantidad de ajustes
+                detectados en Testing / Review.
+              </div>
+            </div>
+          </div>
+
+          <div class="finding">
+            <h3>Hallazgo 3 — Control del trabajo en proceso</h3>
+
+            <p>
+              El límite WIP permite controlar la cantidad de tareas que se encuentran
+              simultáneamente en ejecución. Mantener el límite en 2 tareas ayuda
+              a evitar una acumulación innecesaria de trabajo en proceso.
+            </p>
+
+            <div class="proposal">
+              <h4>Mejora propuesta</h4>
+              <p><strong>Mantener el límite WIP máximo de 2 tareas.</strong></p>
+
+              <p>
+                <strong>Objetivo:</strong> evitar la saturación de la etapa de
+                ejecución y favorecer la finalización de las tareas iniciadas.
+              </p>
+
+              <div class="indicator">
+                <strong>Indicador de éxito:</strong> no superar las 2 tareas
+                simultáneas en In Progress durante la siguiente iteración.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </details>
+
+      <!-- 06. PLAN DE MEJORA -->
+      <details>
+        <summary>06. Plan de Mejora</summary>
+
+        <div class="details-content">
+
+          <p>
+            A partir de los hallazgos identificados se definieron las siguientes
+            acciones para mejorar el flujo de trabajo:
+          </p>
+
+          <div class="improvement-item">
+            <strong>1. Mejorar la disponibilidad de información</strong>
+            <p>
+              Definir previamente qué información necesita cada tarea para poder
+              comenzar, evitando que una actividad quede detenida por falta de datos.
+            </p>
+          </div>
+
+          <div class="improvement-item">
+            <strong>2. Reducir las esperas</strong>
+            <p>
+              Identificar en qué etapas se producen tiempos de espera y analizar
+              sus causas para reducir los tiempos en los que una tarea permanece detenida.
+            </p>
+          </div>
+
+          <div class="improvement-item">
+            <strong>3. Mantener y controlar el WIP</strong>
+            <p>
+              Mantener el límite de WIP en 2 tareas simultáneas y priorizar
+              la finalización de las tareas antes de comenzar nuevas, evitando
+              la acumulación y saturación del flujo.
+            </p>
+          </div>
+
+          <div class="note">
+            Estas acciones constituyen propuestas de mejora para una siguiente
+            iteración. Su efectividad deberá evaluarse mediante el seguimiento
+            del tablero y de los indicadores definidos.
+          </div>
+
+        </div>
+      </details>
+
+      <!-- 07. CONCLUSIÓN -->
+      <details>
+        <summary>07. Conclusión</summary>
+
+        <div class="details-content">
+
+          <div class="conclusion">
+
+            <p>
+              En conclusión, visualizar las tareas de la historia de usuario
+              en un tablero nos permitió organizar el trabajo de una manera
+              más sencilla y comprender con mayor claridad cómo avanzamos
+              en el proyecto. El uso del límite WIP nos permitió mantener
+              un margen de trabajo y evitar que el flujo se saturara con
+              demasiadas tareas al mismo tiempo.
+            </p>
+
+            <p>
+              Las métricas nos ayudaron a identificar puntos que podían
+              mejorarse y a pensar en acciones concretas para hacerlo.
+              Entre los principales aspectos detectados se encuentran
+              la falta de información necesaria para avanzar, los tiempos
+              de espera y las demoras generadas durante las revisiones.
+            </p>
+
+            <p>
+              Gracias a este trabajo, aprendí que tener un foco y una
+              metodología que guíe el trabajo puede ayudar a alcanzar
+              grandes resultados. Contar con una estructura definida
+              permite organizar mejor las actividades, visualizar lo
+              que hay que hacer y comprender de forma más clara qué pasos
+              debemos seguir para alcanzar el objetivo.
+            </p>
+
+          </div>
+
+        </div>
+      </details>
+
+    </div>
+
+    <a href="proyecto-agil-2.html" class="back-link">
+      ← Volver al Proyecto Ágil 02
+    </a>
+
+  </main>
+
+  <footer>
+    Portfolio personal · Proyectos y aprendizaje continuo
+  </footer>
+
+</body>
+</html>
+
